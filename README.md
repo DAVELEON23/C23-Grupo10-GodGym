@@ -16,3 +16,12 @@
 * [FormularioDeRegistro](https://www.figma.com/file/n0HGdXcTzvcx0XwG2XESO2/Untitled?type=design&mode=design&t=UkQ0UcoqmuhsBFJt-0)
 * [FormularioDeLogin](https://www.figma.com/file/DdjQD5VFbiQpIFZdMPxlJc/Untitled?type=design&node-id=0-1&mode=design&t=7TeUw62Ud4Q6wuLN-0)
 
+### Inspiraciones en referentes del mercado:
+
+- Home: 
+- Detalle de Producto:
+- Carrito de Compras:
+- Formulario de Registro:
+- Formulario de Login:
+
+
