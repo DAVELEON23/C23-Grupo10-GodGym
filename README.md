@@ -18,10 +18,10 @@
 
 ### Inspiraciones en referentes del mercado:
 
-- Home: 
+- Home:  
 - Detalle de Producto:
 - Carrito de Compras:
 - Formulario de Registro:
-- Formulario de Login:
+- Formulario de Login: Para el Formulario de Login me inspire en el logueado de instagram, agregandole mi estilo personal y adaptandola a nuestro proyecto. (https://www.instagram.com/)
 
 
