@@ -21,7 +21,8 @@
 - Home:  
 - Detalle de Producto:
 - Carrito de Compras:
-- Formulario de Registro:
+- Formulario de Registro: Para el formulario de registro me gustaron dos paginas las cuales aprovechaban la oportunidad de dar una clase gratis registrandose
+y asi captar nuevos usuarios.(https://fiter.com).(https://megatlon.com)
 - Formulario de Login: Para el Formulario de Login me inspire en el logueado de instagram, agregandole mi estilo personal y adaptandola a nuestro proyecto. (https://www.instagram.com/)
 
 
