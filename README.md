@@ -18,9 +18,9 @@
 
 ### Inspiraciones en referentes del mercado:
 
-- Home:  
+- Home:  Para el home nos intereso el fondo oscuro de la pagina junto con su HEADER (https://www.openpark.com.ar/) ademas utilizamos como logo a kratos de God Of War por ese motivo creamos una paleta de colores con tonos rojos y fondo oscuro. 
 - Detalle de Producto:
-- Carrito de Compras:
+- Carrito de Compras: Para el carrito me inspire en dos paginas (https://www.smartfit.com.ar/) donde detalla el plan y su contenido y en (https://www.sportclub.com.ar/#asociate) con la misma tematica.
 - Formulario de Registro: Para el formulario de registro me gustaron dos paginas las cuales aprovechaban la oportunidad de dar una clase gratis registrandose
 y asi captar nuevos usuarios.(https://fiter.com).(https://megatlon.com)
 - Formulario de Login: Para el Formulario de Login me inspire en el logueado de instagram, agregandole mi estilo personal y adaptandola a nuestro proyecto. (https://www.instagram.com/)
