@@ -1,0 +1,38 @@
+.header-home{
+    background-color: var(--color-azul);
+    color: var(--color-crema);
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.nav-header-home{
+    display: none;
+}
+.nav-registros{
+    display: none;
+}
+.logo{
+    width: 25%;
+    border: solid red 1px;
+    height: 25%;
+}
+.titulo-home{
+    font-size: 25px;
+    width: 75%;
+    /* border: solid white 1px; */
+    text-align: center;
+    height: max-content;
+    margin-top: 1%;
+}
+.fa-bars{
+    width: 30px;
+    
+    margin-left: 55%;
+    margin-top: -12%;
+    background-color: var(--color-rojo);
+    color: black;
+    padding: 7px;
+    text-align: center;
+    height: 30px;
+    border-radius: 15%
+}

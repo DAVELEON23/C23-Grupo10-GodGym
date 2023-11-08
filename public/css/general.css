@@ -1,0 +1,15 @@
+:root{
+    --color-rojo:#AB222C;
+    --color-amarillo: #E9A103;
+    --color-azul: #16141F;
+    --color-crema: #fff7d2;
+    --color-verde: #0fa826;
+    }
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Lato",sans-serif;
+}
