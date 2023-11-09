@@ -1,0 +1,59 @@
+.footer-home{
+    background-color: var(--color-rojo);
+    margin: 0 auto;
+}
+
+.fa-facebook{
+    color: #000;
+    display: inline;
+}
+
+.fa-x-twitter{
+ color: #000;
+ display: inline;
+}
+
+.fa-instagram{
+    color: #000;
+    display: inline;
+}
+
+.seguinos-footer{
+    color: var(--color-crema);
+}
+
+.redes-sociales{
+    height: 38px;
+    padding-top: 10%;
+    margin-left: 7%;
+    width: 20%;
+    margin-top: 22%;
+}
+
+.secciones-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 49%;
+    margin-left: 39%;
+}
+
+.seccion-home-footer{
+ color: var(--color-crema);
+ font-size: 17px;
+ justify-content: center;
+}
+
+.ultima-sec-footer{
+    margin-bottom: 8%;
+}
+.fa-house{
+    color: #000;
+   }
+   .fa-dumbbell{
+       color: #000 ;
+   }
+   .fa-address-card{
+       color: #000;
+   }
+

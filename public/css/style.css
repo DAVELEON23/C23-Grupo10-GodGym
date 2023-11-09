@@ -6,4 +6,209 @@
 @import url("/css/login.css");
 @import url("/css/productDetail.css");
 @import url("/css/register.css");
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Onest&family=Raleway&family=Roboto&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Onest&family=Raleway&family=Roboto&display=swap');
+
+
+@media (min-width: 768px){
+    .seccion-header {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .nav-header-home{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-header-home ul{
+        margin-left: 150px;
+        display: flex;
+        gap: 55px;
+        margin-bottom: 10px;
+    }
+
+      .nav-header-home li{
+        margin: 0 5px;
+        padding-top: 10px;
+    }
+    .secciones-header{
+        color: var(--color-crema);
+    }
+    .fa-house{
+     color: #000;
+    }
+    .fa-dumbbell{
+        color: #000 ;
+    }
+    .fa-address-card{
+        color: #000;
+    }
+    .nav-registros {
+        margin-top: 0%;
+        display: flex;
+        gap: 10px;
+        margin-right: 1%;
+    }
+    .fa-user {
+        border-radius: 13px;
+        padding: 6px;
+        background-color: var(--color-rojo);
+        width: 27px;
+        height: 27px;
+    }
+    .login{
+        color: #fff;
+        font-size: 10px
+    }
+    .boton-login{
+        color: #fff;
+    }
+    .registrado {
+        font-size: 13px;
+        text-align: center;
+        padding: 3px;
+        height: 25px;
+        width: 96px;
+        border-radius: 9px;
+        color: #fff;
+        background-color: var(--color-rojo);
+    }
+
+    .logo{
+        width: 10%;
+        height: 20%;
+        padding-top: 3%;
+    }
+    .boton-hamburguesa{
+        display: none;
+    }
+    .titulo-home {
+        margin-left: 12%;
+        width: 42%;
+        margin-top: 3%;
+    }
+    .caja-logueado{
+        margin-top: 16%;
+    }
+    .slogan-main {
+        width: 44%;
+        border-bottom: 3px solid #fff;
+        margin-top: 5%;
+        font-size: 21px;
+        margin-left: 30%;
+        color: white;
+    }
+    main article img {
+        height: 80px;
+    }
+    .boton-derecha {
+        font-weight: bold;
+        font-size: 37px;
+        color: #fff;
+        top: 18%;
+        right: 15%;
+        position: absolute;
+    }
+    .boton-izquierda-muscu {
+        position: absolute;
+        color: #fff;
+        font-size: 29px;
+        font-weight: bold;
+        top: 27%;
+        left: 7%;
+    }
+    .boton-izquierda {
+        position: absolute;
+        color: #fff;
+        font-size: 31px;
+        font-weight: bold;
+        top: 22%;
+        left: 10%;
+    }
+    .redes-sociales {
+        height: 42px;
+        padding-top: 4%;
+        margin-left: 10%;
+        width: 22%;
+        margin-top: 4%;
+    }
+    .secciones-footer {
+        width: 49%;
+        gap: 7%;
+        color: var(--color-crema);
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        margin-left: 39%;
+        padding-bottom: 23px;
+       
+    }
+     .seccion-home-footer{
+        font-size: 15px
+     }
+    .ultima-sec-footer{
+        margin: 0px;
+    }
+   
+}
+
+@media (min-width: 1024px){
+    .seccion-header {
+        justify-content: space-evenly;
+    }
+    .logo{
+        margin-top: 1px;
+        width: 9%;
+    }
+    .titulo-home{
+        margin-left: 5%;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .nav-registros{
+        margin-top: 12px;
+    }
+    .nav-header-home ul{
+        margin-left: 500px;
+        gap: 70px;
+        margin-bottom: 20px;
+    }
+    .secciones-header{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .slogan-main {
+        width: 31%;
+        border-bottom: 3px solid #fff;
+        margin-top: 5%;
+        font-size: 30px;
+        margin-left: 37%;
+        color: white;
+    }
+    main article img {
+        height: 110px;
+    }
+    .boton-derecha {
+        font-size: 50px;
+        top: 24%;
+        right: 15%;
+    }
+    .boton-izquierda-muscu {
+        font-size: 50px;
+        top: 24%;
+        left: 7%;
+    }
+    .boton-izquierda {
+        font-size: 50px;
+        top: 22%;
+        left: 10%;
+    }
+    .seccion-home-footer{
+        font-size: 25px;
+        font-weight: bold
+     }
+     .seguinos-footer{
+        font-size: 15px;
+     }
+} 
+

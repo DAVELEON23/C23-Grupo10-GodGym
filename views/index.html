@@ -10,78 +10,85 @@
 
 </head>
 
-<body>
+<body class="body-home">
     
     <header class="header-home">
+        <section class="seccion-header">
         <img class= "logo" src="/img/logo-proyecto.svg" alt="logo">
         <h1 class="titulo-home">GOD GYM</h1>
+        <div class="boton-hamburguesa">
         <i class="fa-solid fa-bars"></i>
-        <nav>
-        <ul class="nav-header-home">
-            <i class="fa-solid fa-house"></i>
-            <li><a href="">HOME</a></li>
-            <i class="fa-solid fa-dumbbell"></i>
-            <li><a href="">ACTIVIDADES</a></li>
-            <i class="fa-regular fa-address-card"></i>
-            <li><a href="">PASE DE PRUEBA</a></li>
+    </div>
+    <nav class="nav-registros">
+        <div class="caja-logueado">
+        <a href="/login" class="boton-login"><i class="fa-solid fa-user"></i>
+           <a href="/login"> <h4 class="login">LOGIN</h4></a>
+        </a>
+        </div>
+        <div class="caja-logueado">
+            <a href="/register">
+            <h4 class="registrado">REGISTRATE</h4>
+        </a>
+        </div>
+    </nav>
+</section>
+        <nav class="nav-header-home">
+        <ul class="secciones">
+            
+            <li> <i class="fa-solid fa-house"></i><a href="" class="secciones-header">HOME</a></li>
+            
+            <li> <i class="fa-solid fa-dumbbell"></i><a href="" class="secciones-header">ACTIVIDADES</a></li>
+            
+            <li> <i class="fa-regular fa-address-card"></i><a href="" class="secciones-header">PASE DE PRUEBA</a></li>
         </ul>
     </nav>
-    <nav class="nav-registros">
-        <div>
-            <h4>login</h4>
-            <i class="fa-solid fa-user"></i>
-        </div>
-        
-        <div>
-            <h4>register</h4>
 
-        </div>
-    </nav>
+    
 
     </header>
-    <main>    
+    <main class="home-main">    
         <h3 class="slogan-main">BE SMART - BE STRONG - BE FAST</h3>
         
-        <>
+      
             <article class="boton-inspeccion">   
-                        <a href="">CROSSFIT</a>   
+                        <a href="" class="boton-derecha">CROSSFIT</a>   
                         <img src="/img/component1.png" alt="crossfit" width="100%"> 
             </article>
             
             <article class="boton-inspeccion">   
-                        <a href="">MUSCULACION</a> 
+                        <a href="" class="boton-izquierda-muscu">MUSCULACIÓN</a> 
                         <img src="/img/component2.png" alt="" width="100%">
             </article>
             <article class="boton-inspeccion">   
-                        <a href="">ZUMBA</a> 
+                        <a href="" class="boton-derecha">ZUMBA</a> 
                         <img src="/img/component3.png" alt="zumba" width="100%">   
             </article>
             <article class="boton-inspeccion">
-                        <a href="">FUNCIONAL</a>
+                        <a href="" class="boton-izquierda">FUNCIONAL</a>
                         <img src="/img/component4.png" alt="funcional" width="100%">
             </article>
-        </section>
-
-        <footer>
+        
+    </main>
+        <footer class="footer-home">
             <div class="redes-sociales">
-                <h4>Seguinos</h4>
+                <h4 class="seguinos-footer">SEGUINOS</h4>
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
 
-            <nav class="nav-footer-home">
-                <ul>
-                    <i class="fa-solid fa-house"></i>
-                    <li><a href="">HOME</a></li>
-                    <i class="fa-solid fa-dumbbell"></i>
-                    <li><a href="">ACTIVIDADES</a></li>
-                    <i class="fa-regular fa-address-card"></i>
-                    <li><a href="">PASE DE PRUEBA</a></li>
+            
+                <ul class="secciones-footer"> 
+                   
+                    <li><i class="fa-solid fa-house"></i><a href="" class="seccion-home-footer">HOME</a></li>
+                   
+                    <li><i class="fa-solid fa-dumbbell"></i><a href="" class="seccion-home-footer">ACTIVIDADES</a></li>
+                    
+                    <li class="ultima-sec-footer"><i class="fa-regular fa-address-card"></i><a href="" class="seccion-home-footer">PASE DE PRUEBA</a></li>
                 </ul>
-            </nav>
+            
         </footer>
-    </main>
+
 
 
     

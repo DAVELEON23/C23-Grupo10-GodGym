@@ -1,0 +1,49 @@
+.body-home{
+    background-image: url('/img/background.jpg.png');
+}
+.home-main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.slogan-main{
+    width: 73%;
+    border-bottom: 3px solid #fff;
+        margin-top: 5%;
+        font-size: 15px;
+        margin-left: 18%;
+        color: white;
+}
+.boton-inspeccion{
+    position: relative;
+
+}
+.boton-derecha{
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    top: 21%;
+    right: 12%;
+    position: absolute;
+}
+.boton-izquierda{
+    position: absolute;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    top: 21%;
+    left: 4%;
+}
+
+.boton-izquierda-muscu{
+    position: absolute;
+    color: #fff;
+    font-size: 19px;
+    font-weight: bold;
+    top: 25%;
+    left: 3%;
+}
+main article img{
+    height: 56px;
+}
