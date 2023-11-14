@@ -26,9 +26,10 @@
     width: 75%;
     text-align: center;
     height: max-content;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 .fa-bars{
+    margin: 10px 0;
     width: 30px;
     background-color: var(--color-rojo);
     color: black;
