@@ -1,0 +1,155 @@
+.footer-home{
+    background-color: #ab222bc4;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 2%;
+    align-items: center;
+    
+
+}
+
+.fa-facebook{
+    color: #000;
+    
+}
+
+.fa-x-twitter{
+ color: #000;
+
+}
+
+.fa-instagram{
+    color: #000;
+    
+}
+
+.seguinos-footer{
+    color: var(--color-crema);
+}
+
+.redes-sociales{
+    display: flex;
+    align-items: center;
+}
+
+.secciones-footer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.seccion-home-footer{
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.fa-solid.fa-house.footer{
+    color: black;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 600;
+}
+.fa-solid.fa-dumbbell.footer{
+    color: black;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 600;
+}
+.fa-regular.fa-address-card.footer{
+    color: black;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 600;
+}
+
+/* -------------------------media queries de footer ----------------------------- */
+
+@media(min-width: 768px){
+    .redes-sociales {
+        width: 25%;
+        display: flex;
+        gap: 10px;
+    }
+    .secciones-footer {
+        width: 49%;
+        gap: 7%;
+        color: var(--color-crema);
+        
+    }
+    .seccion-home-footer{
+        font-size: 15px
+    }
+    .ultima-sec-footer{
+        margin: 0px;
+    }
+    .secciones-header:hover{
+        transition-duration: 1s;
+        color: var(--color-rojo)
+    }
+    .boton-inspeccion:hover{
+        transition-duration: 1s;
+        box-shadow: 0px 0px 10px rgb(201, 9, 9);
+
+    }
+    .secciones-footer ul{
+        display: flex;
+
+    }
+}
+
+
+/* -----------------------------MEDIA QUERIES DESKTOP--------------------------- */
+
+@media(min-width: 1024px){
+    .secciones-footer ul{
+        display: flex;
+
+    }
+
+    .seccion-home-footer{
+        color: black;
+        font-size: 22px;
+        font-weight: bolder;
+        margin-top: 25px;
+       
+    }
+
+    .fa-solid.fa-house.footer{
+        color: black;
+        font-size: 20px;
+        padding: 5px;
+        font-weight: 600;
+    }
+    .fa-solid.fa-dumbbell.footer{
+        color: black;
+        font-size: 20px;
+        padding: 5px;
+        font-weight: 600;
+    }
+    .fa-regular.fa-address-card.footer{
+        color: black;
+        font-size: 20px;
+        padding: 5px;
+        font-weight: 600;
+    }
+
+    .footer-home{
+        background-color: #ab222bc4;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        padding: 1%;
+        align-items: center;
+        
+    }
+    .redes-sociales {
+        display: flex;
+        font-size: x-large;
+        gap: 35px;
+}
+
+}
