@@ -163,3 +163,64 @@
         color: var(--color-crema);
     }  
 }
+
+
+/* -----------------------------MEDIAQUIRE DESKTOP--------------------------- */
+
+@media(min-width: 1024px){
+    .seccion-header {
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    .nav-header-home{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        border-top: 3px solid var(--color-rojo);
+        padding-top: 3%;
+        
+    }
+
+    .nav-registros {
+        display: flex;
+        gap: 20px;
+        width: 30%;
+        padding-bottom: 1%;
+        justify-content: center;
+    }
+
+    .secciones-header{
+        color: var(--color-crema);
+        font-size: 23px;
+        font-weight: 600; 
+    }
+
+    .fa-solid.fa-house{
+        color: var(--color-crema);
+        font-size: 23px;
+        padding: 5px;
+    }
+    .fa-solid.fa-dumbbell{
+        color: var(--color-crema);
+        font-size: 23px;
+        padding: 5px;
+    }
+    .fa-regular.fa-address-card{
+        color: var(--color-crema);
+        font-size: 23px;
+        padding: 5px;
+    }
+
+    .slogan-main {
+        width: 100%;
+        text-decoration: underline 3px;
+        margin-top: 2%;
+        font-size: 160%;
+        text-align: center;
+        color: var(--color-crema);
+    }  
+}

@@ -30,15 +30,13 @@
 
 .redes-sociales{
     display: flex;
-    /* border: 1px solid white; */
-    flex-direction: column;
     align-items: center;
 }
 
 .secciones-footer {
     display: flex;
     flex-direction: column;
-    /* border: solid white 1px; */
+
 }
 
 .seccion-home-footer{
@@ -49,9 +47,6 @@
     flex-wrap: wrap;
 }
 
-.ultima-sec-footer{
-    
-}
 .fa-solid.fa-house.footer{
     color: black;
     font-size: 15px;
@@ -75,26 +70,19 @@
 
 @media(min-width: 768px){
     .redes-sociales {
-        padding-top: 4%;
-        margin-left: 8%;
         width: 25%;
         display: flex;
-        
+        gap: 10px;
     }
     .secciones-footer {
         width: 49%;
         gap: 7%;
         color: var(--color-crema);
         
-        
-        
-        
-        
-    
     }
-     .seccion-home-footer{
+    .seccion-home-footer{
         font-size: 15px
-     }
+    }
     .ultima-sec-footer{
         margin: 0px;
     }
@@ -107,4 +95,61 @@
         box-shadow: 0px 0px 10px rgb(201, 9, 9);
 
     }
+    .secciones-footer ul{
+        display: flex;
+
+    }
+}
+
+
+/* -----------------------------MEDIAQUIRE DESKTOP--------------------------- */
+
+@media(min-width: 1024px){
+    .secciones-footer ul{
+        display: flex;
+
+    }
+
+    .seccion-home-footer{
+        color: black;
+        font-size: 22px;
+        font-weight: bolder;
+        margin-top: 25px;
+       
+    }
+
+    .fa-solid.fa-house.footer{
+        color: black;
+        font-size: 20px;
+        padding: 5px;
+        font-weight: 600;
+    }
+    .fa-solid.fa-dumbbell.footer{
+        color: black;
+        font-size: 20px;
+        padding: 5px;
+        font-weight: 600;
+    }
+    .fa-regular.fa-address-card.footer{
+        color: black;
+        font-size: 20px;
+        padding: 5px;
+        font-weight: 600;
+    }
+
+    .footer-home{
+        background-color: #ab222bc4;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        padding: 1%;
+        align-items: center;
+        
+    }
+    .redes-sociales {
+        display: flex;
+        font-size: x-large;
+        gap: 35px;
+}
+
 }
