@@ -115,7 +115,7 @@
         width: 30%;
         padding-bottom: 1%;
     }
-    .fa-user {
+    .icono-login-header {
         border-radius: 13px;
         padding: 6px;
         background-color: var(--color-rojo);
