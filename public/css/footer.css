@@ -1,21 +1,27 @@
 .footer-home{
     background-color: #ab222bc4;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 2%;
+    align-items: center;
+    
+
 }
 
 .fa-facebook{
     color: #000;
-    display: inline;
+    
 }
 
 .fa-x-twitter{
  color: #000;
- display: inline;
+
 }
 
 .fa-instagram{
     color: #000;
-    display: inline;
+    
 }
 
 .seguinos-footer{
@@ -23,37 +29,82 @@
 }
 
 .redes-sociales{
-    height: 38px;
-    padding-top: 10%;
-    margin-left: 7%;
-    width: 20%;
-    margin-top: 22%;
+    display: flex;
+    /* border: 1px solid white; */
+    flex-direction: column;
+    align-items: center;
 }
 
 .secciones-footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 49%;
-    margin-left: 39%;
+    /* border: solid white 1px; */
 }
 
 .seccion-home-footer{
- color: var(--color-crema);
- font-size: 17px;
- justify-content: center;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 25px;
+    flex-wrap: wrap;
 }
 
 .ultima-sec-footer{
-    margin-bottom: 8%;
+    
 }
-.fa-house{
-    color: #000;
-   }
-   .fa-dumbbell{
-       color: #000 ;
-   }
-   .fa-address-card{
-       color: #000;
-   }
+.fa-solid.fa-house.footer{
+    color: black;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 600;
+}
+.fa-solid.fa-dumbbell.footer{
+    color: black;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 600;
+}
+.fa-regular.fa-address-card.footer{
+    color: black;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 600;
+}
 
+/* -------------------------mediaquire de footer ----------------------------- */
+
+@media(min-width: 768px){
+    .redes-sociales {
+        padding-top: 4%;
+        margin-left: 8%;
+        width: 25%;
+        display: flex;
+        
+    }
+    .secciones-footer {
+        width: 49%;
+        gap: 7%;
+        color: var(--color-crema);
+        
+        
+        
+        
+        
+    
+    }
+     .seccion-home-footer{
+        font-size: 15px
+     }
+    .ultima-sec-footer{
+        margin: 0px;
+    }
+    .secciones-header:hover{
+        transition-duration: 1s;
+        color: var(--color-rojo)
+    }
+    .boton-inspeccion:hover{
+        transition-duration: 1s;
+        box-shadow: 0px 0px 10px rgb(201, 9, 9);
+
+    }
+}

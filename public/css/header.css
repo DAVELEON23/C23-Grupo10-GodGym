@@ -7,7 +7,7 @@
 }
 .seccion-header {
     height: 2%;
-    width: 79%;
+    width: 65%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -18,15 +18,15 @@
     display: none;
 }
 .logo{
-    width: 25%;
-    height: 25%;
+    width: 35%;
+    
 }
 .titulo-home{
     font-size: 25px;
-    width: 75%;
+    width: 60%;
     text-align: center;
-    height: max-content;
-    margin-top: 2%;
+    margin-top: 5%;
+    margin-left: 6%;
 }
 .fa-bars{
     margin: 10px 0;
@@ -40,6 +40,126 @@
 }
 
 .boton-hamburguesa{
-    margin-left: 55%;
-    margin-top: -12%;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+.slogan-main {
+    width: 100%;
+    text-decoration: underline 3px;
+    margin-top: 2%;
+    font-size: 120%;
+    text-align: center;
+    color: var(--color-crema);
+}  
+
+
+/* -------------------------------------header mediaquire de tablet*---------------------------------*/
+
+@media (min-width: 768px){
+    main article img {
+        height: 60px;
+    }
+    .titulo-home {
+        width: 50%;
+        margin-top: 2%;
+        font-size: 35px;
+    }
+    .seccion-header {
+        width: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+    }
+    .nav-header-home{
+        display: flex;
+        justify-content: space-between;
+        border-top: 3px solid var(--color-rojo);
+        padding-top: 3%;
+        
+    }
+    .nav-header-home ul{
+        display: flex;
+        gap: 50px;
+        margin-bottom: 10px;
+    }
+
+    .nav-header-home li{
+        margin: 0 5px;
+        padding-top: 10px;
+    }
+    .secciones-header{
+        color: var(--color-crema);
+        font-size: 16px;
+        font-weight: 600;
+        
+    }
+    .fa-solid.fa-house{
+        color: var(--color-crema);
+        font-size: 15px;
+        padding: 5px;
+    }
+    .fa-solid.fa-dumbbell{
+        color: var(--color-crema);
+        font-size: 15px;
+        padding: 5px;
+    }
+    .fa-regular.fa-address-card{
+        color: var(--color-crema);
+        font-size: 15px;
+        padding: 5px;
+    }
+    .nav-registros {
+        display: flex;
+        gap: 20px;
+        width: 30%;
+        padding-bottom: 1%;
+    }
+    .fa-user {
+        border-radius: 13px;
+        padding: 6px;
+        background-color: var(--color-rojo);
+        width: 27px;
+        height: 27px;
+    }
+    .login{
+        color: #fff;
+        font-size: 10px
+    }
+    .boton-login{
+        color: #fff;
+    }
+    .registrado {
+        font-size: 13px;
+        text-align: center;
+        padding: 3px;
+        height: 25px;
+        width: 96px;
+        border-radius: 9px;
+        color: #fff;
+        background-color: var(--color-rojo);
+    }
+
+    .logo{
+        width: 23%;
+        
+    }
+    .boton-hamburguesa{
+        display: none;
+    }
+
+    .caja-logueado{
+        margin-top: 16%;
+    }
+    .caja-logueado-registro{
+        margin-top: 17%;
+    }
+    .slogan-main {
+        width: 100%;
+        text-decoration: underline 3px;
+        margin-top: 2%;
+        font-size: 120%;
+        text-align: center;
+        color: var(--color-crema);
+    }  
 }
