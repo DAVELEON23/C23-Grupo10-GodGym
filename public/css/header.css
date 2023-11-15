@@ -53,7 +53,7 @@
 }  
 
 
-/* -------------------------------------header mediaquire de tablet*---------------------------------*/
+/* -------------------------------------header media queries de tablet---------------------------------*/
 
 @media (min-width: 768px){
     main article img {
@@ -165,7 +165,7 @@
 }
 
 
-/* -----------------------------MEDIAQUIRE DESKTOP--------------------------- */
+/* -----------------------------MEDIA QUERIE DESKTOP--------------------------- */
 
 @media(min-width: 1024px){
     .seccion-header {

@@ -66,7 +66,7 @@
     font-weight: 600;
 }
 
-/* -------------------------mediaquire de footer ----------------------------- */
+/* -------------------------media queries de footer ----------------------------- */
 
 @media(min-width: 768px){
     .redes-sociales {
@@ -102,7 +102,7 @@
 }
 
 
-/* -----------------------------MEDIAQUIRE DESKTOP--------------------------- */
+/* -----------------------------MEDIA QUERIES DESKTOP--------------------------- */
 
 @media(min-width: 1024px){
     .secciones-footer ul{
