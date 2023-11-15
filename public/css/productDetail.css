@@ -2,7 +2,7 @@
     margin-top: 0%;
     width: 100%;
     text-decoration: underline 3px;
-    font-size: 30px;
+    font-size: 18px;
     padding-top: 30px;
     text-align: center;
     color: var(--color-crema);
@@ -78,6 +78,16 @@ main article{
 
 /* ---------------MEDIA QUERIES TABLET------------------ */
 @media(min-width: 768px){
+
+    .slogan-main {
+        margin-top: 0%;
+        width: 100%;
+        text-decoration: underline 3px;
+        font-size: 35px;
+        padding-top: 30px;
+        text-align: center;
+        color: var(--color-crema);
+    }
     .detalleProduct-imagen{ 
         height: 1%;
         width: 90%;
@@ -138,6 +148,7 @@ main article{
 
 /* ---------------MEDIA QUERIES DESKTOP------------------ */
 @media(min-width: 1024px){
+    
     .detalleProduct-imagen{
         height: 1%;
         width: 40%;
