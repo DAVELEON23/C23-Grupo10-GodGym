@@ -1,5 +1,5 @@
 .footer-home {
-    background-color: #ab222bc4;
+    background-color:#ab222b;
     justify-content: space-around;
     margin-top: 27px;
     padding: 2%;
@@ -97,7 +97,7 @@
     
 
     .footer-home {
-        background-color: #ab222bc4;
+        background-color: #ab222b;
         justify-content: space-around;
         margin-top: 3%;
         padding-bottom: 3%;
@@ -144,7 +144,7 @@
     }
 
     .footer-home{
-        background-color: #ab222bc4;
+        background-color: #ab222b;
         display: flex;
         justify-content: space-around;
         margin-top: 30px;
