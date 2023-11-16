@@ -2,83 +2,98 @@
     background-image: url('/img/background.jpg.png');
 
 }
-.home-main{
+.home-main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
+    gap: 27px;
 }
-/* .slogan-main{
-    width: 100%;
-    text-decoration: underline 3px;
-        margin-top: 5%;
-        font-size: 15px;
-        text-align: center;
-        color: white;
-}  repetido */
+.imagen-home{
+    height: 50px;
+}
 .boton-inspeccion{
     position: relative;
-
 }
-.boton-derecha{
+.boton-derecha {
     font-weight: bold;
     font-size: 20px;
     color: #fff;
-    top: 9%;
-    right: 15%;
+    top: 22%;
+    right: 13%;
     position: absolute;
 }
-.boton-izquierda{
+.boton-izquierda {
     position: absolute;
     color: #fff;
     font-size: 20px;
     font-weight: bold;
-    top: 8%;
+    top: 19%;
     left: 7%;
 }
 
-.boton-izquierda-muscu{
+.boton-izquierda-muscu {
     position: absolute;
     color: #fff;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: bold;
-    top: 11%;
+    top: 24%;
     left: 2%;
 }
-/* main article img{
-    height: 40px;
-} */
+
 
 /* mediaquire de main */
 @media(min-width: 768px){
+    .imagen-home {
+        height: 79px;
+    }
     .boton-inspeccion{
         position: relative;
         height: 15%;
     
     }
-    .boton-derecha{
+    .boton-derecha {
         font-weight: bold;
-        font-size: 35px;
+        font-size: 37px;
         color: #fff;
-        top: 10%;
-        right: 15%;
+        top: 21%;
+        right: 14%;
         position: absolute;
     }
-    .boton-izquierda{
+    .boton-izquierda {
         position: absolute;
         color: #fff;
-        font-size: 35px;
+        font-size: 36px;
         font-weight: bold;
-        top: 15%;
+        top: 20%;
         left: 9%;
     }
     
-    .boton-izquierda-muscu{
+    .boton-izquierda-muscu {
         position: absolute;
         color: #fff;
-        font-size: 35px;
+        font-size: 36px;
         font-weight: bold;
-        top: 17%;
-        left: 7%;
+        top: 23%;
+        left: 6%;
+    }
 }
+@media(min-width: 1024px){
+    .logo{
+        margin-left: 15px;
+        width: 12%;
+    }
+    .imagen-home{
+        height: 120px;
+    }
+    .boton-derecha{
+        right: 15%;
+     font-size: 60px;
+    }
+    .boton-izquierda-muscu{
+        left: 8%;
+        font-size: 50px;
+    }
+    .boton-izquierda{
+        left: 10%;
+        font-size: 50px;
+    }
 }

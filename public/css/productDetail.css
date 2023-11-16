@@ -1,19 +1,16 @@
-.slogan-main {
-    margin-top: 0%;
+.slogan-main-detalle {
+
     width: 100%;
     text-decoration: underline 3px;
-    font-size: 18px;
-    padding-top: 30px;
+    font-size: 19px;
+    padding: 2%;
     text-align: center;
     color: var(--color-crema);
 }
-.footer-home {
-    margin-top: 0  ;
-    background-color: #ab222bc4;
-    display: flex;
-    justify-content: space-around;
+.footer-home-detalle {
+    background-color: #ab222b;
     padding: 2%;
-    align-items: center;
+    text-align: center;
 }
 
 .body-home{
@@ -26,7 +23,7 @@
     width: 95%;
 }
 
-main article{
+.articulo-producto{
     margin-top: 20px;
     text-align: center;
     padding-bottom: 10px;
@@ -76,6 +73,8 @@ main article{
 }
 
 
+
+
 /* ---------------MEDIA QUERIES TABLET------------------ */
 @media(min-width: 768px){
 
@@ -111,18 +110,6 @@ main article{
         font-size: 1rem;
         color: #fff;
     }
-    /* .seccion-tablet-info {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin-top: 2%; */
-    /* } */
-    /* .caja-boton-carrito {
-    border-radius: 11px;
-    margin-left: 25%;
-    width: 24%;
-    background-color: var(--color-verde);
-    } */
     .precio-producto{
     font-size: 1.2rem;
     }
@@ -141,9 +128,33 @@ main article{
         margin-top: 2%;
         gap:20px;
     }
+
+    .redes-sociales-detalle {
+    gap: 8px;
+    display: flex;
+    }
+    .footer-home-detalle {
+    background-color: #ab222b;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
+    .secciones-footer-detalle {
+    gap: 24px;
+    width: 55%;
+    gap: 7%;
+    color: var(--color-crema);
+    
+    }
+    .lista-footer-detalle{
+        gap: 15px;
+    display: flex;
+   
+    }
 
-
+}
 
 
 /* ---------------MEDIA QUERIES DESKTOP------------------ */
@@ -181,5 +192,23 @@ main article{
     }
     .precio-producto{
     font-size: 1.2rem;
+    }
+    .secciones-footer-detalle{
+         width: 57%;
+    }
+    .lista-footer-detalle{
+        gap: 20px;
+    }
+    .fa-instagram {
+        font-size: 30px;
+    }
+    .logo-face-home{
+        font-size: 30px;
+    }
+    .fa-x-twitter{
+        font-size: 30px;
+    }
+    .seguinos-footer{
+        font-size: 26px;
     }
 }

@@ -1,14 +1,10 @@
-.footer-home{
-    background-color: #ab222bc4;
-    display: flex;
+.footer-home {
+    background-color:#ab222b;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: 27px;
     padding: 2%;
     align-items: center;
-    
-
 }
-
 .fa-facebook{
     color: #000;
     
@@ -27,15 +23,14 @@
 .seguinos-footer{
     color: var(--color-crema);
 }
-
 .redes-sociales{
-    display: flex;
-    align-items: center;
+    text-align: center;
 }
 
 .secciones-footer {
     display: flex;
     flex-direction: column;
+    text-align: center;
 
 }
 
@@ -96,8 +91,19 @@
 
     }
     .secciones-footer ul{
+        gap: 8px;
         display: flex;
+    }
+    
 
+    .footer-home {
+        background-color: #ab222b;
+        justify-content: space-around;
+        margin-top: 3%;
+        padding-bottom: 3%;
+        padding-top: 3%;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -138,11 +144,12 @@
     }
 
     .footer-home{
-        background-color: #ab222bc4;
+        background-color: #ab222b;
         display: flex;
         justify-content: space-around;
         margin-top: 30px;
-        padding: 1%;
+        padding-top: 2%;
+        padding-bottom: 2%;
         align-items: center;
         
     }
@@ -150,6 +157,15 @@
         display: flex;
         font-size: x-large;
         gap: 35px;
-}
-
+        width: 27%;
+    }
+    .secciones-footer {
+    width: 55%;
+    gap: 7%;
+    color: var(--color-crema);
+    }
+    .secciones-footer ul{
+    gap: 25px;
+    display: flex;
+        }
 }
