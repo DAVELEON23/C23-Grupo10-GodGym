@@ -1,19 +1,19 @@
-.slogan-main {
-    margin-top: 0%;
+.slogan-main-detalle {
+
     width: 100%;
     text-decoration: underline 3px;
-    font-size: 30px;
-    padding-top: 30px;
+    font-size: 19px;
+    padding: 2%;
     text-align: center;
     color: var(--color-crema);
 }
-.footer-home {
-    margin-top: 0  ;
+.footer-home-detalle {
+    text-align: center;
     background-color: #ab222bc4;
-    display: flex;
-    justify-content: space-around;
     padding: 2%;
-    align-items: center;
+    
+    
+    
 }
 
 .body-home{
