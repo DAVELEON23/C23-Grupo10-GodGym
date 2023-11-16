@@ -7,8 +7,8 @@
     text-align: center;
     color: var(--color-crema);
 }
-.footer-home {
-    margin-top: 0  ;
+.footer-detalle {
+    margin-top: 0 ;
     background-color: #ab222bc4;
     display: flex;
     justify-content: space-around;
@@ -26,7 +26,7 @@
     width: 95%;
 }
 
-main article{
+.articulo-producto{
     margin-top: 20px;
     text-align: center;
     padding-bottom: 10px;
