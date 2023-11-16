@@ -77,7 +77,9 @@
 
 /* ---------------MEDIA QUERIES TABLET------------------ */
 @media(min-width: 768px){
-
+    .slogan-main-detalle{
+        font-size: 36px;
+    }
     .slogan-main {
         margin-top: 0%;
         width: 100%;
@@ -166,7 +168,7 @@
         margin-left: 3%;
     }
     .nombre-producto{
-        font-size: 40px;
+        font-size: 60px;
         margin-top: 5%;
     }
     .articulo-producto{
