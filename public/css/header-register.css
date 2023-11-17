@@ -1,0 +1,233 @@
+.header-home-register{
+    background-color: var(--color-azul);
+    color: var(--color-crema);
+    display: flex;
+    flex-wrap: wrap;
+}
+.logo-register{
+    width: 30%;  
+}
+.seccion-header-register{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.titulo-form-register{
+    display: none;
+}
+.nav-header-register{
+    display: none;
+}
+.nav-registros-register{
+    display: none;
+}
+
+.titulo-home-register{
+    text-align: center;
+}
+.boton-hamburguesa-register{
+    display: none;
+}
+.linea-roja{
+    width: 90%;
+    height: 5%;
+    border: 2px solid red;
+    background: red;
+    border-radius: 5px;
+}
+.titulo-register{
+    font-size: 1.2rem; 
+}
+.fa-bars{
+    margin: 10px 0;
+    width: 30px;
+    background-color: var(--color-rojo);
+    color: black;
+    padding: 7px;
+    text-align: center;
+    height: 30px;
+    border-radius: 15%
+}
+
+.boton-hamburguesa-register{
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+
+
+/* -------------------------------------header media queries de tablet---------------------------------*/
+
+@media (min-width: 768px){
+    .titulo-home-register{
+        font-size: 2.1rem;
+    }
+    .titulo-register {
+        font-size: 24px;
+    }
+    .linea-roja {
+        width: 99%;
+        height: 5%;
+        border: 2px solid red;
+        background: red;
+        border-radius: 5px;
+    }
+    
+    .seccion-header-register {
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items:flex-end ;
+        margin:2% auto;
+        padding-right: 9%;
+    }
+    
+    .nav-header-register ul{
+        display: flex;
+        gap: 50px;
+        margin-bottom: 10px;
+    }
+
+    .nav-header-home li{
+        margin: 0 5px;
+        padding-top: 10px;
+    }
+    .secciones-header{
+        color: var(--color-crema);
+        font-size: 16px;
+        font-weight: 600;
+        
+    }
+    .fa-solid.fa-house{
+        color: var(--color-crema);
+        font-size: 15px;
+        padding: 5px;
+    }
+    .fa-solid.fa-dumbbell{
+        color: var(--color-crema);
+        font-size: 15px;
+        padding: 5px;
+    }
+    .fa-regular.fa-address-card{
+        color: var(--color-crema);
+        font-size: 15px;
+        padding: 5px;
+    }
+   
+    .icono-login-header-register {
+        border-radius: 13px;
+        padding: 6px;
+        background-color: var(--color-rojo);
+        width: 27px;
+        height: 27px;
+    }
+    .login-register{
+        color: #fff;
+        font-size: 10px
+    }
+    .boton-login-register{
+        color: #fff;
+    }
+    .registrado-register {
+        font-size: 13px;
+        text-align: center;
+        padding: 3px;
+        height: 25px;
+        width: 96px;
+        border-radius: 9px;
+        color: #fff;
+        background-color: var(--color-rojo);
+    }
+
+    .logo-register{
+        width: 23%;
+        
+    }
+    .boton-hamburguesa-register{
+        display: none;
+    }
+
+    .caja-logueado-register{
+        margin-top: 16%;
+    }
+    .caja-logueado-registro{
+        margin-top: 17%;
+    }
+    .slogan-main {
+        width: 100%;
+        text-decoration: underline 3px;
+        margin-top: 2%;
+        font-size: 120%;
+        text-align: center;
+        color: var(--color-crema);
+    }  
+}
+
+
+/* -----------------------------MEDIA QUERIE DESKTOP--------------------------- */
+
+@media(min-width: 1024px){
+    .linea-roja{
+        display: none;
+    }
+    .titulo-register{
+        display: none;
+    }
+    .titulo-home-register{
+        text-align: center;
+        font-size: 3rem;
+        padding-bottom: 1% ;
+    }
+    .seccion-header-register {
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
+        padding: 0;
+    }
+   
+    .nav-header-register{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-top: 3px solid var(--color-rojo);
+        padding-top: 3%;
+       
+    }
+
+    .secciones-header{
+        color: var(--color-crema);
+        font-size: 23px;
+        font-weight: 600; 
+    }
+
+    .fa-solid.fa-house{
+        color: var(--color-crema);
+        font-size: 23px;
+        padding: 5px;
+    }
+    .fa-solid.fa-dumbbell{
+        color: var(--color-crema);
+        font-size: 23px;
+        padding: 5px;
+    }
+    .fa-regular.fa-address-card{
+        color: var(--color-crema);
+        font-size: 23px;
+        padding: 5px;
+    }
+
+    .slogan-main {
+        width: 100%;
+        text-decoration: underline 3px;
+        margin-top: 2%;
+        font-size: 160%;
+        text-align: center;
+        color: var(--color-crema);
+    }  
+}
