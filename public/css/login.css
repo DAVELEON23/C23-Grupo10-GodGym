@@ -1,8 +1,8 @@
 .footer-login {
     background-color: #ab222b;
     justify-content: space-around;
-    padding-bottom: 3%;
-    padding-top: 3%;
+    padding-bottom: 9%;
+    padding-top: 6%;
     display: flex;
     align-items: center;
 }
@@ -121,6 +121,14 @@
 }
 
 @media (min-width: 768px) {
+    .footer-login {
+        background-color: #ab222b;
+        justify-content: space-around;
+        padding-bottom: 2%;
+        padding-top: 4%;
+        display: flex;
+        align-items: center;
+    }
     .formulario-login{
         width: 35%;
     }
@@ -140,9 +148,9 @@
         margin-top: 55%;
     }
     .icono-user-input {
-        left: -3%;
+        left: -2%;
         position: relative;
-        top: 90%;
+        top: 88%;
     }
     .input-contraseña {
         border: 1px solid white;
@@ -198,6 +206,14 @@
 
 
 @media (min-width: 1024px){
+    .footer-login {
+        background-color: #ab222b;
+        justify-content: space-around;
+        padding-bottom: 2%;
+        padding-top: 4%;
+        display: flex;
+        align-items: center;
+    }
     .formulario-login {
         margin-top: 6%;
         border-radius: 43px;
@@ -209,12 +225,12 @@
         position: relative;
     }
 
-        .login-user{
-            font-size: 56px;
-            left: 47%;
-            top: 3%;
-            position: absolute;
-        }
+    .login-user {
+        font-size: 56px;
+        left: 46%;
+        top: 3%;
+        position: absolute;
+    }
         
         .input-user {
             font-size: 23px;
