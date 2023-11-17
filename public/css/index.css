@@ -79,21 +79,24 @@
 @media(min-width: 1024px){
     .logo{
         margin-left: 15px;
-        width: 12%;
+        width: 10%;
     }
-    .imagen-home{
-        height: 120px;
+    .imagen-home {
+        height: 177px;
     }
     .boton-derecha{
+        top: 30%;
         right: 15%;
      font-size: 60px;
     }
     .boton-izquierda-muscu{
         left: 8%;
-        font-size: 50px;
+        font-size: 56px;
+            top: 33%;
     }
     .boton-izquierda{
-        left: 10%;
-        font-size: 50px;
+        left: 9%;
+    font-size: 62px;
+    top: 27%;
     }
 }
