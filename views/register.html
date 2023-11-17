@@ -9,29 +9,32 @@
 
 </head>
 <body class="body-register">
-    <header class="header-home">
-        <img class= "logo" src="/img/logo-proyecto.svg" alt="logo">
-        <section class="seccion-header">
-            <h1 class="titulo-home">GOD GYM</h1>
-            <div class="boton-hamburguesa">
+    <header class="header-home-register">
+        <img class= "logo-register" src="/img/logo-proyecto.svg" alt="logo">
+        <section class="seccion-header-register">
+            <h1 class="titulo-home-register">GOD GYM</h1>
+            <div class="boton-hamburguesa-register">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <nav class="nav-registros">
-                <div class="caja-logueado">
-                    <a href="/login" class="boton-login"><i class="fa-solid fa-user icono-login-header"></i>
+                <div class="linea-roja">
+                </div>
+            <h2 class="titulo-register">Formulario de registro</h2>
+            <nav class="nav-registros-register">
+                <div class="caja-logueado-register">
+                    <a href="/login" class="boton-login-register"><i class="fa-solid fa-user icono-login-header-register"></i>
                         <a href="/login">
-                            <h4 class="login">LOGIN</h4>
+                            <h4 class="login-register">LOGIN</h4>
                         </a>
                     </a>
                 </div>
                 <div class="caja-logueado-registro">
                     <a href="/register">
-                        <h4 class="registrado">REGISTRATE</h4>
+                        <h4 class="registrado-register">REGISTRATE</h4>
                     </a>
                 </div>
         
             </nav>
-            <nav class="nav-header-home">
+            <nav class="nav-header-register">
                 <ul class="secciones">
             
                     <li> <i class="fa-solid fa-house"></i><a href="/" class="secciones-header">HOME</a></li>
@@ -43,33 +46,33 @@
             </nav>
         </section>
     </header>
-    <main class="main-register">
-        <h2 class="titulo-register">Formulario de registro</h2>
+<main class="main-register">
+        
     <form action="/register" method="post" class="formulario-register">
-
+        <h2 class="titulo-form-register">Formulario de registro</h2>
             <label class="label-register" for="nombre">Nombre</label>
             <input class="input-register" type="text" id="nombre" name="nombre">
 
-            <label for="apellido">Apellido</label>
+            <label class="label-register" for="apellido">Apellido</label>
             <input class="input-register" type="text" id="apellido" name="apellido">
     
-            <label for="fecha">Fecha de nacimiento</label>
+            <label class="label-register" for="fecha">Fecha de nacimiento</label>
             <input class="input-register" type="date" id="fecha" name="fecha">
            
-            <label>Seleccion de actividades</label>
-                <select class="select-register" name="seleccion-actividades" id="">
+            <label class="label-register" id="seleccion-actividades">Seleccion de actividades</label>
+                <select class="select-register" name="seleccion-actividades" id="seleccion-actividades">
                     <option value="crossfit">Crossfit</option>
                     <option value="musculacion">Musculacion</option>
                     <option value="zumba">Zumba</option>
                     <option value="funcional">Funcional</option>
                  </select>
 
-            <label for="comentario">Comentanos tu objetivo</label>
+            <label class="label-register" for="comentario">Comentanos tu objetivo</label>
             <textarea class="textarea-register" name="comentario" id="comentario" cols="30" rows="5"></textarea>
             
             <div class="botones-registro">
-                <button class="boton-registro" type="submit">Enviar</button>
-                <button class="boton-reset" type="reset">Reset</button> 
+                <button class="boton-register" type="submit">Enviar</button>
+                <button class="boton-register" type="reset">Reset</button> 
             </div> 
               
         
@@ -81,7 +84,7 @@
     </form>
 </main>
 <footer>
-    <section class="footer-login">
+    <section class="footer-home-detalle">
 
 
         <div class="secciones-footer">
