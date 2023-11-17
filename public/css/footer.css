@@ -163,8 +163,8 @@
     gap: 7%;
     color: var(--color-crema);
     }
-    .secciones-footer ul{
-    gap: 25px;
-    display: flex;
-        }
+    .secciones-footer ul {
+        gap: 8px;
+        display: flex;
+    }
 }
