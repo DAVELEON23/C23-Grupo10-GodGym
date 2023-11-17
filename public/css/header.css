@@ -168,6 +168,25 @@
 /* -----------------------------MEDIA QUERIE DESKTOP--------------------------- */
 
 @media(min-width: 1024px){
+    .nav-header-home {
+        margin-right: 8%;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        border-top: 3px solid var(--color-rojo);
+        padding-top: 3%;
+    }
+    .titulo-home {
+        margin-left: 18%;
+        width: 50%;
+        margin-top: 2%;
+        font-size: 50px;
+    }
+    .secciones {
+        display: flex;
+        gap: 71px;
+        margin-bottom: 10px;
+    }
     .seccion-header {
         width: 75%;
         display: flex;
@@ -195,24 +214,24 @@
 
     .secciones-header{
         color: var(--color-crema);
-        font-size: 23px;
+        font-size: 40px;
         font-weight: 600; 
     }
 
     .fa-solid.fa-house{
         color: var(--color-crema);
-        font-size: 23px;
-        padding: 5px;
+        font-size: 35px;
+        padding: 7px;
     }
     .fa-solid.fa-dumbbell{
         color: var(--color-crema);
-        font-size: 23px;
-        padding: 5px;
+        font-size: 35px;
+        padding: 7px;
     }
     .fa-regular.fa-address-card{
         color: var(--color-crema);
-        font-size: 23px;
-        padding: 5px;
+        font-size: 35px;
+        padding: 7px;
     }
 
     .slogan-main {
@@ -223,4 +242,31 @@
         text-align: center;
         color: var(--color-crema);
     }  
+    .icono-login-header {
+        font-size: 20px;
+        border-radius: 19px;
+        padding: 10px;
+        background-color: var(--color-rojo);
+        width: 40px;
+        height: 40px;
+    }
+    .login{
+        margin-right: 1%;
+        font-size: 15px;
+    }
+
+    .registrado {
+        font-size: 15px;
+        text-align: center;
+        padding: 7px;
+        height: 32px;
+        width: 104px;
+        border-radius: 11px;
+        color: #fff;
+        background-color: var(--color-rojo);
+    }
+    .titulo-home {
+        margin-top: 4%;
+
+    }
 }

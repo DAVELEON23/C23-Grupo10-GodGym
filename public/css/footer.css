@@ -116,29 +116,28 @@
 
     }
 
-    .seccion-home-footer{
+    .seccion-home-footer {
         color: black;
-        font-size: 22px;
+        font-size: 34px;
         font-weight: bolder;
         margin-top: 25px;
-       
     }
 
     .fa-solid.fa-house.footer{
         color: black;
-        font-size: 20px;
+        font-size: 30px;
         padding: 5px;
         font-weight: 600;
     }
     .fa-solid.fa-dumbbell.footer{
         color: black;
-        font-size: 20px;
-        padding: 5px;
+        font-size: 30px;
+        padding: 6px;
         font-weight: 600;
     }
     .fa-regular.fa-address-card.footer{
         color: black;
-        font-size: 20px;
+        font-size: 30px;
         padding: 5px;
         font-weight: 600;
     }
