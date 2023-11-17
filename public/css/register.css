@@ -1,0 +1,73 @@
+.body-register{
+    
+}
+.main-register{
+    background-color: var(--color-azul);
+    color: #fff;
+}
+.titulo-register{
+    text-align: center;
+   
+    /* color:black;*/
+}
+.formulario-register{
+    width: 80%;
+    padding-bottom: 4%;
+    margin: 0 auto;
+   
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid blue;
+    
+    background-image: url('/img/background.jpg.png');
+    background-position: center;
+}
+.input-registe, .select-register{
+    border-radius: 5px;
+    padding: 3% 0;
+}
+.label-register, .textarea-register{
+    margin: 2% 0 1%;
+    padding: 3% 0;
+}
+.input-registe{
+    width: 80%;
+    
+}
+.textarea-register{
+    padding-bottom: 4%;
+    border-radius: 10px 0 10px 0;
+}
+.input-registe, .select-register, .textarea-register{
+    border: 2px solid red;
+}
+.botones-registro{
+    margin: 2% 0;
+    width: 100%;
+    height: 100px;
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+   ;
+}
+.botones-registro button{
+    margin: 2% 0;
+    width:60%;
+    padding: 2% 0;
+    border-radius: 5px;
+    display: block;
+  
+}
+
+/* TABLET----------------------------------------------------------*/
+@media (min-width: 768px){
+    .input-registe{
+        width: 50%;
+        height: 40px;
+    }
+
+}
