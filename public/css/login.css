@@ -3,9 +3,11 @@
     justify-content: space-around;
     padding-bottom: 9%;
     padding-top: 6%;
+    flex-direction: column;
     display: flex;
     align-items: center;
 }
+
 .body-login{
     background-image: url('/img/background.jpg.png');
 }
@@ -121,6 +123,15 @@
 }
 
 @media (min-width: 768px) {
+    .footer-login {
+        background-color: #ab222b;
+        justify-content: space-around;
+        padding-bottom: 2%;
+        padding-top: 4%;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+    }
     .footer-login {
         background-color: #ab222b;
         justify-content: space-around;

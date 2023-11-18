@@ -81,15 +81,6 @@
     .ultima-sec-footer{
         margin: 0px;
     }
-    .secciones-header:hover{
-        transition-duration: 1s;
-        color: var(--color-rojo)
-    }
-    .boton-inspeccion:hover{
-        transition-duration: 1s;
-        box-shadow: 0px 0px 10px rgb(201, 9, 9);
-
-    }
     .secciones-footer ul{
         gap: 8px;
         display: flex;
