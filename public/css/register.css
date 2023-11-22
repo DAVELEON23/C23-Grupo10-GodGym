@@ -1,0 +1,138 @@
+
+
+
+/*seccion del main-------------------------------------*/
+.main-register{
+    background-color: var(--color-azul);
+    color: #fff;
+}
+
+.formulario-register{
+    width: 80%;
+    padding-bottom: 4%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    border:1px solid var(--color-rojo);
+    background-image: url('/img/background.jpg.png');
+    background-position: center;
+}
+.pase-prueba{
+    font-size: 1rem;
+    text-align: center;
+    padding: 1% ;
+}
+.pase-prueba:hover{
+    color: var(--color-amarillo);
+    transition: all 0.5s;
+}
+.input-register, .select-register{
+    border-radius: 5px;
+    padding: 2% 0;
+}
+.label-register, .textarea-register{
+    margin: 2% 0 1%;
+    padding: 3% 0;
+}
+.input-register{
+    width: 80%;
+    
+}
+.textarea-register{
+    padding-bottom: 4%;
+    border-radius: 10px 0 10px 0;
+}
+.input-register, .select-register, .textarea-register{
+    border: 2px solid red;
+    cursor: pointer;
+}
+.textarea-register:hover{
+    box-shadow: 5px 5px 5px 2px var(--color-amarillo);
+    transition: all 0.8s;
+}
+.input-register:hover{
+    box-shadow: 5px 5px 5px 2px var(--color-amarillo);
+    transition: all 0.8s;
+}
+.select-register:hover{
+    box-shadow: 5px 5px 5px 2px var(--color-amarillo);
+    transition: all 0.8s;
+}
+
+.botones-registro{
+    margin: 2% 0;
+    width: 100%;
+   /* height: 100px;*/
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+   ;
+}
+.boton-register{
+    margin: 2% 0;
+    width:60%;
+    padding: 2% 0;
+    border-radius: 5px;
+    display: block;
+    font-size: 1rem;
+}
+.boton-register:hover{
+    background: var(--color-amarillo);
+    box-shadow: 5px 5px 5px 2px var(--color-amarillo);
+    transition: all 0.8s;
+}
+
+/* TABLET----------------------------------------------------------*/
+@media (min-width: 768px){
+    .pase-prueba{
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 3% ;
+    }
+    .input-register, .label-register, .select-register{
+        font-size: 1.2rem;
+    }
+    .input-register{
+        width: 50%;
+        height: 40px;
+    }
+    .botones-registro{
+        margin: 2% 0;
+        width: 100%;
+       /* height: 100px;*/
+        padding: 2% 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .boton-register{
+        margin: 2% 0;
+        width:25%;
+        padding: 2% 0;
+        border-radius: 5px;
+        display: block;
+        font-size: 1.3rem;
+    }
+    .textarea-register{
+        width: 60%;   
+    }
+
+}
+/*DESCKKOP----------------------------------------------------*/
+@media (min-width: 1024px){
+    .titulo-form-register{
+        display: initial;
+        padding: 3% 0;
+        font-size: 2rem;
+    }
+    .pase-prueba:hover{
+        transform: scale(1.2);
+        color: var(--color-amarillo);
+        transition: all 0.5s;
+    }
+}

@@ -1,0 +1,121 @@
+
+
+.info-carrito{
+    padding: 2%;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+
+}
+.actividades{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 15%;
+    
+
+}
+
+.actividades article{
+    padding: 2%;
+    font-size: 11px;
+    color: #fff;
+    font-weight: bold;
+}
+.pagos{
+    width: 50%;
+    padding: 2%;
+}
+
+.check{
+    margin-right: 5%;
+}
+
+.subtotal{
+    padding: 2%;
+    text-align: justify;
+    font-size: 15px;
+    color: #fff;
+    border-top: 3px solid #fff;
+    font-weight: bold;
+    width: 90%;
+    margin: auto;
+}
+.caja-1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.boton-finalizar-compra{
+    background-color: var(--color-verde);
+    font-weight: bold;
+    color: #fff;
+    padding: 1%;
+    margin-bottom: 3%;
+    border-radius: 11px;
+}
+
+
+
+
+
+/* ---------------MEDIA QUERIES TABLET------------------ */
+
+@media(min-width: 768px){
+
+    .boton-finalizar-compra {
+        background-color: var(--color-verde);
+        font-weight: bold;
+        color: #fff;
+        padding: 1%;
+        margin-bottom: 1%;
+        border-radius: 11px;
+}
+.actividades article {
+    padding: 1%;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+.actividades {
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.subtotal{
+    font-size: 20px;
+}
+.info-carrito{
+    font-size: 20px;
+}
+
+}
+
+
+/* ---------------MEDIA QUERIES DESKTOP------------------ */
+
+@media(min-width: 1024px){
+
+    .info-carrito{
+        font-size: 25px;
+    }
+
+.actividades article {
+    padding: 2%;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+.actividades {
+    left: 23%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.subtotal{
+    font-size: 25px;
+}
+
+}
