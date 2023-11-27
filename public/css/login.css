@@ -23,7 +23,7 @@
     height: 288px;
     flex-direction: column;
     display: flex;
-    background-color: #fff7d2d2;
+    background-color: #fff7d29f;
     position: relative;
 }
 
@@ -89,7 +89,7 @@
     margin-left: 12%;
     border-radius: 50px;
     width: 39%;
-    background-color: #fff7d2b6;
+    background-color: #fff7d29f;
 }
 .no-cuenta{
       font-size: 12px;
@@ -102,7 +102,7 @@
     margin-left: 2%;
     border-radius: 50px;
     width: 39%;
-    background-color: #fff7d2b6;
+    background-color: #fff7d29f;
 }
 
 .logueatecon{
@@ -124,21 +124,19 @@
 
 @media (min-width: 768px) {
     .footer-login {
+        flex-direction: row;
         background-color: #ab222b;
         justify-content: space-around;
-        padding-bottom: 2%;
+        padding-bottom: 3%;
         padding-top: 4%;
-        flex-direction: row;
         display: flex;
         align-items: center;
     }
-    .footer-login {
-        background-color: #ab222b;
-        justify-content: space-around;
-        padding-bottom: 2%;
-        padding-top: 4%;
+    .seccion-login {
+        margin-left: 3%;
         display: flex;
-        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 16px;
     }
     .formulario-login{
         width: 35%;
@@ -186,32 +184,37 @@
     }
     
     .caja-logueado-segunda {
-        margin-top: 10px;
-        margin-left: 2%;
+        margin: -32px -29px;
+        width: 70%;
+        height: 40px;
         border-radius: 50px;
-        width: 17%;
-        background-color: #fff7d2b6;
+        background-color: #fff7d29f;
     }
     .caja-logueado-cuenta {
-        margin-top: 10px;
+        margin: auto -33px;
+        width: 71%;
         align-items: center;
-        flex-direction: column;
-        display: flex;
-        margin-left: 33%;
-        border-radius: 50px;
-        width: 17%;
-        background-color: #fff7d2b6;
+        background-color: #fff7d29f;
     }
     .section-debajo-logueado {
-        margin-bottom: 2%;
-        margin-top: -4%;
-        display: flex;
+        width: 41%;
+        flex-wrap: wrap;
     }
     .caja-logueado-login {
         display: none;
     }
     .caja-logueado-registro-login{
         display: none;
+    }
+    .logo-google {
+        color: #000;
+        position: relative;
+        left: 47%;
+    }
+    .logo-face {
+        color: #000;
+        position: relative;
+        left: 39%;
     }
 }
 
@@ -232,8 +235,14 @@
         height: 500px;
         flex-direction: column;
         display: flex;
-        background-color: #fff7d2d2;
+        background-color: #fff7d29f;
         position: relative;
+    }
+    .seccion-login {
+        margin-left: 11%;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 139px;
     }
 
     .login-user {
@@ -261,12 +270,15 @@
             font-size: 23px;
             top: 23%;
         }
-    .caja-logueado-cuenta{
-        width: 16%;
-    }
-    .caja-logueado-segunda{
-        width: 16%;
-    }
+        .caja-logueado-cuenta {
+            height: 51px;
+            width: 35%;
+        }
+        .caja-logueado-segunda {
+            margin-bottom: 160px;
+            height: 54px;
+            width: 34%;
+        }
     .logueatecon {
         font-size: 16px;
         text-align: center;
@@ -289,10 +301,11 @@
         left: 38%;
     }
     .section-debajo-logueado {
-        margin-bottom: 14%;
+        margin-top: 9%;
+        width: 44%;
+        flex-direction: column;
+        margin-bottom: 5%;
         display: flex;
-       
-        margin-top: 1%;
     }
     .caja-boton-logueado {
         color: #E9A103;
