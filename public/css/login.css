@@ -18,13 +18,21 @@
 .formulario-login {
     border-radius: 43px;
     align-items: center;
-    margin: 37px auto;
+    margin: 17px auto;
     width: 82%;
     height: 288px;
     flex-direction: column;
     display: flex;
     background-color: #fff7d29f;
     position: relative;
+}
+.titulo-formulario-login{
+    text-decoration: underline 2px;
+        padding-top: 8%;
+        font-size: 22px;
+        color: #fff;
+        text-align: center;
+
 }
 
 .input-user {
@@ -93,8 +101,12 @@
 }
 .no-cuenta{
       font-size: 12px;
+      font-weight: bold;
 }
 .registrate-caja{
+    font-weight: bold;
+    color: #0B58CB;
+    text-decoration: underline;
     margin-bottom: 7px;
     font-size: 12px;
 }
@@ -106,6 +118,7 @@
 }
 
 .logueatecon{
+    font-weight: bold;
     font-size: 12px;
     text-align: center;
 }
@@ -133,6 +146,7 @@
         align-items: center;
     }
     .seccion-login {
+        margin-bottom: 5%;
         margin-left: 3%;
         display: flex;
         padding-top: 20px;
@@ -140,6 +154,13 @@
     }
     .formulario-login{
         width: 35%;
+    }
+    .titulo-formulario-login {
+        text-decoration: underline 2px;
+        padding-top: 8%;
+        font-size: 26px;
+        color: #fff;
+        text-align: center;
     }
     .login-user {
         bottom: 82%;
@@ -229,9 +250,9 @@
         align-items: center;
     }
     .formulario-login {
-        margin-top: 6%;
+        margin-top: 4%;
         border-radius: 43px;
-        width: 37%;
+        width: 36%;
         height: 500px;
         flex-direction: column;
         display: flex;
@@ -243,6 +264,13 @@
         display: flex;
         padding-top: 20px;
         padding-bottom: 139px;
+    }
+    .titulo-formulario-login {
+        text-decoration: underline 2px;
+        padding-top: 8%;
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
     }
 
     .login-user {
@@ -291,11 +319,11 @@
         font-size: 15px;
     }
     .logo-google{
-        font-size: 19px;
+        font-size: 25px;
     }
     .logo-face {
         margin-top: 5px;
-        font-size: 19px;
+        font-size: 25px;
         color: #000;
         position: relative;
         left: 38%;
