@@ -8,7 +8,7 @@ const productsController = {
       detail: (req, res) => {
         const {id} = req.params;
         const product = products.find(producto => producto.id == id);
-        res.render('products/detail', { title: product.nombre, products });
+        res.render('products/detail', { title: product.nombre, product });
     },
 }
     
