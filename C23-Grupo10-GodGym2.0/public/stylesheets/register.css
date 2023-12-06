@@ -2,11 +2,11 @@
 
 
 /*seccion del main-------------------------------------*/
-.main-register{
+.main-register {
+    padding: 5% 0;
     background-color: var(--color-azul);
     color: #fff;
 }
-
 .formulario-register{
     width: 80%;
     padding-bottom: 4%;
