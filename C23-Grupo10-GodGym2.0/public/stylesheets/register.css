@@ -2,11 +2,11 @@
 
 
 /*seccion del main-------------------------------------*/
-.main-register{
+.main-register {
+    padding: 5% 0;
     background-color: var(--color-azul);
     color: #fff;
 }
-
 .formulario-register{
     width: 80%;
     padding-bottom: 4%;
@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     align-items: center;
     border:1px solid var(--color-rojo);
-    background-image: url('/img/background.jpg.png');
+    background-image: url('/images/background.jpg.png');
     background-position: center;
 }
 .pase-prueba{

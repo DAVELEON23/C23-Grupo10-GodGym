@@ -4,7 +4,8 @@
     <main class="body-detail">
         
         <h3 class="slogan-main-detalle">BE SMART - BE STRONG - BE FAST</h3>
-
+        
+                <% products.forEach(product =>{ %>
             <h2 class="nombre-producto"><%= product.nombre %></h2>
         <article class="articulo-producto">
             <img src="/images/<%= product.imagen %>"  class="detalleProduct-imagen"> 
@@ -20,7 +21,7 @@
         </div>
                 </div>
         </article>
-        
+        <% })  %>
 
     </main>
     <%- include("../partials/footerdetail.ejs") %>
