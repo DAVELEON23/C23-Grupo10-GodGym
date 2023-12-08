@@ -16,6 +16,9 @@ const productsController = {
     productCart: (req, res) => {
       res.render('products/cart', { title: 'GOD GYM', products });
     },
+    dashboard:(req, res) => {
+      res.render('products/dashboard', { title: 'dashboard', products });
+    },
 }
     
-module.exports = productsController
+module.exports = productsController;
