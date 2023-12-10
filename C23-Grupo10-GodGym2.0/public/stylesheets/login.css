@@ -1,0 +1,357 @@
+.footer-login {
+    background-color: #ab222b;
+    justify-content: space-around;
+    padding-bottom: 9%;
+    padding-top: 6%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.body-login{
+    background-image: url('/img/background.jpg.png');
+}
+.seccion-login{
+    padding-top: 20px;
+    padding-bottom: 16px;
+}
+.formulario-login {
+    border-radius: 43px;
+    align-items: center;
+    margin: 17px auto;
+    width: 82%;
+    height: 288px;
+    flex-direction: column;
+    display: flex;
+    background-color: #fff7d29f;
+    position: relative;
+}
+.titulo-formulario-login{
+    text-decoration: underline 2px;
+        padding-top: 8%;
+        font-size: 22px;
+        color: #fff;
+        text-align: center;
+
+}
+
+.input-user {
+    font-size: 12px;
+    border: 1px solid white;
+    height: 21%;
+    margin-top: 66%;
+}
+.input-contraseña {
+    font-size: 12px;
+    border: 1px solid white;
+    height: 75%;
+    margin-top: 15px;
+}
+.input-recordamelo {
+    font-size: 11px;
+    margin-top: 23%;
+    margin-left: -48%;
+}
+
+.login-user{
+    left: 46%;
+    margin-top: 5%;
+    font-size: 35px;
+    position: absolute
+}
+
+.login-debajodel-icono{
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 21%;
+}
+
+
+.caja-boton-logueado{
+    margin-top: 35px;
+
+}
+.boton-login-main{
+    border: #E9A103;
+    background-color: #E9A103;
+    width: 88px;
+}
+
+.boton-login-main:hover{
+    box-shadow: 0px 0px 12px  #E9A103;
+}
+.input-user:hover{
+    box-shadow: 0px 0px 12px black
+}
+.input-contraseña:hover{
+    box-shadow: 0px 0px 10px black
+}
+.section-debajo-logueado {
+    display: flex;
+}
+.caja-logueado-cuenta {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-left: 12%;
+    border-radius: 50px;
+    width: 39%;
+    background-color: #fff7d29f;
+}
+.no-cuenta{
+      font-size: 12px;
+      font-weight: bold;
+}
+.registrate-caja{
+    font-weight: bold;
+    color: #0B58CB;
+    text-decoration: underline;
+    margin-bottom: 7px;
+    font-size: 12px;
+}
+.caja-logueado-segunda{
+    margin-left: 2%;
+    border-radius: 50px;
+    width: 39%;
+    background-color: #fff7d29f;
+}
+
+.logueatecon{
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}
+
+.logo-face{
+    color: #000;
+    position: relative;
+    left: 31%;
+}
+
+.logo-google{
+    color: #000;
+    position: relative;
+    left: 41%;
+}
+
+@media (min-width: 768px) {
+    .footer-login {
+        flex-direction: row;
+        background-color: #ab222b;
+        justify-content: space-around;
+        padding-bottom: 3%;
+        padding-top: 4%;
+        display: flex;
+        align-items: center;
+    }
+    .seccion-login {
+        margin-bottom: 5%;
+        margin-left: 3%;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 16px;
+    }
+    .formulario-login{
+        width: 35%;
+    }
+    .titulo-formulario-login {
+        text-decoration: underline 2px;
+        padding-top: 8%;
+        font-size: 26px;
+        color: #fff;
+        text-align: center;
+    }
+    .login-user {
+        bottom: 82%;
+        left: 45%;
+        margin-top: 5%;
+        font-size: 35px;
+        position: absolute;
+    }
+    .input-user {
+        border: 1px solid white;
+        height: 19%;
+        text-align: center;
+        margin-left: -7%;
+        width: 117%;
+        margin-top: 55%;
+    }
+    .icono-user-input {
+        left: -2%;
+        position: relative;
+        top: 88%;
+    }
+    .input-contraseña {
+        border: 1px solid white;
+    height: 58%;
+        text-align: center;
+        margin-left: -7%;
+        width: 117%;
+        margin-top: 5px;
+    }
+    .icono-candado-input {
+        left: -3%;
+        position: relative;
+        top: 66%;
+    }
+    .input-recordamelo {
+        font-size: 10px;
+        margin-top: 23%;
+        margin-left: -72%;
+    }
+    .caja-boton-logueado {
+        width: 88px;
+    }
+    
+    .caja-logueado-segunda {
+        margin: -32px -29px;
+        width: 70%;
+        height: 40px;
+        border-radius: 50px;
+        background-color: #fff7d29f;
+    }
+    .caja-logueado-cuenta {
+        margin: auto -33px;
+        width: 71%;
+        align-items: center;
+        background-color: #fff7d29f;
+    }
+    .section-debajo-logueado {
+        width: 41%;
+        flex-wrap: wrap;
+    }
+    .caja-logueado-login {
+        display: none;
+    }
+    .caja-logueado-registro-login{
+        display: none;
+    }
+    .logo-google {
+        color: #000;
+        position: relative;
+        left: 47%;
+    }
+    .logo-face {
+        color: #000;
+        position: relative;
+        left: 39%;
+    }
+}
+
+
+@media (min-width: 1024px){
+    .footer-login {
+        background-color: #ab222b;
+        justify-content: space-around;
+        padding-bottom: 2%;
+        padding-top: 4%;
+        display: flex;
+        align-items: center;
+    }
+    .formulario-login {
+        margin-top: 4%;
+        border-radius: 43px;
+        width: 36%;
+        height: 500px;
+        flex-direction: column;
+        display: flex;
+        background-color: #fff7d29f;
+        position: relative;
+    }
+    .seccion-login {
+        margin-left: 11%;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 139px;
+    }
+    .titulo-formulario-login {
+        text-decoration: underline 2px;
+        padding-top: 8%;
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .login-user {
+        font-size: 56px;
+        left: 46%;
+        top: 3%;
+        position: absolute;
+    }
+        
+        .input-user {
+            font-size: 23px;
+        }
+        .caja-user{
+            margin-top: 30px;
+        }
+        .input-contraseña {
+            font-size: 23px;
+        }
+        .input-recordamelo {
+            font-size: 16px;
+            margin-top: 27%;
+            margin-left: -97%;
+        }
+        .login-debajodel-icono {
+            font-size: 23px;
+            top: 23%;
+        }
+        .caja-logueado-cuenta {
+            height: 51px;
+            width: 35%;
+        }
+        .caja-logueado-segunda {
+            margin-bottom: 160px;
+            height: 54px;
+            width: 34%;
+        }
+    .logueatecon {
+        font-size: 16px;
+        text-align: center;
+    }
+    .no-cuenta {
+        font-size: 17px;
+    }
+    .registrate-caja {
+        margin-bottom: 7px;
+        font-size: 15px;
+    }
+    .logo-google{
+        font-size: 25px;
+    }
+    .logo-face {
+        margin-top: 5px;
+        font-size: 25px;
+        color: #000;
+        position: relative;
+        left: 38%;
+    }
+    .section-debajo-logueado {
+        margin-top: 9%;
+        width: 44%;
+        flex-direction: column;
+        margin-bottom: 5%;
+        display: flex;
+    }
+    .caja-boton-logueado {
+        color: #E9A103;
+        margin-top: 78px;
+    }
+    .boton-login-main {
+        font-size: 22px;
+        border: #E9A103;
+        background-color: #E9A103;
+        width: 91px;
+    }
+    .icono-user-input {
+        font-size: 20px;
+        top: 91%;
+    }
+    .icono-candado-input {
+        font-size: 20px;
+        left: -3%;
+        top: 59%;
+    }
+}

@@ -1,0 +1,125 @@
+.body-detail{
+    background-image: url('/images/background.jpg.png');
+    background-position: center;
+    background-size: 90%;
+    
+}
+/*FORMULARIO------------------------------*/
+.form-producto{
+    width: 90%;
+    padding: 4% 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    border: 1px solid yellow;*/
+}
+label{
+    color: #fff;
+}
+/* DIV SELECCION DE IMAGEN--------------------------*/
+.form-producto-imagen {
+    text-align: center;
+    border-radius: 40px;
+    width: 95%;
+    /*border: 1px solid rgb(17, 0, 255);*/
+}
+.form-imagen{
+    border-radius: 40px;
+    width: 75%;
+    margin: 2% 0;
+}
+.form-producto-imagen input{
+    display: contents;
+    margin: 2% 0;
+}
+/* DIV DESCRIPCION DEL PRODUCTO------------------------*/
+
+.form-descripcion-producto, .horario-producto{
+    text-align: center;
+    padding-bottom: 5%;
+    margin: 3%;
+    width: 95%;
+    border-radius: 15px;
+    background-color: rgb(166 165 165 / 30%);
+   /* border: 1px solid rgb(0, 255, 0);*/
+}
+.form-descripcion-producto textarea{
+    margin: 3% 0;
+    width: 90%;
+
+}
+/* DIV HORARIOS DEL PRODUCTO----------------------------*/
+.textarea-horario{
+    margin: 3% 0;
+    width: 90%;
+   /* border: 1px solid rgb(140, 0, 255);*/
+}
+/* DIV PRECIO PRODUCTO-----------------------------------*/
+.form-precio-producto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    align-items: center;
+    width: 95%;
+    padding-bottom: 5%;
+    margin: 3%;
+    background-color: rgb(166 165 165 / 30%);
+   /*border: 1px solid rgb(255, 72, 0); */
+}
+.form-precio-producto input{
+    margin: 3% 0;
+    width: 90%;
+   /* height: 30%;*/
+}
+/*|||||||||| MEDIA QUERIE TABLET ||||||||||||||||||||||||||||||||||*/
+@media(min-width: 768px){
+
+    .form-imagen{
+        width: 80%;
+    }
+    .label-seleccion-imagen,
+    .label-form-descripcion,
+    .label-form-horario,
+    .label-form-precio
+    {
+        font-size: 2rem;
+    }
+    .input-form-precio{
+        height: 40px;
+    }
+}
+
+/*|||||||||| MEDIA QUERIE LAPTOP|||||||||||||||||||||||||||||||||*/
+@media(min-width: 1024px){
+    .form-producto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .form-producto-imagen{
+       
+        width: 45%;
+    }
+    .form-descripcion-producto,
+    .horario-producto,
+    .form-precio-producto
+    {
+        width: 44%;
+    }
+    
+}
+
+
+

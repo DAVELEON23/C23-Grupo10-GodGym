@@ -1,0 +1,276 @@
+.header-home{
+    background-color: var(--color-azul);
+    color: var(--color-crema);
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.seccion-header {
+    height: 2%;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-header-home{
+    display: none;
+}
+.nav-registros{
+    display: none;
+}
+.logo{
+    width: 35%;
+    
+}
+.titulo-home{
+    font-size: 25px;
+    width: 60%;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 6%;
+}
+.fa-bars{
+    margin: 10px 0;
+    width: 30px;
+    background-color: var(--color-rojo);
+    color: black;
+    padding: 7px;
+    text-align: center;
+    height: 30px;
+    border-radius: 15%
+}
+
+.boton-hamburguesa{
+    margin-left: 30%;
+    margin-top: 10%;
+}
+.slogan-main {
+    width: 100%;
+    text-decoration: underline 3px;
+    margin-top: 2%;
+    font-size: 120%;
+    text-align: center;
+    color: var(--color-crema);
+}  
+
+
+/* -------------------------------------header media queries de tablet---------------------------------*/
+
+@media (min-width: 768px){
+    .secciones-header:hover{
+        transition-duration: 1s;
+        color: var(--color-rojo)
+    }
+    main article img {
+        height: 60px;
+    }
+    .titulo-home {
+        width: 50%;
+        margin-top: 2%;
+        font-size: 35px;
+    }
+    .seccion-header {
+        width: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+    }
+    .nav-header-home{
+        display: flex;
+        justify-content: space-between;
+        border-top: 3px solid var(--color-rojo);
+        padding-top: 3%;
+        
+    }
+    .nav-header-home ul{
+        display: flex;
+        gap: 50px;
+        margin-bottom: 10px;
+    }
+
+    .nav-header-home li{
+        margin: 0 5px;
+        padding-top: 10px;
+    }
+    .secciones-header{
+        color: var(--color-crema);
+        font-size: 16px;
+        font-weight: 600;
+        
+    }
+    .fa-solid.fa-house{
+        color: var(--color-crema);
+        font-size: 15px;
+        padding: 5px;
+    }
+    .fa-solid.fa-dumbbell{
+        color: var(--color-crema);
+        font-size: 15px;
+        padding: 5px;
+    }
+    .fa-regular.fa-address-card{
+        color: var(--color-crema);
+        font-size: 15px;
+        padding: 5px;
+    }
+    .nav-registros {
+        display: flex;
+        gap: 20px;
+        width: 30%;
+        padding-bottom: 1%;
+    }
+    .icono-login-header {
+        border-radius: 13px;
+        padding: 6px;
+        background-color: var(--color-rojo);
+        width: 27px;
+        height: 27px;
+    }
+    .login{
+        color: #fff;
+        font-size: 10px
+    }
+    .boton-login{
+        color: #fff;
+    }
+    .registrado {
+        font-size: 13px;
+        text-align: center;
+        padding: 3px;
+        height: 25px;
+        width: 96px;
+        border-radius: 9px;
+        color: #fff;
+        background-color: var(--color-rojo);
+    }
+
+    .logo{
+        width: 23%;
+        
+    }
+    .boton-hamburguesa{
+        display: none;
+    }
+
+    .caja-logueado{
+        margin-top: 16%;
+    }
+    .caja-logueado-registro{
+        margin-top: 17%;
+    }
+    .slogan-main {
+        width: 100%;
+        text-decoration: underline 3px;
+        margin-top: 2%;
+        font-size: 120%;
+        text-align: center;
+        color: var(--color-crema);
+    }  
+}
+
+
+/* -----------------------------MEDIA QUERIE DESKTOP--------------------------- */
+
+@media(min-width: 1024px){
+    .nav-header-home {
+        margin-right: 8%;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        border-top: 3px solid var(--color-rojo);
+        padding-top: 3%;
+    }
+    .titulo-home {
+        margin-left: 18%;
+        width: 50%;
+        margin-top: 2%;
+        font-size: 50px;
+    }
+    .secciones {
+        display: flex;
+        gap: 71px;
+        margin-bottom: 10px;
+    }
+    .seccion-header {
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    .nav-header-home{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        border-top: 3px solid var(--color-rojo);
+        padding-top: 3%;
+        
+    }
+
+    .nav-registros {
+        display: flex;
+        gap: 20px;
+        width: 30%;
+        padding-bottom: 1%;
+        justify-content: center;
+    }
+
+    .secciones-header{
+        color: var(--color-crema);
+        font-size: 40px;
+        font-weight: 600; 
+    }
+
+    .fa-solid.fa-house{
+        color: var(--color-crema);
+        font-size: 35px;
+        padding: 7px;
+    }
+    .fa-solid.fa-dumbbell{
+        color: var(--color-crema);
+        font-size: 35px;
+        padding: 7px;
+    }
+    .fa-regular.fa-address-card{
+        color: var(--color-crema);
+        font-size: 35px;
+        padding: 7px;
+    }
+
+    .slogan-main {
+        width: 100%;
+        text-decoration: underline 3px;
+        margin-top: 2%;
+        font-size: 160%;
+        text-align: center;
+        color: var(--color-crema);
+    }  
+    .icono-login-header {
+        font-size: 20px;
+        border-radius: 19px;
+        padding: 10px;
+        background-color: var(--color-rojo);
+        width: 40px;
+        height: 40px;
+    }
+    .login{
+        margin-right: 1%;
+        font-size: 15px;
+    }
+
+    .registrado {
+        font-size: 15px;
+        text-align: center;
+        padding: 7px;
+        height: 32px;
+        width: 104px;
+        border-radius: 11px;
+        color: #fff;
+        background-color: var(--color-rojo);
+    }
+    .titulo-home {
+        margin-top: 4%;
+
+    }
+}

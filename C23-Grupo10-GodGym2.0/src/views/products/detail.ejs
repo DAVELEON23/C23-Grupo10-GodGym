@@ -1,0 +1,28 @@
+<%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main class="body-detail">
+        
+        <h3 class="slogan-main-detalle">BE SMART - BE STRONG - BE FAST</h3>
+
+            <h2 class="nombre-producto"><%= product.nombre %></h2>
+        <article class="articulo-producto">
+            <img src="/images/<%= product.imagen %>"  class="detalleProduct-imagen"> 
+            <div class="caja-producto">
+            <p class="info-producto"><%= product.informacion %></p>
+                
+                <p class="horarios-producto"><%= product.horario %></p>
+            <div class="seccion-tablet-info">
+                    <p class="precio-producto"><%= product.precio %></p>
+                <div class="caja-boton-carrito">
+                    <a href="/products/productCart" class="boton-carrito">AGREGAR AL CARRITO</a>
+                </div>
+            </div>
+           </div>
+        </article>
+        
+
+    </main>
+    <%- include("../partials/footerdetail.ejs") %>
+</body>
+</html>

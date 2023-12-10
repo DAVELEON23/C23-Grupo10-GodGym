@@ -1,0 +1,39 @@
+<%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main class="body-detail">
+        <h3 class="slogan-main-detalle">CREAR PRODUCTO</h3>
+        <form action="/prooductCreate" method="post" class="form-producto">
+
+        <div class="form-producto-imagen">
+            <label class="label-seleccion-imagen" for="imagen">Seleccion de imagen</label>
+            <input class="" type="file" id="imagen" name="imagen" accept="image/*">
+            <img src="/images/default.webp"  class="form-imagen"> 
+        </div>
+                 
+         <div class="form-descripcion-producto">
+            <label class="label-form-descripcion" for="descripcion">Descripcion del producto</label>
+            <textarea class="" name="descripcion" id="descripcion" cols="" rows=""></textarea>
+         </div>
+
+         <div class="horario-producto">
+            <label class="label-form-horario" for="descripcion">horarios del producto</label>
+            <textarea class="textarea-horario" name="descripcion" id="descripcion" cols="" rows=""></textarea>
+         </div>
+
+         <div class="form-precio-producto">
+           <label class="label-form-precio" for="precio">Precio del producto</label>
+            <input class="input-form-precio" type="text" id="precio" name="precio">
+         </div>
+
+        
+           
+             
+   </form>
+
+        
+
+    </main>
+    <%- include("../partials/footerdetail.ejs") %>
+</body>
+</html>
