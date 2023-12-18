@@ -71,7 +71,11 @@ const productsController = {
     //metodo de eliminacion
     productDelete: (req,res)=>{
       const {id} = req.params;
-      const products = getJson("products");
+      const products = getJson();
+      const newList = products.filter(elemento => elemento.id != id)
+      const json = JSON.stringify(newList)
+      fs.writeFileSync(productsFilePath,json,'utf-8')
+      res.redirect('/products')
     }
   }
     
