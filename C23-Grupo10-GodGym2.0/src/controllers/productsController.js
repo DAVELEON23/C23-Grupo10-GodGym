@@ -1,18 +1,28 @@
 const fs = require("fs");
 const path = require("path");
-const json = fs.readFileSync(path.join(__dirname,"../database/products.json"),"utf-8")
-const products = JSON.parse(json);
+
+const productsFilePath = path.join(__dirname, '../database/products.json');
+
+const getJson = () =>{
+	const productsFilePath = path.join(__dirname, '../database/products.json');
+	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	return products
+}
 
 
 const productsController = {
-      detail: (req, res) => {
-        const {id} = req.params;
-        const product = products.find(producto => producto.id == id);
-        res.render('products/detail', { title: product.nombre, product });
-    },
-      actividades: (req, res) => {
-      res.render('products/actividades', { title: 'GOD GYM', products });
-    },
+  detail: (req, res) => {
+    const {id} = req.params;
+    const products = getJson()
+    const product = products.find(product => product.id == id);
+    res.render('products/detail', { title: product.nombre, product});
+  },
+
+    actividades: (req, res) => {
+    const {id} = req.params;
+  const products = getJson()
+  res.render('products', { title: 'GOD GYM', products });
+  },
     productCart: (req, res) => {
       res.render('products/cart', { title: 'GOD GYM', products });
     },

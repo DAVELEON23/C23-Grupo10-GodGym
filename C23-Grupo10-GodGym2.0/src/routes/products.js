@@ -7,7 +7,7 @@ const {detail,actividades, productCart,dashboard,edit,create,productCreateView} 
 
 router
 .get('/detail/:id', detail )
-.get('/actividades', actividades )
+.get('/', actividades )
 .get('/productCart', productCart)
 .get("/dashboard",dashboard)
 
