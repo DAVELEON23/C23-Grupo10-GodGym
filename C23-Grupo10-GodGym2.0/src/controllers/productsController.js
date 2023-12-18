@@ -21,15 +21,15 @@ const productsController = {
     },
     edit:(req, res) => {
       const {id} = req.params;
-      const produc = products.find(elemento => elemento.id == id );
+      const products = products.find(elemento => elemento.id == id );
       res.render('products/productEdit', { title: 'Editar', products });
     },
     create: (req,res)=>{
       const product = req.body 
       product.id = products[products.length-1].id +1;
       products.push(product);
-      const productjson = JSON.stringify(products);
-      fs.writeFileSync(path.join(__dirname,"../database/product.json"),productjson,"utf-8");
+      const productJson = JSON.stringify(products);
+      fs.writeFileSync(path.join(__dirname,"../database/product.json"),productJson,"utf-8");
       res.redirect("/products/dashboard")
   },
   productCreateView: (req,res)=>{
