@@ -26,22 +26,29 @@ const productsController = {
     },
 
     productCart: (req, res) => {
+      const {id} = req.params;
+		  const products = getJson()
       res.render('products/cart', { title: 'GOD GYM', products });
     },
 
     dashboard:(req, res) => {
+      const {id} = req.params;
+		  const products = getJson()
       res.render('products/dashboard', { title: 'dashboard', products });
     },
 
     // vista formulario de edicion
     productEditView:(req, res) => {
       const {id} = req.params;
-      const products = products.find(elemento => elemento.id == id );
-      res.render('products/productEdit', { title: 'Editar', products });
+		  const products = getJson()
+      const product = products.find(elemento => elemento.id == id );
+      res.render('products/productEdit', { title: 'Editar', product });
     },
 
     //metodo de edicion
     edit: (req,res) =>{
+      const {id} = req.params;
+		  const products = getJson()
 
     },
 
@@ -53,6 +60,7 @@ const productsController = {
     //metodo de creacion
     create: (req,res)=>{
     const product = req.body 
+    const products = getJson()
     product.id = products[products.length-1].id +1;
     products.push(product);
     const productJson = JSON.stringify(products);
@@ -62,7 +70,8 @@ const productsController = {
     
     //metodo de eliminacion
     productDelete: (req,res)=>{
-
+      const {id} = req.params;
+      const products = getJson("products");
     }
   }
     
