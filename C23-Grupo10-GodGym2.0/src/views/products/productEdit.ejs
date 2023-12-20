@@ -5,29 +5,36 @@
         
         <h3 class="slogan-main-detalle">EDITAR PRODUCTO</h3>
             
-        <form action="/products/edit<%= product.id %>?_method=PUT" method="post" class="form-producto">
+        <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="form-producto">
 
             <div class="form-producto-imagen">
-                <label class="label-seleccion-imagen" for="imagen">Seleccion de imagen</label>
+                <label class="label-seleccion-imagen" for="imagen">Seleccion de imagen
                 <input class="" type="file" id="imagen" name="imagen" accept="image/*">
-                <img src="/images/default.webp"  class="form-imagen"> 
+                <img src="/images/<%= product.imagen %>"  class="form-imagen" value="<%= product.imagen %>"> 
+            </label>
             </div>
+
+            <div class="form-precio-producto">
+                <label class="label-form-precio" for="name">Nombre del producto</label>
+                 <input class="input-form-precio" type="text" id="name" name="name" value="<%= product.nombre %>">
+              </div>
                      
              <div class="form-descripcion-producto">
                 <label class="label-form-descripcion" for="descripcion">Descripcion del producto</label>
-                <textarea class="" name="descripcion" id="descripcion" cols="" rows=""></textarea>
+                <textarea class="" name="descripcion" id="descripcion" cols="" rows="" value=""><%= product.informacion %></textarea>
              </div>
     
              <div class="horario-producto">
                 <label class="label-form-horario" for="descripcion">horarios del producto</label>
-                <textarea class="textarea-horario" name="descripcion" id="descripcion" cols="" rows=""></textarea>
+                <textarea class="textarea-horario" name="descripcion" id="descripcion" cols="" rows="" value=""><%= product.horario %></textarea>
              </div>
     
              <div class="form-precio-producto">
                <label class="label-form-precio" for="precio">Precio del producto</label>
-                <input class="input-form-precio" type="text" id="precio" name="precio">
+                <input class="input-form-precio" type="number" id="precio" name="precio" value="<%= product.precio %>">
              </div>
              
+             <button type="submit">guardar</button>
          </form>
 
     </main>

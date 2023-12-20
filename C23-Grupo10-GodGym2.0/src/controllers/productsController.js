@@ -47,24 +47,51 @@ const productsController = {
 
     //metodo de edicion
     edit: (req,res) =>{
+      const {nombre,imagen,informacion,horario,precio} = req.body;
       const {id} = req.params;
 		  const products = getJson()
-
+      const nuevoArray = products.map(product => {
+        if(product.id == id){
+          return{
+            id:+id,
+            nombre:nombre ? nombre : product.nombre,
+            imagen:imagen ? imagen : product.imagen,
+            horario:horario ? horario : product.horario,
+            informacion:informacion ? informacion : product.informacion, 
+            precio:+precio,
+          }
+        }
+        return product
+      })
+      const json = JSON.stringify(nuevoArray)
+		fs.writeFileSync(productsFilePath,json,"utf-8");
+		res.redirect(`/products/dashboard`);
     },
 
     // vista formulario de creacion
     productCreateView: (req,res)=>{
-    res.render("products/productCreate",{ title: "Crear"});
+      const product = req.body 
+    const products = getJson()
+    res.render("products/productCreate",{ title: "Crear",products});
     } ,
 
     //metodo de creacion
     create: (req,res)=>{
-    const product = req.body 
+    const {nombre,imagen,informacion,horario,precio} = req.body;
     const products = getJson()
-    product.id = products[products.length-1].id +1;
-    products.push(product);
+    const id = products[products.length -1].id +1 ;
+		const nuevoObj = {
+			id:+id,
+      nombre:nombre ? nombre : products.nombre,
+      imagen:imagen ? imagen : products.imagen,
+      horario:horario ? horario : products.horario,
+      informacion:informacion ? informacion : products.informacion, 
+      precio:+precio,
+		}
+    
+    products.push(nuevoObj);
     const productJson = JSON.stringify(products);
-    fs.writeFileSync(path.join(__dirname,"../database/product.json"),productJson,"utf-8");
+    fs.writeFileSync(path.join(__dirname,"../database/products.json"),productJson,"utf-8");
     res.redirect("/products/dashboard")
     } ,
     
@@ -75,7 +102,7 @@ const productsController = {
       const newList = products.filter(elemento => elemento.id !== +req.params.id);
       const json = JSON.stringify(newList);
       fs.writeFileSync(productsFilePath,json,'utf-8');
-      res.redirect('/products')
+      res.redirect('/products/dashboard')
     }
   }
     
