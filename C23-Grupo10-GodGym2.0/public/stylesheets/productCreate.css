@@ -13,17 +13,10 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2px;
-    margin-top: 20px;
-    text-align: center;
-    padding-bottom: 10px;
-    border: 1px solid yellow;*/
 }
-label{
+label {
+    font-weight: bold;
+    font-size: 19px;
     color: #fff;
 }
 /* DIV SELECCION DE IMAGEN--------------------------*/
@@ -51,7 +44,13 @@ label{
     width: 95%;
     border-radius: 15px;
     background-color: rgb(166 165 165 / 30%);
-   /* border: 1px solid rgb(0, 255, 0);*/
+   box-shadow: 0px 0px 10px rgb(166, 165, 165) ;
+}
+.form-imagen{
+   box-shadow: 0px 0px 30px rgb(166, 165, 165) ;
+}
+.form-precio-producto{
+    box-shadow: 0px 0px 10px rgb(166, 165, 165) ;
 }
 .form-descripcion-producto textarea{
     margin: 3% 0;
@@ -59,10 +58,12 @@ label{
 
 }
 /* DIV HORARIOS DEL PRODUCTO----------------------------*/
-.textarea-horario{
+.textarea-horario {
+    font-weight: bold;
+    font-size: 12px;
+    height: 24px;
     margin: 3% 0;
     width: 90%;
-   /* border: 1px solid rgb(140, 0, 255);*/
 }
 /* DIV PRECIO PRODUCTO-----------------------------------*/
 .form-precio-producto{
@@ -75,13 +76,37 @@ label{
     padding-bottom: 5%;
     margin: 3%;
     background-color: rgb(166 165 165 / 30%);
-   /*border: 1px solid rgb(255, 72, 0); */
+
 }
-.form-precio-producto input{
-    margin: 3% 0;
-    width: 90%;
-   /* height: 30%;*/
+.input-form-precio{
+    font-weight: bold;
+    margin-top: 2%;
+    font-size: 12px;
+    text-align: center;
+    width: 85%;
 }
+.input-form-descripcion{
+    font-weight: bold;
+    font-size: 10px;
+    width: 85%;
+    height: 19px;
+}
+
+.boton-create {
+    padding: 6px;
+    font-weight: bold;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 13px;
+    box-shadow: 0px 0px 20px #ff000094;
+}
+    .boton-create:hover{
+        transform: scale(0.95);
+    }
+    input:hover{
+        transform: scale(0.95);
+    }
+    
 /*|||||||||| MEDIA QUERIE TABLET ||||||||||||||||||||||||||||||||||*/
 @media(min-width: 768px){
 
@@ -94,11 +119,44 @@ label{
     .label-form-precio
     {
         font-size: 2rem;
+        font-weight: bold;
+    }
+    .form-precio-producto input {
+        font-weight: bold;
+        font-size: 21px;
+        margin: 3% 0;
+        width: 90%;
+        height: 38px;
+    }
+    
+    .input-form-descripcion{
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 24px;
+        height: 36px;
+        width: 85%;
+    }
+    .textarea-horario {
+        font-weight: bold;
+        font-size: 17px;
+        margin: 3% 0;
+        width: 90%;
     }
     .input-form-precio{
-        height: 40px;
+        text-align: center;
+        font-weight: bold;
+        FONT-SIZE: 17px;
+        }
+        .boton-create {
+            padding: 6px;
+            font-weight: bold;
+            background-color: #ff0000;
+            color: #ffffff;
+            font-size: 21px;
+            box-shadow: 0px 0px 20px #ff000094;
+        }
     }
-}
+
 
 /*|||||||||| MEDIA QUERIE LAPTOP|||||||||||||||||||||||||||||||||*/
 @media(min-width: 1024px){
@@ -118,8 +176,43 @@ label{
     {
         width: 44%;
     }
+    .form-precio-producto input {
+        font-weight: bold;
+        font-size: 21px;
+        margin: 3% 0;
+        width: 90%;
+        height: 44px;
+    }
     
+    .input-form-descripcion{
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 24px;
+        height: 44px;
+        width: 85%;
+    }
+    .textarea-horario {
+        font-weight: bold;
+        font-size: 17px;
+        margin: 3% 0;
+        width: 90%;
+        height: 44px;
+    }
+    .input-form-precio{
+        text-align: center;
+        font-weight: bold;
+        FONT-SIZE: 17px;
+        height: 44px;
+    }
+    .boton-create{
+        font-size: 35px;
+        margin-right: 20%;
+        margin-top: 5%;
+    }
 }
+
+    
+
 
 
 

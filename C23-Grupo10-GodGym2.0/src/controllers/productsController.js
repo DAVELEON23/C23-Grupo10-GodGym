@@ -82,10 +82,10 @@ const productsController = {
     const id = products[products.length -1].id +1 ;
 		const nuevoObj = {
 			id:+id,
-      nombre:nombre ? nombre : products.nombre,
-      imagen:imagen ? imagen : products.imagen,
-      horario:horario ? horario : products.horario,
-      informacion:informacion ? informacion : products.informacion, 
+      nombre,
+      imagen: imagen ? products.imagen : "default.webp",
+      horario,
+      informacion, 
       precio:+precio,
 		}
     

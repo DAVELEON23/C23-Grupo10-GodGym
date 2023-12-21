@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "nombre":"CROSSFIT",
+        "componente": "component1.png"
+    },
+    {
+        "id": 2,
+        "nombre": "MUSCULACIÓN",
+        "componente": "Component2.png"
+    },
+    {
+        "id": 3,
+        "nombre": "ZUMBA",
+        "componente": "Component3.png"
+    },
+    {
+        "id": 4,
+        "nombre": "FUNCIONAL",
+        "componente": "Component4.png"
+    }
+]

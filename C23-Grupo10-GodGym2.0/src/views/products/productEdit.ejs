@@ -6,35 +6,39 @@
         <h3 class="slogan-main-detalle">EDITAR PRODUCTO</h3>
             
         <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="form-producto">
-
+<section class="seccion-edit">
             <div class="form-producto-imagen">
-                <label class="label-seleccion-imagen" for="imagen">Seleccion de imagen
+                <label class="label-seleccion-imagen" for="imagen">SELECCIÓN DE IMÁGEN
                 <input class="" type="file" id="imagen" name="imagen" accept="image/*">
                 <img src="/images/<%= product.imagen %>"  class="form-imagen" value="<%= product.imagen %>"> 
             </label>
             </div>
 
-            <div class="form-precio-producto">
-                <label class="label-form-precio" for="name">Nombre del producto</label>
-                 <input class="input-form-precio" type="text" id="name" name="name" value="<%= product.nombre %>">
+            <div class="div-form-nombre-edit">
+                <label class="label-form-edit" for="name">NOMBRE DEL PRODUCTO</label>
+                 <input class="input-form-nombre-edit" type="text" id="name" name="name" value="<%= product.nombre %>">
               </div>
-                     
-             <div class="form-descripcion-producto">
-                <label class="label-form-descripcion" for="descripcion">Descripcion del producto</label>
-                <textarea class="" name="descripcion" id="descripcion" cols="" rows="" value=""><%= product.informacion %></textarea>
+            </section>
+                     <section class="seccion-edit-2">
+             <div class="div-form-edit">
+                <label class="label-form-edit" for="descripcion">DESCRIPCIÓN DEL PRODUCTO</label>
+                <textarea class="form-descripcion-edit" name="descripcion" id="descripcion" cols="" rows="" value=""><%= product.informacion %></textarea>
              </div>
     
-             <div class="horario-producto">
-                <label class="label-form-horario" for="descripcion">horarios del producto</label>
-                <textarea class="textarea-horario" name="descripcion" id="descripcion" cols="" rows="" value=""><%= product.horario %></textarea>
+             <div class="div-form-edit">
+                <label class="label-form-edit" for="descripcion">HORARIOS DEL PRODUCTO</label>
+                <textarea class="textarea-horario-edit" name="descripcion" id="descripcion" cols="" rows="" value=""><%= product.horario %></textarea>
              </div>
-    
-             <div class="form-precio-producto">
-               <label class="label-form-precio" for="precio">Precio del producto</label>
-                <input class="input-form-precio" type="number" id="precio" name="precio" value="<%= product.precio %>">
+             </section>
+            <section class="seccion-edit-3">
+             <div class="div-form-edit-precio">
+               <label class="label-form-edit" for="precio">PRECIO DEL PRODUCTO</label>
+                <input class="input-form-precio-edit" type="number" id="precio" name="precio" value="<%= product.precio %>">
              </div>
+            
              
-             <button type="submit">guardar</button>
+             <button type="submit" class="boton-edit">GUARDAR</button>
+            </section>
          </form>
 
     </main>
