@@ -2,6 +2,22 @@
     width: 200px;
     height: 150px;
 }
+.crearActidad{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: x-large;
+    
+}
+.crearActidad a {
+    color: var(--color-crema)
+}
+
+.botonDelete{
+    background-color: rgb(147 146 218 / -70%);
+    padding: 3px;
+    border-radius: 4px;
+}
 
 .dashboard_caja-producto {
     height: 80px;
