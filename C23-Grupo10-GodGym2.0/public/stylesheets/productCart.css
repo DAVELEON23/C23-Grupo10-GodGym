@@ -55,6 +55,9 @@
     margin-bottom: 3%;
     border-radius: 11px;
 }
+.boton-finalizar-compra:hover{
+    transform: scale(0.95);
+}
 
 
 
