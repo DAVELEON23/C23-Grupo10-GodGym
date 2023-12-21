@@ -34,7 +34,7 @@ const productsController = {
     dashboard:(req, res) => {
       const {id} = req.params;
 		  const products = getJson()
-      res.render('products/dashboard', { title: 'dashboard', products });
+      res.render('products/dashboard', { title: 'DASHBOARD', products });
     },
 
     // vista formulario de edicion
@@ -42,7 +42,7 @@ const productsController = {
       const {id} = req.params;
 		  const products = getJson()
       const product = products.find(elemento => elemento.id == id );
-      res.render('products/productEdit', { title: 'Editar', product });
+      res.render('products/productEdit', { title: 'EDITAR PRODUCTO', product });
     },
 
     //metodo de edicion
@@ -72,7 +72,7 @@ const productsController = {
     productCreateView: (req,res)=>{
       const product = req.body 
     const products = getJson()
-    res.render("products/productCreate",{ title: "Crear",products});
+    res.render("products/productCreate",{ title: "CREAR PRODUCTO",products});
     } ,
 
     //metodo de creacion
