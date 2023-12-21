@@ -77,13 +77,14 @@ const productsController = {
 
     //metodo de creacion
     create: (req,res)=>{
+      const file = req.file;
     const {nombre,imagen,informacion,horario,precio} = req.body;
     const products = getJson()
     const id = products[products.length -1].id +1 ;
 		const nuevoObj = {
 			id:+id,
       nombre,
-      imagen: imagen ? products.imagen : "default.webp",
+      imagen: file ? file.filename : "default.webp",
       horario,
       informacion, 
       precio:+precio,

@@ -54,6 +54,10 @@
     margin-left: 30%;
     margin-top: 10%;
 }
+.seccion-header-register li:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
 
 
 

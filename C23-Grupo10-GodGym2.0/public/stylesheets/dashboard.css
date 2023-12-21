@@ -23,6 +23,9 @@
     line-height: 3;
     padding: 4%;
 }
+.icon_edit_dashboard:hover{
+    transform: scale(0.80);
+}
 .box_dashboard_option{
     align-items: center;
     justify-content: space-around;
@@ -31,6 +34,10 @@
 }
 .tacho-dashboard{
     color: var(--color-rojo);
+
+}
+.tacho-dashboard:hover{
+    transform: scale(0.80);
 }
 
 
