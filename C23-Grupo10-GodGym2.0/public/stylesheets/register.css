@@ -31,6 +31,8 @@
 .input-register, .select-register{
     border-radius: 5px;
     padding: 2% 0;
+    font-size: 10px;
+    font-weight: bold;
 }
 .label-register, .textarea-register{
     margin: 2% 0 1%;
@@ -99,6 +101,8 @@
     .input-register{
         width: 50%;
         height: 40px;
+        font-size: 15px;
+    font-weight: bold;
     }
     .botones-registro{
         margin: 2% 0;
@@ -129,6 +133,10 @@
         display: initial;
         padding: 3% 0;
         font-size: 2rem;
+    }
+    .input-register{
+        font-size: 20px;
+    font-weight: bold;
     }
     .pase-prueba:hover{
         transform: scale(1.2);

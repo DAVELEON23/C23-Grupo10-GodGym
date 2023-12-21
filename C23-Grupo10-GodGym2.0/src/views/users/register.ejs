@@ -9,28 +9,23 @@
                
     
            
-             <form action="/register" method="post" class="formulario-register">
+             <form action="/users/register" method="post" class="formulario-register">
                  <h2 class="titulo-form-register">Formulario de registro</h2>
                 <h2 class="pase-prueba">Obtene, gratis por un dia, tu pase de prueba !!!</h2>       
-                <label class="label-register" for="nombre">Nombre</label>
+                <label class="label-register" for="nombre">NOMBRE</label>
                 <input class="input-register" type="text" id="nombre" name="nombre">
     
-                <label class="label-register" for="apellido">Apellido</label>
+                <label class="label-register" for="apellido">APELLIDO</label>
                 <input class="input-register" type="text" id="apellido" name="apellido">
         
-                <label class="label-register" for="fecha">Fecha de nacimiento</label>
+                <label class="label-register" for="fecha">FECHA DE NACIMIENTO</label>
                 <input class="input-register" type="date" id="fecha" name="fecha">
                
-                <label class="label-register" id="seleccion-actividades">Seleccion de actividades</label>
-                    <select class="select-register" name="seleccion-actividades" id="seleccion-actividades">
-                        <option value="crossfit">Crossfit</option>
-                        <option value="musculacion">Musculacion</option>
-                        <option value="zumba">Zumba</option>
-                        <option value="funcional">Funcional</option>
-                     </select>
+                <label class="label-register" id="email">EMAIL</label>
+                 <input type="email" name="email" id="email" class="input-register">
     
-                <label class="label-register" for="comentario">Comentanos tu objetivo</label>
-                <textarea class="textarea-register" name="comentario" id="comentario" cols="30" rows="5"></textarea>
+                <label class="label-register" for="contraseña">CONTRASEÑA</label>
+               <input type="password" name="contraseña" class="input-register">
                 
                 <div class="botones-registro">
                     <button class="boton-register" type="submit">Enviar</button>
