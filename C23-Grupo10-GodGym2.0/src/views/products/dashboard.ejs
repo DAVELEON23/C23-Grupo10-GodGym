@@ -4,7 +4,7 @@
     <main class="body-detail">
     
         <h3 class="slogan-main-detalle"> Lista de Actividades </h3>
-        
+        <div class="crearActidad"><a href="/products/create"><i class="fa-solid fa-plus-minus"></i> AGREGAR ACTIVIDAD</a></div>
                 <% products.forEach(product =>{ %>
             <h3 class="nombre-producto"> Entrenamiento : <%= product.nombre %></h3>
         <article class="articulo-producto">
@@ -29,7 +29,7 @@
                     </a>
                     
                     <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                        <button type="submit"><i class="fa-solid fa-trash tacho-dashboard"></i></button>
+                        <button  class="botonDelete" type="submit"><i class="fa-solid fa-trash tacho-dashboard"></i></button>
                     
                     </form>
                     

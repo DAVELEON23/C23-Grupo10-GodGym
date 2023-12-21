@@ -1,0 +1,25 @@
+[
+    {
+        "nombre": "Diego",
+        "apellido": "isray",
+        "fecha": "2004-03-15",
+        "email": "diegoisray2@gmail.com",
+        "contraseña": "diego123"
+    },
+    {
+        "id": null,
+        "nombre": "david",
+        "apellido": "de leon",
+        "fecha": "1986-07-06",
+        "email": "dasnsnnfnlds@gmail.com",
+        "contraseña": "dajpjpfs3341"
+    },
+    {
+        "id": "baaea3bb-b3bb-467d-aa22-e85cf21bce11",
+        "nombre": "pepe",
+        "apellido": "gomez",
+        "fecha": "1995-12-23",
+        "email": "pepe@hotnflns.com",
+        "contraseña": "ddmsammlf432"
+    }
+]

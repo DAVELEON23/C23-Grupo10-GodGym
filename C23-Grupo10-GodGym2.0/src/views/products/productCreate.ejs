@@ -3,41 +3,48 @@
     <%- include("../partials/header.ejs") %>
     <main class="body-detail">
         <h3 class="slogan-main-detalle">CREAR PRODUCTO</h3>
-        <form action="/products/create" method="post" class="form-producto">
+        <form action="/products/create" method="post" class="form-producto" enctype="multipart/form-data">
 
         <div class="form-producto-imagen">
-            <label class="label-seleccion-imagen" for="imagen">Seleccion de imagen
+            <label class="label-seleccion-imagen" for="imagen">SELECCIÓN DE IMÁGEN
             <input class="" type="file" id="imagen" name="imagen" accept="image/*"<% products.imagen ? products.imagen : "default.webp" %>>
             <img src="/images/default.webp"  class="form-imagen">
         </label> 
         </div>
 
         <div class="form-precio-producto">
-            <label class="label-form-precio" for="nombre">Nombre del producto</label>
+            <label class="label-form-precio" for="nombre">NOMBRE DEL PRODUCTO</label>
              <input class="input-form-precio" type="text" id="nombre" name="nombre">
         </div> 
 
          <div class="form-descripcion-producto">
-            <label class="label-form-descripcion" for="descripcion">Descripcion del producto</label>
-            <input class="" name="descripcion" id="descripcion" cols="" rows=""></input>
+            <label class="label-form-descripcion" for="descripcion">DESCRIPCIÓN DEL PRODUCTO</label>
+            <input class="input-form-descripcion" name="descripcion" id="descripcion" cols="" rows=""></input>
          </div>
 
          <div class="horario-producto">
-            <label class="label-form-horario" for="descripcion">horarios del producto</label>
+            <label class="label-form-horario" for="descripcion">HORARIOS DEL PRODUCTO</label>
             <select class="textarea-horario" name="descripcion" id="descripcion" cols="" rows="">
-                <option value=""> 10 a 12</option>
-                <option value=""> 14 a 16</option>
-                <option value=""> 16 a 17</option>
+                <option value=""> Lunes de 10:00hs a 12:00hs - Martes de 11:00hs a 12:00hs </option>
+                <option value=""> Martes de 14:00hs a 16:00hs - Miercoles de 15:00hs a 16:00hs </option>
+                <option value=""> Miercoles de 16:00hs a 17:00hs - Jueves de 17:00hs a 18:00hs</option>
+                <option value=""> Jueves de 11:00hs a 13:00hs - Viernes de 12:00hs a 13:00hs</option>
+                <option value=""> Viernes de 13:00hs a 14:30hs - Lunes de 14:00hs a 15:00hs</option>
+                <option value=""> Lunes de 16:00hs a 17:30hs - Martes de 17:00hs a 18:30hs</option>
+                <option value=""> Martes de 20:00hs a 21:00hs - Miercoles de 21:00hs a 22:00hs</option>
+                <option value=""> Miercoles de 21:00hs a 21:30hs - Jueves de 22:00hs a 22:30hs</option>
+                <option value=""> Jueves de 15:00hs a 16:00hs - Viernes de 16:00hs a 17:00hs</option>
+                <option value=""> Viernes de 16:30hs a 17:30hs - Lunes de 16:30hs a 17:30hs</option>
 
             </select>
          </div>
 
          <div class="form-precio-producto">
-           <label class="label-form-precio" for="precio">Precio del producto</label>
+           <label class="label-form-precio" for="precio">PRECIO DEL PRODUCTO</label>
             <input class="input-form-precio" type="number" id="precio" name="precio">
          </div>
 
-        <button type="submit">guradar</button>
+        <button type="submit" class="boton-create">GUARDAR</button>
            
              
    </form>

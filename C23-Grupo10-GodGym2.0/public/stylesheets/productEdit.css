@@ -1,0 +1,214 @@
+.div-form-edit{
+    width: 97%;
+    text-align: center;
+    background-color: rgb(166 165 165 / 30%);
+    box-shadow: 0px 0px 10px rgb(166, 165, 165) ;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.div-form-nombre-edit{
+    width: 97%;
+    text-align: center;
+    background-color: rgb(166 165 165 / 30%);
+    box-shadow: 0px 0px 10px rgb(166, 165, 165) ;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.div-form-edit-precio{
+    width: 97%;
+    text-align: center;
+    background-color: rgb(166 165 165 / 30%);
+    box-shadow: 0px 0px 10px rgb(166, 165, 165) ;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.textarea-horario-edit{
+    
+        font-weight: bold;
+        font-size: 8px;
+        height: 40px;
+        margin: 3% 0;
+        width: 90%;
+    
+}
+.input-form-nombre-edit {
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 10px auto;
+    width: 81%;
+}
+
+.form-descripcion-edit{
+    font-weight: bold;
+    font-size: 12px;
+    height: 50px;
+    width: 90%;
+    margin: 10px auto;
+}
+.input-form-precio-edit{
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    width: 85%;
+}
+
+.boton-edit{
+    padding: 3px;
+    margin-top: 16px;
+    font-weight: bold;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 15px;
+    box-shadow: 0px 0px 20px #ff000094;
+}
+.boton-edit:hover{
+    transform: scale(0.95);
+}
+.seccion-edit-3 {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width: 768px){
+    .seccion-edit{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-descripcion-edit {
+        font-weight: bold;
+        font-size: 12px;
+        height: 44px;
+        width: 90%;
+        margin: 10px auto;
+    }
+    .seccion-edit-2 {
+        align-items: center;
+        width: 100%;
+        display: flex;
+    }
+    .div-form-edit {
+        margin-left: 18px;
+        width: 82%;
+    }
+    .div-form-nombre-edit{
+        width: 82%;
+    }
+    .div-form-edit-precio{
+        width: 82%;
+    }
+    .input-form-nombre-edit {
+        text-align: center;
+        font-weight: bold;
+        font-size: 13px;
+        margin: 10px auto;
+        width: 85%;
+        height: 26px;
+    }
+    .textarea-horario-edit {
+        font-weight: bold;
+        font-size: 9px;
+        height: 40px;
+        margin: 3% 0;
+        width: 90%;
+        height: 42px;
+    }
+    .input-form-precio-edit {
+        margin: 10px auto;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        width: 85%;
+        height: 28px;
+    }
+    .boton-edit {
+        margin-top: 16px;
+        font-weight: bold;
+        background-color: #ff0000;
+        color: #ffffff;
+        font-size: 19px;
+        box-shadow: 0px 0px 20px #ff000094;
+    }
+}
+
+@media(min-width: 1024px){
+    .form-imagen {
+        width: 70%;
+    }
+    .seccion-edit {
+        width: 100%;
+        flex-direction: row;
+        display: flex;
+        margin-left: 5%;
+    }
+    .div-form-nombre-edit {
+        margin-left: 115px;
+        height: 82px;
+        width: 52%;
+    }
+    .seccion-edit-2 {
+        display: flex;
+        width: 100%;
+    }
+    .div-form-edit {
+        margin-right: auto;
+        width: 47%;
+    }
+    .seccion-edit-3 {
+        margin: 3% 0;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .div-form-edit-precio{
+        width: 47%;
+    }
+    .boton-edit{
+        width: 10%;
+        font-size: 30px;
+    }
+    .form-descripcion-edit {
+        font-weight: bold;
+        font-size: 15px;
+        height: 80px;
+        width: 88%;
+        margin: 10px auto;
+    }
+    .input-form-nombre-edit {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 10px auto;
+        width: 85%;
+        height: 32px;
+    }
+    .textarea-horario-edit {
+        font-weight: bold;
+        font-size: 15px;
+        height: 40px;
+        margin: 3% 0;
+        width: 90%;
+        height: 45px;
+    }
+    .input-form-precio-edit{
+        width: 85%;
+        height: 32px;
+        font-size: 20px;
+    }
+    .boton-edit{
+        margin-top: 3%;
+    }
+    .label-seleccion-imagen{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .label-form-edit{
+        font-size: 25px;
+        font-weight: bold;
+    } 
+}

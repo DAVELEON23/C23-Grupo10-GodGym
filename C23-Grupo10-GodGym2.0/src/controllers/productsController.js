@@ -34,7 +34,7 @@ const productsController = {
     dashboard:(req, res) => {
       const {id} = req.params;
 		  const products = getJson()
-      res.render('products/dashboard', { title: 'dashboard', products });
+      res.render('products/dashboard', { title: 'DASHBOARD', products });
     },
 
     // vista formulario de edicion
@@ -42,7 +42,7 @@ const productsController = {
       const {id} = req.params;
 		  const products = getJson()
       const product = products.find(elemento => elemento.id == id );
-      res.render('products/productEdit', { title: 'Editar', product });
+      res.render('products/productEdit', { title: 'EDITAR PRODUCTO', product });
     },
 
     //metodo de edicion
@@ -72,20 +72,21 @@ const productsController = {
     productCreateView: (req,res)=>{
       const product = req.body 
     const products = getJson()
-    res.render("products/productCreate",{ title: "Crear",products});
+    res.render("products/productCreate",{ title: "CREAR PRODUCTO",products});
     } ,
 
     //metodo de creacion
     create: (req,res)=>{
+      const file = req.file;
     const {nombre,imagen,informacion,horario,precio} = req.body;
     const products = getJson()
     const id = products[products.length -1].id +1 ;
 		const nuevoObj = {
 			id:+id,
-      nombre:nombre ? nombre : products.nombre,
-      imagen:imagen ? imagen : products.imagen,
-      horario:horario ? horario : products.horario,
-      informacion:informacion ? informacion : products.informacion, 
+      nombre,
+      imagen: file ? file.filename : "default.webp",
+      horario,
+      informacion, 
       precio:+precio,
 		}
     

@@ -2,6 +2,22 @@
     width: 200px;
     height: 150px;
 }
+.crearActidad{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: x-large;
+    
+}
+.crearActidad a {
+    color: var(--color-crema)
+}
+
+.botonDelete{
+    background-color: rgb(147 146 218 / -70%);
+    padding: 3px;
+    border-radius: 4px;
+}
 
 .dashboard_caja-producto {
     height: 80px;
@@ -23,6 +39,9 @@
     line-height: 3;
     padding: 4%;
 }
+.icon_edit_dashboard:hover{
+    transform: scale(0.80);
+}
 .box_dashboard_option{
     align-items: center;
     justify-content: space-around;
@@ -31,6 +50,10 @@
 }
 .tacho-dashboard{
     color: var(--color-rojo);
+
+}
+.tacho-dashboard:hover{
+    transform: scale(0.80);
 }
 
 

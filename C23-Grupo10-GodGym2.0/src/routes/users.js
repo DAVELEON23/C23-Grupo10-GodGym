@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const {registro,login} = require('../controllers/usersController')
+const {viewRegister,createRegister,login} = require('../controllers/usersController')
 
 /* GET users listing. */
 
 router
-.get('/register', registro)
+.get('/register', viewRegister)
+.post('/register', createRegister)
 .get('/login', login)
 
 module.exports = router;

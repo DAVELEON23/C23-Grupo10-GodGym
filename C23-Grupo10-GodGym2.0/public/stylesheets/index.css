@@ -1,11 +1,13 @@
+
 .imagen-home:hover{
-    transition-duration: 1s;
- box-shadow: 0px 0px 40px rgb(100, 100, 100);
+   transform: scale(0.98);
+   transition: 1s;
 }
 .body-home{
     background-image: url('/images/background.jpg.png');
 
 }
+
 .home-main {
     display: flex;
     flex-direction: column;

@@ -51,14 +51,25 @@
     text-align: center;
     color: var(--color-crema);
 }  
-
-
+.seccion-header li:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.caja-logueado:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.caja-logueado-registro:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
 /* -------------------------------------header media queries de tablet---------------------------------*/
 
 @media (min-width: 768px){
-    .secciones-header:hover{
-        transition-duration: 1s;
-        color: var(--color-rojo)
+    
+    .seccion-header li:hover{
+        transform: scale(1.1);
+        transition: 0.2s;
     }
     main article img {
         height: 60px;
