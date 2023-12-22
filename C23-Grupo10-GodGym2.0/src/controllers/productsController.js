@@ -77,7 +77,8 @@ const productsController = {
 
     //metodo de creacion
     create: (req,res)=>{
-      const file = req.file;
+      //res.send(req.body)
+    const file = req.file;
     const {nombre,imagen,informacion,horario,precio} = req.body;
     const products = getJson()
     const id = products[products.length -1].id +1 ;
