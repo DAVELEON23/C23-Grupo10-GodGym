@@ -47,6 +47,12 @@ const productsController = {
 
     //metodo de edicion
     edit: (req,res) =>{
+      const images = []
+      if(req.files){
+        files.forEach(element => {
+          images.push(element.filename)
+        });
+      }
       const {nombre,imagen,informacion,horario,precio} = req.body;
       const {id} = req.params;
 		  const products = getJson()
@@ -55,7 +61,7 @@ const productsController = {
           return{
             id:+id,
             nombre:nombre ? nombre : product.nombre,
-            imagen:imagen ? imagen : product.imagen,
+            imagen: images.length > 0 ? images : product.imagen,
             horario:horario ? horario : product.horario,
             informacion:informacion ? informacion : product.informacion, 
             precio:+precio,
@@ -101,8 +107,15 @@ const productsController = {
     productDelete: (req,res)=>{
       
       const products = getJson();
+      const product = products.find(producto => producto.id == +req.params.id)
       const newList = products.filter(elemento => elemento.id !== +req.params.id);
       const json = JSON.stringify(newList);
+      
+      fs.unlink(`./public/images/${product.imagen}`, (err)=>{
+        if(err) throw err;
+        console.log(`borre el archivo ${product.imagen}`)
+        })
+        
       fs.writeFileSync(productsFilePath,json,'utf-8');
       res.redirect('/products/dashboard')
     }
