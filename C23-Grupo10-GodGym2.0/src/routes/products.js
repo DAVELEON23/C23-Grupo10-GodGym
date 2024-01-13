@@ -30,7 +30,7 @@ router
 .post("/create", upload.single("imagen"), create)
 
 .get("/edit/:id",productEditView)
-.put("/edit/:id", edit )
+.put("/edit/:id", upload.single("imagen"), edit )
 
 router.delete('/delete/:id', productDelete); 
 
