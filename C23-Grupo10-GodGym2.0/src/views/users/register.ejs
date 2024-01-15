@@ -5,8 +5,12 @@
         
         
             
-    
-               
+        <% if (locals.errors) { %>
+         <% for( let oneError in errors ) { %>
+            <p><%= errors[oneError].msg  %></p>
+         <% } %>
+        <% } %>
+        
     
            
              <form action="/users/register" method="post" class="formulario-register">

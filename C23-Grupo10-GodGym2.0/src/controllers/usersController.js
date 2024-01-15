@@ -3,6 +3,8 @@ const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 const usersFilePath = path.join(__dirname, '../database/Users.json');
+const { validationResult } = require("express-validator")
+
 
 const UsersJson = () =>{
 	const usersFilePath = path.join(__dirname, '../database/Users.json');
@@ -16,7 +18,15 @@ const usersController = {
         res.render('users/register', { title: 'GOD GYM', users});
       },
       createRegister:(req,res) =>{
-        const user = req.body;
+        const resultValidation = validationResult(req);
+        
+        if(resultValidation.errors.length > 0){
+           res.render('users/register', { 
+            errors:resultValidation.mapped(),title: 'GOD GYM'});
+        }
+        
+
+        /*const user = req.body;
         const users = UsersJson()
         const {nombre,apellido,fecha,email,contraseña} = req.body;
         const newUser = {
@@ -30,7 +40,7 @@ const usersController = {
         users.push(newUser)
         const jsonUsers = JSON.stringify(users)
         fs.writeFileSync(usersFilePath, jsonUsers, 'utf-8')
-        res.redirect('/')
+        res.redirect('/')*/
       },
 
       login: (req, res) => {
