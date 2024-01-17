@@ -22,7 +22,11 @@ const usersController = {
         
         if(resultValidation.errors.length > 0){
            res.render('users/register', { 
-            errors:resultValidation.mapped(),title: 'GOD GYM'});
+            errors:resultValidation.mapped(),
+            oldData: req.body,
+            title: 'GOD GYM'
+          });
+
         }
         
 

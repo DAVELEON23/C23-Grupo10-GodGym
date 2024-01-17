@@ -5,31 +5,53 @@
         
         
             
-        <% if (locals.errors) { %>
-         <% for( let oneError in errors ) { %>
-            <p><%= errors[oneError].msg  %></p>
-         <% } %>
-        <% } %>
+        
         
     
            
              <form action="/users/register" method="post" class="formulario-register">
                  <h2 class="titulo-form-register">Formulario de registro</h2>
-                <h2 class="pase-prueba">Obtene, gratis por un dia, tu pase de prueba !!!</h2>       
+                <h2 class="pase-prueba">Obtene, gratis por un dia, tu pase de prueba !!!</h2>
+
                 <label class="label-register" for="nombre">NOMBRE</label>
-                <input class="input-register" type="text" id="nombre" name="nombre">
+                <input class="input-register" type="text" id="nombre" name="nombre"
+                        value="<%= locals.oldData ? oldData.nombre : null %>"
+                >
+                <% if (locals.errors && errors.nombre) { %>
+                      <p><%= errors.nombre.msg  %></p>
+                <% } %>
     
                 <label class="label-register" for="apellido">APELLIDO</label>
-                <input class="input-register" type="text" id="apellido" name="apellido">
-        
+                <input class="input-register" type="text" id="apellido" name="apellido"
+                       value="<%= locals.oldData ? oldData.apellido : null %>"
+                >
+                <% if (locals.errors && errors.apellido) { %>
+                 <p><%= errors.apellido.msg  %></p>
+                <% } %>
+
                 <label class="label-register" for="fecha">FECHA DE NACIMIENTO</label>
-                <input class="input-register" type="date" id="fecha" name="fecha">
-               
+                <input class="input-register" type="date" id="fecha" name="fecha"
+                       value="<%= locals.oldData ? oldData.fecha: null %>"
+                >
+               <% if (locals.errors && errors.fecha) { %>
+                <p><%= errors.fecha.msg  %></p>
+               <% } %>
+
                 <label class="label-register" id="email">EMAIL</label>
-                 <input type="email" name="email" id="email" class="input-register">
-    
+                 <input type="email" name="email" id="email" class="input-register"
+                 value="<%= locals.oldData ? oldData.email : null %>"
+                 >
+                 <% if (locals.errors && errors.email) { %>
+                    <p><%= errors.email.msg  %></p>
+                   <% } %>
+
                 <label class="label-register" for="contraseña">CONTRASEÑA</label>
-               <input type="password" name="contraseña" class="input-register">
+               <input type="password" name="contraseña" class="input-register"
+                    value="<%= locals.oldData ? oldData.contraseña : null %>"
+               >
+               <% if (locals.errors && errors.contraseña) { %>
+                <p><%= errors.contraseña.msg  %></p>
+               <% } %>
                 
                 <div class="botones-registro">
                     <button class="boton-register" type="submit">Enviar</button>
