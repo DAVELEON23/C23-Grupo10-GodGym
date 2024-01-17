@@ -10,6 +10,7 @@ const getJson = () =>{
 }
 
 
+
 const productsController = {
 
     detail: (req, res) => {

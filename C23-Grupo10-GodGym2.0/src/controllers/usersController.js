@@ -36,6 +36,36 @@ const usersController = {
       login: (req, res) => {
         res.render('users/login', { title: 'GOD GYM'});
       },
+      UserEditView: (req,res) => {
+        const {id} = req.params;
+		    const users = UsersJson()
+        const user = users.find(elemento => elemento.id == id)
+        res.render('users/usersEdit', {title: 'EDITAR USUARIO', user})
+      },
+      edit: (req,res) =>{
+        const users = UsersJson()
+        const {nombre,apellido,fecha,email,contraseña} = req.body;
+        const {id} = req.params;
+        
+        const nuevoUsuario = users.map(user => {
+          if(user.id == id){
+            return{
+              id: id ? id : user.id,
+              nombre: nombre ? nombre : user.nombre,
+              apellido: apellido ? apellido : user.apellido,
+              fecha: fecha ? fecha : user.fecha,
+              email: email ? email : user.email,
+              contraseña: contraseña ? contraseña : user.contraseña,
+
+            }
+          }
+          return user
+        })
+          const json = JSON.stringify(nuevoUsuario)
+        fs.writeFileSync(usersFilePath,json,'utf-8')
+        res.redirect('/')
+        
+    }
       
 }
 
