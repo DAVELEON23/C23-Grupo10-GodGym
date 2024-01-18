@@ -39,7 +39,7 @@ const usersController = {
           apellido: apellido.trim(),
           fecha,
           email:email.trim(),
-          contraseña: contraseña.trim()
+          contrasenia: contrasenia.trim()
         }
         users.push(newUser)
         const jsonUsers = JSON.stringify(users)

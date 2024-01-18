@@ -45,12 +45,12 @@
                     <p><%= errors.email.msg  %></p>
                    <% } %>
 
-                <label class="label-register" for="contraseña">CONTRASEÑA</label>
-               <input type="password" name="contraseña" class="input-register"
-                    value="<%= locals.oldData ? oldData.contraseña : null %>"
+                <label class="label-register" for="contrasenia">CONTRASEÑA</label>
+               <input type="password" name="contrasenia" class="input-register"
+                    value="<%= locals.oldData ? oldData.contrasenia : null %>"
                >
-               <% if (locals.errors && errors.contraseña) { %>
-                <p><%= errors.contraseña.msg  %></p>
+               <% if (locals.errors && errors.contrasenia) { %>
+                <p><%= errors.contrasenia.msg  %></p>
                <% } %>
                 
                 <div class="botones-registro">
