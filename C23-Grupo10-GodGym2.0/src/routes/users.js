@@ -9,7 +9,7 @@ const {viewRegister,createRegister,login,UserEditView,edit, processLogin} = requ
 router
 .get('/register', viewRegister)
 
-.post('/register', validationRegister ,createRegister)
+.post('/register',createRegister)
 
 .get('/login', login)
 .post('/login', processLogin)

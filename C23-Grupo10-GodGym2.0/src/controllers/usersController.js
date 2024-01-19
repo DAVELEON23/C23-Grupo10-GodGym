@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
-const {validationResult} =  require('express-session')
+const session =  require('express-session')
 const usersFilePath = path.join(__dirname, '../database/Users.json');
 const { validationResult } = require("express-validator")
 
