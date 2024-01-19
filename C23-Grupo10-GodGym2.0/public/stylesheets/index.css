@@ -44,7 +44,22 @@
     top: 24%;
     left: 2%;
 }
-
+.caja-admin-dash{
+    display: flex;
+}
+.slogan-main {
+    width: 94%;
+    text-decoration: underline 3px;
+    margin-top: 2%;
+    font-size: 110%;
+    text-align: center;
+    color: var(--color-crema);
+}
+.dash-admin {
+    font-size: 19px;
+    margin: 6px 3px;
+    color: var(--color-crema);
+}
 
 /* mediaquire de main */
 @media(min-width: 768px){
@@ -81,6 +96,11 @@
         top: 23%;
         left: 6%;
     }
+    .dash-admin {
+        font-size: 24px;
+        margin: 32px 12px;
+        color: var(--color-crema);
+    }
 }
 @media(min-width: 1024px){
     .logo{
@@ -104,5 +124,10 @@
         left: 9%;
     font-size: 62px;
     top: 27%;
+    }
+    .dash-admin {
+        font-size: 30px;
+        margin: 32px 10px;
+        color: var(--color-crema);
     }
 }

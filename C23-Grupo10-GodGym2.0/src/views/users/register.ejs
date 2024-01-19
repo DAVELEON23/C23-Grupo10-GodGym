@@ -1,14 +1,8 @@
 <%- include("../partials/head.ejs") %>
 <body class="body-register">
-    <%- include("../partials/headerRegister.ejs") %> 
+    <%- include("../partials/header.ejs") %> 
     <main class="main-register">
         
-        
-            
-    
-               
-    
-           
              <form action="/users/register" method="post" class="formulario-register">
                  <h2 class="titulo-form-register">Formulario de registro</h2>
                 <h2 class="pase-prueba">Obtene, gratis por un dia, tu pase de prueba !!!</h2>       
@@ -25,7 +19,18 @@
                  <input type="email" name="email" id="email" class="input-register">
     
                 <label class="label-register" for="contraseña">CONTRASEÑA</label>
-               <input type="password" name="contraseña" class="input-register">
+                <input type="password" name="contraseña" class="input-register">
+                    
+                <% if(locals.usuario && usuario.rol == "admin"){%>
+                <label for="rol" class="label-register">ROL</label>
+                <select name="rol" id="" class="input-register">
+                    <option  id="" value="usuario">usuario</option>
+                    <option  id="" value="admin">admin</option>
+                    </select>
+                    
+                <% } %>
+               
+
                 
                 <div class="botones-registro">
                     <button class="boton-register" type="submit">Enviar</button>

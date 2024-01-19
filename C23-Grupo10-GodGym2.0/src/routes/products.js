@@ -3,8 +3,10 @@ const router = express.Router();
 const path = require('path')
 const {detail,actividades, productCart,dashboard,edit,create,productCreateView, productEditView, productDelete} = require('../controllers/productsController')
 /* GET home page. */
-
+const accountValidate = require('../middlewares/accountValidate')
 const multer = require('multer');
+
+const adminValidate = require('../middlewares/adminValidate')
 
 const storage = multer.diskStorage({
   destination: (req,file,cb) => {
@@ -22,17 +24,17 @@ router
 
 .get('/', actividades )
 
-.get('/productCart', productCart)
+.get('/productCart', accountValidate, productCart)
 
-.get("/dashboard",dashboard)
+.get("/dashboard", adminValidate, dashboard)
 
-.get("/create",productCreateView)
+.get("/create", adminValidate ,productCreateView)
 .post("/create", upload.single("imagen"), create)
 
-.get("/edit/:id",productEditView)
+.get("/edit/:id", adminValidate ,productEditView)
 .put("/edit/:id", upload.single("imagen"), edit )
 
-router.delete('/delete/:id', productDelete); 
+router.delete('/delete/:id', adminValidate, productDelete); 
 
 
 module.exports = router;
