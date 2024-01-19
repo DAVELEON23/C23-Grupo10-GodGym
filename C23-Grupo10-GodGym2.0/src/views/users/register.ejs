@@ -19,8 +19,9 @@
                  <input type="email" name="email" id="email" class="input-register">
     
                 <label class="label-register" for="contraseña">CONTRASEÑA</label>
+                <input type="password" name="contraseña" class="input-register">
+                    
                 <% if(locals.usuario && usuario.rol == "admin"){%>
-                    <input type="password" name="contraseña" class="input-register">
                 <label for="rol" class="label-register">ROL</label>
                 <select name="rol" id="" class="input-register">
                     <option  id="" value="usuario">usuario</option>
