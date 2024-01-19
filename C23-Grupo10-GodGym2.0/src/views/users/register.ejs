@@ -52,6 +52,14 @@
                <% if (locals.errors && errors.contrasenia) { %>
                 <p><%= errors.contrasenia.msg  %></p>
                <% } %>
+
+               <label class="label-register" for="contrasenia2">CONFIRMAR CONTRASEÑA</label>
+               <input type="password" name="contrasenia2" class="input-register"
+                    value="<%= locals.oldData ? oldData.contrasenia : null %>"
+               >
+               <% if (locals.errors && errors.contrasenia) { %>
+                <p><%= errors.contrasenia.msg  %></p>
+               <% } %>
                 
                 <div class="botones-registro">
                     <button class="boton-register" type="submit">Enviar</button>

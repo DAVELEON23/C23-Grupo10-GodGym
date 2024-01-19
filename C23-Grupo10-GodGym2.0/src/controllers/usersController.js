@@ -28,11 +28,10 @@ const usersController = {
           });
 
         }
-        
-
-        /*const user = req.body;
+        else{
+          const user = req.body;
         const users = UsersJson()
-        const {nombre,apellido,fecha,email,contraseña} = req.body;
+        const {nombre,apellido,fecha,email,contrasenia} = req.body;
         const newUser = {
           id: uuidv4(),
           nombre: nombre.trim(),
@@ -44,7 +43,9 @@ const usersController = {
         users.push(newUser)
         const jsonUsers = JSON.stringify(users)
         fs.writeFileSync(usersFilePath, jsonUsers, 'utf-8')
-        res.redirect('/')*/
+        res.redirect('/users/login')
+        }
+        
       },
 
       login: (req, res) => {
