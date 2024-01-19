@@ -1,0 +1,73 @@
+.formulario-userEdit{
+    margin: 0 auto;
+    width: 90%;
+    background-color: #fff7d2cc;
+    border-radius: 4%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.label-userEdit{
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+    margin: 8px auto;
+}
+.titulo-form-userEdit{
+    margin: 10px auto;
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+}
+.input-userEdit{
+   width: 70%;
+   text-align: center;
+   font-size: 17px;
+   font-weight: bold;
+}
+
+.boton-userEdit{
+
+    background-color: var(--color-rojo);
+    padding: 2px;
+    margin: 8px auto;
+    font-weight: bold;
+}
+
+.boton-userEdit:hover{
+    transform: scale(0.95);
+}
+
+@media(min-width: 768px){
+    .formulario-userEdit{
+        width: 81%;
+    }
+    .input-userEdit{
+        width: 60%;
+        height: 35px;
+        font-size: 20px;
+    }
+    .boton-userEdit{
+        font-size: 17px;
+    }
+    .titulo-form-userEdit{
+        font-size: 30px;
+    }
+    .label-userEdit{
+        font-size: 22px;
+    }
+}
+
+@media(min-width: 1024px){
+    .formulario-userEdit{
+        width: 50%;
+    }
+    .input-userEdit{
+        width: 50%;
+        height: 40px;
+        font-size: 25px;
+    }
+    .boton-userEdit{
+        font-size: 20px;
+    }
+}
