@@ -6,7 +6,7 @@ const products = JSON.parse(json);
 
 const indexController = {
     home: (req, res) => {
-        res.render('home', { title: 'GOD GYM', products });
+        res.render('home', { title: 'GOD GYM', products, usuario: req.session.user});
       }
 }
 

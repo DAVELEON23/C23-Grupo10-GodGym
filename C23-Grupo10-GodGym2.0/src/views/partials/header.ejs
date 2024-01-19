@@ -7,17 +7,33 @@
         </div>
         <nav class="nav-registros">
             <div class="caja-logueado">
-                <a href="/users/login" class="boton-login"><i class="fa-solid fa-user icono-login-header"></i>
-                    <a href="/users/login">
-                        <h4 class="login">LOGIN</h4>
-                    </a>
-                </a>
-            </div>
-            <div class="caja-logueado-registro">
-                <a href="/users/register">
-                    <h4 class="registrado">REGISTRATE</h4>
-                </a>
-            </div>
+                <% if(locals.usuario){%>
+                    <div class="caja-session">
+                        <div>
+              
+                    <i class="fa-solid fa-user icono-session"
+                    style="color: #ffffff;"></i>
+                </div>
+                <p class="nombre-session-usuario"><%= usuario.nombre.toUpperCase() %> <% if(locals.usuario && locals.usuario.rol == "admin"){ %>
+                    ADMIN
+                    <% } %></p>
+            
+                </div>
+                    <% } else { %>
+                        <a href="/users/login" class="boton-login"><i class="fa-solid fa-user icono-login-header"></i>
+                            <a href="/users/login">
+                                <h4 class="login">LOGIN</h4>
+                            </a>
+                        </a>
+                    </div>
+                    <div class="caja-logueado-registro">
+                        <a href="/users/register">
+                            <h4 class="registrado">REGISTRATE</h4>
+                        </a>
+                    </div>
+                    <%  } %>
+
+                
     
         </nav>
         <nav class="nav-header-home">

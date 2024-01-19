@@ -17,25 +17,25 @@ const productsController = {
     const {id} = req.params;
     const products = getJson()
     const product = products.find(product => product.id == id);
-    res.render('products/detail', { title: product.nombre, product});
+    res.render('products/detail', { title: product.nombre, product, usuario: req.session.user});
     },
 
     actividades: (req, res) => {
     const {id} = req.params;
     const products = getJson()
-    res.render('products', { title: 'GOD GYM', products });
+    res.render('products', { title: 'GOD GYM', products, usuario: req.session.user });
     },
 
     productCart: (req, res) => {
       const {id} = req.params;
 		  const products = getJson()
-      res.render('products/cart', { title: 'GOD GYM', products });
+      res.render('products/cart', { title: 'GOD GYM', products, usuario: req.session.user});
     },
 
     dashboard:(req, res) => {
       const {id} = req.params;
 		  const products = getJson()
-      res.render('products/dashboard', { title: 'DASHBOARD', products });
+      res.render('products/dashboard', { title: 'DASHBOARD', products, usuario: req.session.user });
     },
 
     // vista formulario de edicion
@@ -43,7 +43,7 @@ const productsController = {
       const {id} = req.params;
 		  const products = getJson()
       const product = products.find(elemento => elemento.id == id );
-      res.render('products/productEdit', { title: 'EDITAR PRODUCTO', product });
+      res.render('products/productEdit', { title: 'EDITAR PRODUCTO', product, usuario: req.session.user });
     },
 
     //metodo de edicion
@@ -79,7 +79,7 @@ const productsController = {
     productCreateView: (req,res)=>{
       const product = req.body 
     const products = getJson()
-    res.render("products/productCreate",{ title: "CREAR PRODUCTO",products});
+    res.render("products/productCreate",{ title: "CREAR PRODUCTO",products, usuario: req.session.user});
     } ,
 
     //metodo de creacion

@@ -4,13 +4,13 @@
     <main class="main-login">
         <h1 class="titulo-formulario-login">Formulario de login</h1>
         <section class="seccion-login">
-    <form action="/login" method="post" class="formulario-login">
+    <form action="/users/login" method="post" class="formulario-login">
         
         <i class="fa-solid fa-user login-user"></i>
         <p class="login-debajodel-icono">LOGIN</p>
      <div class="caja-user">
         <i class="fa-solid fa-user icono-user-input"></i>
-        <input type="text" name="username" placeholder="E-mail, teléfono o usuario" class="input-user">
+        <input type="text" name="email" placeholder="E-mail" class="input-user">
 
      </div>
      <div class="caja-contraseña"> 
@@ -22,13 +22,16 @@
      </div>
      <div class="caja-boton-logueado">
         <button type="submit" class="boton-login-main">Login</button>
+        <% if (locals.error){ %>
+            <p> <%= error %></p>
+            <% }%>
      </div>
-
+    
     </form>
     <section class="section-debajo-logueado">
     <div class="caja-logueado-cuenta">
         <p class="no-cuenta">¿No tenés cuenta?</p>                   
-        <a href="/register" class="registrate-caja">Registrate</a>
+        <a href="/users/register" class="registrate-caja">Registrate</a>
     </div>
     <div class="caja-logueado-segunda">
         <p class="logueatecon">o logueate con</p>
