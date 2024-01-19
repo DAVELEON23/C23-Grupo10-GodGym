@@ -7,11 +7,16 @@
         </div>
         <nav class="nav-registros">
             <div class="caja-logueado">
+                <% if(locals.usuario){ %>
+                    <p> <% usuario.nombre %></p>
+                    
+                    <% }else{ %>
                 <a href="/users/login" class="boton-login"><i class="fa-solid fa-user icono-login-header"></i>
                     <a href="/users/login">
                         <h4 class="login">LOGIN</h4>
                     </a>
                 </a>
+                <% } %>
             </div>
             <div class="caja-logueado-registro">
                 <a href="/users/register">

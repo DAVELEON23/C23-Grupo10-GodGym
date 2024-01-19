@@ -4,18 +4,18 @@
     <main class="main-login">
         <h1 class="titulo-formulario-login">Formulario de login</h1>
         <section class="seccion-login">
-    <form action="/login" method="post" class="formulario-login">
+    <form action="/users/login" method="post" class="formulario-login">
         
         <i class="fa-solid fa-user login-user"></i>
         <p class="login-debajodel-icono">LOGIN</p>
      <div class="caja-user">
         <i class="fa-solid fa-user icono-user-input"></i>
-        <input type="text" name="username" placeholder="E-mail, teléfono o usuario" class="input-user">
+        <input type= "email" name="email" placeholder="E-mail, teléfono o usuario" class="input-user">
 
      </div>
      <div class="caja-contraseña"> 
         <i class="fa-solid fa-lock icono-candado-input"></i>
-        <input type="password" name="password" id="" placeholder="contraseña" class="input-contraseña">
+        <input type="password" name="contraseña" id="" placeholder="contraseña" class="input-contraseña">
      </div>
      <div>
        <p class="input-recordamelo"> <input type="checkbox" name="" id="">Recordamelo</p>
@@ -24,6 +24,10 @@
         <button type="submit" class="boton-login-main">Login</button>
      </div>
 
+    <% if (locals.error){%>
+        <p> <%= error %> </p>
+    <%  } %>
+    
     </form>
     <section class="section-debajo-logueado">
     <div class="caja-logueado-cuenta">
