@@ -12,6 +12,12 @@ const UsersJson = () =>{
 	return users
 }
 
+const getJson = (fileName) => {
+  const file = fs.readFileSync(`${__dirname}/../database/${fileName}.json`,"utf-8");
+  const json = JSON.parse(file);
+  return json;
+}
+
 const usersController = {
     viewRegister: (req, res) => {
       const users = UsersJson()
@@ -40,14 +46,17 @@ const usersController = {
       },
       processLogin: (req, res) => {
         const errores = validationResult(req);
-        if(!errores.isEmpty()) {res.render("/users/login", {errores: errores.mapped(), usuario:req.session.usuario})};
+        if(!errores.isEmpty()) {
+          res.render("/users/login", {errores: errores.mapped(), usuario:req.session.usuario})
+        }
         const {email} = req.body; 
-        const users = UsersJson("users");
+        const users = getJson("users");
         console.log("ver q hay en USERS",users);
         const user = users.find(usuario => usuario.email == email);
         console.log("ver q hay en USER",user);
         
-          req.session.user = user;
+     
+          
           if (req.body.remember == "true"){
             res.cookie("user",user,{maxAge:1000*60*15});
             res.cookie("rememberMe","true",{maxAge:1000*60*15});
