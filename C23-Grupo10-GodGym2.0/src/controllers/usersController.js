@@ -28,7 +28,8 @@ const usersController = {
             res.render('users/register', { 
             errors:resultValidation.mapped(),
             oldData: req.body,
-            title: 'GOD GYM'
+            title: 'GOD GYM',
+            usuario:req.session.user
           });
 
         }

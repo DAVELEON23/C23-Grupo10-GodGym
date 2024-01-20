@@ -60,6 +60,13 @@
                <% if (locals.errors && errors.contrasenia) { %>
                 <p class="register_invalido"><%= errors.contrasenia.msg  %></p>
                <% } %>
+               <% if (locals.usuario && usuario.rol == 'admin') { %>
+                <label class="label-register" for="rol">ROL:</label>
+                    <select name="rol" id="" class="input-rol">
+                        <option value="usuario" class="option-rol">usuario</option>
+                        <option value="admin" class="option-rol">admin</option>
+                        </select>
+                     <% } %>
                 
                 <div class="botones-registro">
                     <button class="boton-register" type="submit">Enviar</button>
