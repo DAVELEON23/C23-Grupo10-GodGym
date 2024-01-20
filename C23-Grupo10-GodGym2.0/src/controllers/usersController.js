@@ -56,6 +56,14 @@ const usersController = {
       login: (req, res) => {
         res.render('users/login', { title: 'GOD GYM' });
       },
+      logout: (req,res)=>{
+        req.session.destroy()
+        if(req.cookies.user){
+          res.clearCookie('user')
+          res.clearCookie('remember')
+        }
+        res.redirect('/')
+      },
       processLogin: (req,res) =>{
     
         const {email} = req.body
@@ -63,7 +71,8 @@ const usersController = {
         const user = users.find(usuario => usuario.email == email)
         if(user){
           req.session.user = user
-          res.cookie('userEmail', user.email,{maxAge: 1000 * 60 * 15})
+          delete user.password
+          res.cookie('user', {nombre:user.nombre,apellido:user.apellido, email:user.email,id:user.id, rol:user.rol},{maxAge: 1000 * 60 * 15})
           res.cookie('rememberMe', "true",{maxAge: 1000 * 60 * 15})
           res.redirect('/')
 
@@ -80,27 +89,37 @@ const usersController = {
       },
       edit: (req,res) =>{
         const users = UsersJson()
-        const {nombre,apellido,fecha,email,contraseña} = req.body;
+        const {nombre,apellido,fecha,email,contraseña,rol} = req.body;
         const {id} = req.params;
-        
-        const nuevoUsuario = users.map(user => {
+        const usuarios = users.map(user =>{
           if(user.id == id){
-            return{
+            return {
               id: id ? id : user.id,
               nombre: nombre ? nombre : user.nombre,
               apellido: apellido ? apellido : user.apellido,
               fecha: fecha ? fecha : user.fecha,
               email: email ? email : user.email,
               contraseña: contraseña ? contraseña : user.contraseña,
+              rol: rol ? rol : user.rol
 
             }
           }
           return user
         })
-          const json = JSON.stringify(nuevoUsuario)
-        fs.writeFileSync(usersFilePath,json,'utf-8')
+        
+          setJson(usuarios, "users")
+          const userUpdate = usuarios.find(elemento => elemento.id == id)
+          req.session.user = userUpdate
+          res.cookie('user',({nombre:userUpdate.nombre, apellido: userUpdate.apellido, email: userUpdate.email, id: userUpdate.id, rol:userUpdate.rol}))
+       
         res.redirect('/')
         
+    },
+    viewPerfil: (req,res) =>{
+      const {id} = req.params;
+		    const users = UsersJson()
+        const user = users.find(elemento => elemento.id == id)
+        res.render('users/perfil',{title:"PERFIL",user, usuario:req.session.user})
     }
       
 }

@@ -44,6 +44,13 @@
                 <li> <i class="fa-solid fa-dumbbell"></i><a href="/products" class="secciones-header">ACTIVIDADES</a></li>
         
                 <li> <i class="fa-regular fa-address-card"></i><a href="/users/register" class="secciones-header">PASE DE PRUEBA</a></li>
+                <% if( locals.usuario){%>
+                    <div>
+                    <li><a href="/users/perfil/<%= usuario.id %>" class="secciones-header">PERFIL</a></li>
+                    </div>
+                    <%} %>
+                    
+                    
             </ul>
         </nav>
     </section>
