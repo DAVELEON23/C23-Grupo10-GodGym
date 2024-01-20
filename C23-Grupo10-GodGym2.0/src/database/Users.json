@@ -33,5 +33,23 @@
     "email": "david@gmail.com",
     "contraseña": "$2b$10$iEGL/URyMwPYwPzWuIwjUOZcO6SdeoRtdipupL.wtFii3DDzjnoBG",
     "rol": "admin"
+  },
+  {
+    "id": "6b113461-72b1-4e68-9902-fa7f853ae6e0",
+    "nombre": "gustavo",
+    "apellido": "insfran",
+    "fecha": "1980-08-28",
+    "email": "gustavo@mail.com",
+    "contrasenia": "$2b$10$53k8TcALgRpbRzsOgFb8t.JW7sP4ptVRGTlaGco46ZomOs0dJYJ9q",
+    "rol": "usuario"
+  },
+  {
+    "id": "a7072a94-c903-4c96-9b05-8da9c9cb013f",
+    "nombre": "alonso",
+    "apellido": "pepeproni",
+    "fecha": "2020-12-20",
+    "email": "pepe@elmail.com",
+    "contrasenia": "$2b$10$18UgNIAZ4iEvwXcpCNa//OmrYdeDhgQOtSZH18UeyIPasvvx55xRG",
+    "rol": "usuario"
   }
 ]

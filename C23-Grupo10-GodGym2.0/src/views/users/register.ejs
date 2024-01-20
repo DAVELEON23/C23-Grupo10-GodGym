@@ -34,7 +34,7 @@
                        value="<%= locals.oldData ? oldData.fecha: null %>"
                 >
                <% if (locals.errors && errors.fecha) { %>
-                <p><%= errors.fecha.msg  %></p>
+                <p class="register_invalido"><%= errors.fecha.msg  %></p>
                <% } %>
 
                 <label class="label-register" id="email">EMAIL</label>
@@ -42,7 +42,7 @@
                  value="<%= locals.oldData ? oldData.email : null %>"
                  >
                  <% if (locals.errors && errors.email) { %>
-                    <p><%= errors.email.msg  %></p>
+                    <p class="register_invalido"><%= errors.email.msg  %></p>
                    <% } %>
 
                 <label class="label-register" for="contrasenia">CONTRASEÑA</label>
@@ -50,7 +50,7 @@
                     value="<%= locals.oldData ? oldData.contrasenia : null %>"
                >
                <% if (locals.errors && errors.contrasenia) { %>
-                <p><%= errors.contrasenia.msg  %></p>
+                <p class="register_invalido"><%= errors.contrasenia.msg  %></p>
                <% } %>
 
                <label class="label-register" for="contrasenia2">CONFIRMAR CONTRASEÑA</label>
@@ -58,7 +58,7 @@
                     value="<%= locals.oldData ? oldData.contrasenia : null %>"
                >
                <% if (locals.errors && errors.contrasenia) { %>
-                <p><%= errors.contrasenia.msg  %></p>
+                <p class="register_invalido"><%= errors.contrasenia.msg  %></p>
                <% } %>
                 
                 <div class="botones-registro">

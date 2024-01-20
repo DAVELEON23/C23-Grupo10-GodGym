@@ -1,4 +1,4 @@
-const { json } = require("express");
+const {getJson,setJson} = require('../utility/jsonMethod')
 const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
@@ -15,15 +15,17 @@ const UsersJson = () =>{
 }
 
 const usersController = {
+  //vista del Registro
     viewRegister: (req, res) => {
       const users = UsersJson()
         res.render('users/register', { title: 'GOD GYM', users, usuario:req.session.user});
       },
+  //vista para llenar el formulario
       createRegister:(req,res) =>{
         const resultValidation = validationResult(req);
-        
+        console.log(resultValidation)
         if(resultValidation.errors.length > 0){
-           res.render('users/register', { 
+            res.render('users/register', { 
             errors:resultValidation.mapped(),
             oldData: req.body,
             title: 'GOD GYM'
@@ -31,9 +33,9 @@ const usersController = {
 
         }
         else{
-          const user = req.body;
+        
         const users = UsersJson()
-        const {nombre,apellido,fecha,email,contraseña,rol} = req.body;
+        const {nombre,apellido,fecha,email,contrasenia,rol} = req.body;
         const newUser = {
           id: uuidv4(),
           nombre: nombre.trim(),
@@ -47,7 +49,7 @@ const usersController = {
         const jsonUsers = JSON.stringify(users)
         fs.writeFileSync(usersFilePath, jsonUsers, 'utf-8')
         res.redirect('/users/login')
-        }
+      } 
         
       },
 
