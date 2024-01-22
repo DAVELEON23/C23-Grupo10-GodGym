@@ -10,13 +10,18 @@
         <p class="login-debajodel-icono">LOGIN</p>
      <div class="caja-user">
         <i class="fa-solid fa-user icono-user-input"></i>
-        <input type="text" name="email" placeholder="E-mail" class="input-user">
-
+        <input type="text" name="email" placeholder="E-mail" class="input-user" value="<%= locals.oldData ? oldData.email : null %>">
+        <% if (locals.errores && errores.email) { %>
+            <p><%= errores.email.msg  %></p>
+        <% } %>
      </div>
      <div class="caja-contraseña"> 
         <i class="fa-solid fa-lock icono-candado-input"></i>
-        <input type="password" name="password" id="" placeholder="contraseña" class="input-contraseña">
+        <input type="password" name="contrasenia" placeholder="contraseña" class="input-contraseña" value="<%= locals.oldData ? oldData.contrasenia : null %>">
      </div>
+     <% if (locals.errores && errores.contrasenia) { %>
+        <p><%= errores.contrasenia.msg  %></p>
+    <% } %>
      <div>
        <p class="input-recordamelo"> <input type="checkbox" name="remember" id="" value="true">Recordamelo</p>
      </div>

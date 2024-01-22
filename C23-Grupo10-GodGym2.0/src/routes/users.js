@@ -5,6 +5,8 @@ const {viewRegister,createRegister,login,UserEditView,edit, processLogin, viewPe
 const accountValidate = require('../middlewares/accountValidate')
 
 const validationRegister = require('../validaciones/validationRegister')
+const validationLogin = require("../validaciones/validationLogin")
+
 /* GET users listing. */
 
 router
@@ -13,7 +15,7 @@ router
 .post('/register',validationRegister,createRegister)
 
 .get('/login', login)
-.post('/login', processLogin)
+.post('/login', validationLogin, processLogin)
 
 .get("/edit/:id",UserEditView)
 .put("/edit/:id", edit )

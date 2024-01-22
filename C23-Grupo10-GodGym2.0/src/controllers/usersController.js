@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
 const session =  require('express-session')
 const usersFilePath = path.join(__dirname, '../database/Users.json');
-const { validationResult } = require("express-validator")
+const { validationResult } = require("express-validator");
 
 
 const UsersJson = () =>{
@@ -66,31 +66,38 @@ const usersController = {
         res.redirect('/')
       },
       processLogin: (req,res) =>{
-    
-        const {email} = req.body
+        const errores = validationResult(req);
+
+        if(!errores.isEmpty()) {
+          res.render("users/login",{errores:errores.mapped(), title:'GOD GYM', usuario:req.session.user});
+        }
+        const {email} = req.body;
         const users = getJson("users")
         const user = users.find(usuario => usuario.email == email)
+        
         if(user){
           req.session.user = user
-          delete user.password
+          delete user.contrasenia
           res.cookie('user', {nombre:user.nombre,apellido:user.apellido, email:user.email,id:user.id, rol:user.rol},{maxAge: 1000 * 60 * 15})
           res.cookie('rememberMe', "true",{maxAge: 1000 * 60 * 15})
           res.redirect('/')
 
         } else {
-          res.render('/users/login',{error:"no se encontro el usuario"})
+          res.render('users/login',{error:"no se encontro el usuario", title:"GOD GYM" })
         }
         
       },
+
       UserEditView: (req,res) => {
         const {id} = req.params;
 		    const users = UsersJson()
         const user = users.find(elemento => elemento.id == id)
         res.render('users/usersEdit', {title: 'EDITAR USUARIO', user, usuario: req.session.user})
       },
+
       edit: (req,res) =>{
         const users = UsersJson()
-        const {nombre,apellido,fecha,email,contraseña,rol} = req.body;
+        const {nombre,apellido,fecha,email,contrasenia,rol} = req.body;
         const {id} = req.params;
         const usuarios = users.map(user =>{
           if(user.id == id){
@@ -100,7 +107,7 @@ const usersController = {
               apellido: apellido ? apellido : user.apellido,
               fecha: fecha ? fecha : user.fecha,
               email: email ? email : user.email,
-              contraseña: contraseña ? contraseña : user.contraseña,
+              contrasenia: contrasenia ? contrasenia : user.contrasenia,
               rol: rol ? rol : user.rol
 
             }
@@ -112,7 +119,7 @@ const usersController = {
           const userUpdate = usuarios.find(elemento => elemento.id == id)
           req.session.user = userUpdate
           res.cookie('user',({nombre:userUpdate.nombre, apellido: userUpdate.apellido, email: userUpdate.email, id: userUpdate.id, rol:userUpdate.rol}))
-       
+        
         res.redirect('/')
         
     },
