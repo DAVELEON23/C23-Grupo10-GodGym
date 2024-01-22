@@ -75,16 +75,15 @@ const usersController = {
         const users = getJson("users")
         const user = users.find(usuario => usuario.email == email)
         
-        if(user){
-          req.session.user = user
-          delete user.contrasenia
-          res.cookie('user', {nombre:user.nombre,apellido:user.apellido, email:user.email,id:user.id, rol:user.rol},{maxAge: 1000 * 60 * 15})
-          res.cookie('rememberMe', "true",{maxAge: 1000 * 60 * 15})
-          res.redirect('/')
+        req.session.user = user
+        delete user.contrasenia
+        res.cookie('user', {nombre:user.nombre,apellido:user.apellido, email:user.email,id:user.id, rol:user.rol},{maxAge: 1000 * 60 * 15})
+        
+        if(req.body.remember == "true"){
 
-        } else {
-          res.render('users/login',{error:"no se encontro el usuario", title:"GOD GYM" })
-        }
+          res.cookie('rememberMe', "true",{maxAge: 1000 * 60 * 15})
+          
+          }res.redirect('/')
         
       },
 
