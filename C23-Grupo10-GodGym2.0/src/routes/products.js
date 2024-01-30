@@ -29,7 +29,7 @@ router
 .get("/dashboard", adminValidate, dashboard)
 
 .get("/create", adminValidate ,productCreateView)
-.post("/create", upload.single("imagen"), create)
+.post("/create",adminValidate, upload.single("imagen"), create)
 
 .get("/edit/:id", adminValidate ,productEditView)
 .put("/edit/:id", upload.single("imagen"), edit )
