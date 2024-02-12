@@ -6,7 +6,7 @@
 ### integrantes:
 - Diego Isray
 - Gustavo Insfran
-- Ivan Baez
+- Sasha Toledo
 - David de Leon
 
 ### Wireframes:
