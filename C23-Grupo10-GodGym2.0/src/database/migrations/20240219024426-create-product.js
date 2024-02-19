@@ -10,19 +10,30 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       actividad: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(50),
+        allowNull: false,
       },
       horario: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        allowNull: false,
       },
       precio: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       cupos: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       imagen_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+        model:{
+          tableName:"imagens"
+        },
+        key:"id"
+        },
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,

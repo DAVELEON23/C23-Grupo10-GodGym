@@ -10,16 +10,26 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       localidad: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(40),
+        allowNull: true,
       },
       calle: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(40),
+        allowNull: true,
       },
       numero: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       id_usuario: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references:{
+          model:{
+            tableName:'Users'
+          },
+          key:"id"
+          },
       },
       createdAt: {
         allowNull: false,

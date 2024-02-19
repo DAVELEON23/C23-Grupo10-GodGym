@@ -10,13 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       admin: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(30),
+        allowNull: true,
       },
       profesor: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(30),
+        allowNull: true,
       },
       usuario: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(30),
+        allowNull: true,
       },
       createdAt: {
         allowNull: false,

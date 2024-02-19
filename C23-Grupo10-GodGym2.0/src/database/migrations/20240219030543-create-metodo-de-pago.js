@@ -10,16 +10,26 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       efectivo: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       debito: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       credito: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       id_producto_usuario: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references:{
+          model:{
+            tableName:'Product_users'
+          },
+          key:"id"
+          },
       },
       createdAt: {
         allowNull: false,
