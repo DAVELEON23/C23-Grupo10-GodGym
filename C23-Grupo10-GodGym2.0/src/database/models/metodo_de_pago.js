@@ -10,13 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      this.hasOne(models.product_users, { 
+        as:"Roles",
+        foreignKey:"id_producto_usuario",
+        });
     }
   }
   Metodo_de_Pago.init({
-    efectivo: DataTypes.INTEGER,
-    debito: DataTypes.INTEGER,
-    credito: DataTypes.INTEGER,
+    pago: DataTypes.ENUMS,
+    fechaDePago:DataTypes.DATE,
+    monto:DataTypes.INTEGER,
     id_producto_usuario: DataTypes.INTEGER
   }, {
     sequelize,

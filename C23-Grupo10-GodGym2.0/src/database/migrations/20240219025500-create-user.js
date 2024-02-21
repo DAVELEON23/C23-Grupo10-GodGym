@@ -30,22 +30,16 @@ module.exports = {
         type: Sequelize.STRING(50),
         allowNull: false,
       },
+      aptoMedico: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+      },
       id_roles: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references:{
           model:{
             tableName:'Roles'
-          },
-          key:"id"
-          },
-      },
-      id_apto_medico: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references:{
-          model:{
-            tableName:'Aptomedicos'
           },
           key:"id"
           },

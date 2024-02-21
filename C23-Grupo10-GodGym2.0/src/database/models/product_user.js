@@ -10,7 +10,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      this.hasOne(models.metodo_de_pago, { 
+        as:'Metodo_de_Pago',
+        foreignKey:"id_producto_usuario",
+        });
     }
   }
   Product_user.init({
