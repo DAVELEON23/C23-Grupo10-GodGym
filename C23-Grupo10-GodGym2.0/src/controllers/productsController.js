@@ -50,31 +50,35 @@ const productsController = {
 
     //metodo de edicion
     edit: (req,res) =>{
-      const images = []
-      if(req.files){
-        files.forEach(element => {
-          images.push(element.filename)
+      const images = [] // --------------------BORRAR
+      if(req.files){    // --------------------BORRAR
+        files.forEach(element => { //----------BORRAR
+          images.push(element.filename) //-----BORRAR
         });
       }
-      const {nombre,imagen,informacion,horario,precio} = req.body;
-      const {id} = req.params;
-		  const products = getJson()
-      const nuevoArray = products.map(product => {
-        if(product.id == id){
+      const {nombre,imagen,informacion,horario,precio} = req.body;//***QUEDA*******
+      const {id} = req.params;//***QUEDA*******
+		  const products = getJson()//--------------------BORRAR
+      const nuevoArray = products.map(product => {//---BORRAR
+        if(product.id == id){                    //----BORRAR
           return{
+          //db.product.update({})**AGREGAR**
             id:+id,
-            nombre:nombre ? nombre : product.nombre,
-            imagen: images.length > 0 ? images : product.imagen,
-            horario:horario ? horario : product.horario,
-            informacion:informacion ? informacion : product.informacion, 
-            precio:+precio,
+            nombre:nombre ? nombre : product.nombre,            //actividad:actividad.trim(),
+            imagen: images.length > 0 ? images : product.imagen,//horario:horario.trim
+            horario:horario ? horario : product.horario,//-------precio:precio
+            informacion:informacion ? informacion : product.informacion,//cupos:cupos 
+            precio:+precio, //----------------------------------imagen:req.file ? req.filename : default.webp
           }
+          /* {where:{  **AGREGAR**
+            id,
+          }}*/
         }
         return product
       })
-      const json = JSON.stringify(nuevoArray)
-		fs.writeFileSync(productsFilePath,json,"utf-8");
-		res.redirect(`/products/dashboard`);
+      const json = JSON.stringify(nuevoArray)//-----BORRAR
+		fs.writeFileSync(productsFilePath,json,"utf-8");//-----BORRAR
+		res.redirect(`/products/dashboard`);//***QUEDA*******
     },
 
     // vista formulario de creacion
