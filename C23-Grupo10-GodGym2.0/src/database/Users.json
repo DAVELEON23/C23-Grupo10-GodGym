@@ -43,21 +43,12 @@
         "rol": "admin"
     },
     {
-        "id": "38df8bfd-8e9e-4555-9729-f0fa316bb713",
+        "id": "770cc582-f4b8-4ecd-9a37-c8dcb0752d84",
         "nombre": "gustavo",
         "apellido": "insfran",
-        "fecha": "1980-05-28",
-        "email": "gustavo@gmail.com",
-        "contrasenia": "$2b$10$wC/r4pajL65YrY3iBCHLJ.c/Rpn3BFGFDA9h0XfXrLCule9IAsn/2",
-        "rol": "usuario"
-    },
-    {
-        "id": "100",
-        "nombre": "javier",
-        "apellido": "insfran",
-        "fecha": "1980-12-28",
-        "email": "javier@gmail.com",
-        "contrasenia": "789789",
+        "fecha": "1980-08-28",
+        "email": "gus_ins@gmail.com",
+        "contrasenia": "$2b$10$XMBZ6MwE6O2k3MBcnZYU9O4qTZfAs4QLFpAZLoyl.TDaw62TjqvCe",
         "rol": "admin"
     }
 ]
