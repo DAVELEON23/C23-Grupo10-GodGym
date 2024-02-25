@@ -1,20 +1,20 @@
 'use strict';
-const jsonMethod = require('./utility/jsonMethod');
-
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
 
     await queryInterface.bulkInsert('roles', [{
-    name: 'Admin',
-    isBetaMember: false
+    roles: 'Admin',
+    createdAt: new Date,
+    updatedAt:new Date,
+    
     },{
-      name: 'Profesor',
+      roles: 'Profesor',
       createdAt: new Date,
       updatedAt:new Date,
       },{
-        name: 'User',
+        roles: 'User',
         createdAt: new Date,
         updatedAt: new Date,
         },], {});

@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Metodo_de_Pago extends Model {
+  class Ticket_de_Pago extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,19 +11,19 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasOne(models.product_users, { 
-        as:"Roles",
+        as:"product_users",
         foreignKey:"id_producto_usuario",
         });
     }
   }
-  Metodo_de_Pago.init({
+  Ticket_de_Pago.init({
     pago: DataTypes.ENUMS,
     fechaDePago:DataTypes.DATE,
     monto:DataTypes.INTEGER,
     id_producto_usuario: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Metodo_de_Pago',
+    modelName: 'Ticket_de_Pago',
   });
-  return Metodo_de_Pago;
+  return Ticket_de_Pago;
 };
