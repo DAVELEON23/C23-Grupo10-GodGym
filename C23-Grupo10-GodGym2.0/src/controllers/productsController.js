@@ -1,3 +1,5 @@
+const db = require('../database/models')
+
 const fs = require("fs");
 const path = require("path");
 
@@ -84,10 +86,10 @@ const productsController = {
 
     //metodo de creacion
     create: (req,res)=>{
-      //res.send(req.body)
+      
     const file = req.file;
     const {nombre,imagen,informacion,horario,precio} = req.body;
-    const products = getJson()
+    const products = getJson() //BORRAR
     const id = products[products.length -1].id +1 ;
 		const nuevoObj = {
 			id:+id,

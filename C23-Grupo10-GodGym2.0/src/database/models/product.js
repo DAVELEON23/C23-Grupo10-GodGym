@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Product.init({
     actividad: DataTypes.STRING,
-    horario: DataTypes.DATE,
+    horario: DataTypes.STRING,
     precio: DataTypes.INTEGER,
     cupos: DataTypes.INTEGER,
     imagen_id: DataTypes.INTEGER

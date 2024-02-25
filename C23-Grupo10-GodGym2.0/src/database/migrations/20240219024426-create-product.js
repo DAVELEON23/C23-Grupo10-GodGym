@@ -10,11 +10,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       actividad: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING,
         allowNull: false,
       },
       horario: {
-        type: Sequelize.DATE,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       precio: {
@@ -33,7 +33,7 @@ module.exports = {
         },
         key:"id"
         },
-        allowNull: false,
+        allowNull: true,
       },
       createdAt: {
         allowNull: false,
