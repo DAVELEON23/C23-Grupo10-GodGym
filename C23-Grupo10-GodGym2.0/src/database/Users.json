@@ -45,7 +45,8 @@
         "apellido": "isray",
         "fecha_de_nacimiento": "2004-04-15",
         "email": "diegoisray2@gmail.com",
-        "contrasenia": "$2b$10$ejNPJBktGboYs7Ykqy1H5uOXn64dEM/I0mnY2UVPrEJhtYWfxnKK.",
-        "rol": "admin"
+        "password": "$2b$10$ejNPJBktGboYs7Ykqy1H5uOXn64dEM/I0mnY2UVPrEJhtYWfxnKK.",
+        "id_roles": 1,
+        "aptoMedico": true
     }
 ]
