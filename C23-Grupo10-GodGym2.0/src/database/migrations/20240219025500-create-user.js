@@ -24,9 +24,14 @@ module.exports = {
       email: {
         type: Sequelize.STRING(50),
         allowNull: false,
+        unique:true,
       },
       password: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(100),
+        allowNull: false,
+      },
+      aptoMedico: {
+        type: Sequelize.BOOLEAN,
         allowNull: false,
       },
       id_roles: {
@@ -35,16 +40,6 @@ module.exports = {
         references:{
           model:{
             tableName:'Roles'
-          },
-          key:"id"
-          },
-      },
-      id_apto_medico: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references:{
-          model:{
-            tableName:'Aptomedicos'
           },
           key:"id"
           },

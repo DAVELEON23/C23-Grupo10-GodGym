@@ -9,15 +9,15 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      efectivo: {
+      pago: {
+        type: Sequelize.BOOLEAN,
+        allowNull: true,
+      },
+      fechaDePago: {
         type: Sequelize.INTEGER,
         allowNull: true,
       },
-      debito: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
-      },
-      credito: {
+      monto: {
         type: Sequelize.INTEGER,
         allowNull: true,
       },
