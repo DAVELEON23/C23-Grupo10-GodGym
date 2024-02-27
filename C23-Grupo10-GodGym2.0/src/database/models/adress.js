@@ -12,8 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       /*this.hasMany(models.user, { 
         as:"User",
-        foreignKey:"id",
-        });*/
+        foreignKey:"id_usuario",
+        });
     }
   }
   Adress.init({
