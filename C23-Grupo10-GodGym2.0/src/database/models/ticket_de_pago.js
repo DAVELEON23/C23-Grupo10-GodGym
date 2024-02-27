@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Ticket_de_Pago.init({
-    pago: DataTypes.ENUMS,
+    pago: DataTypes.INTEGER,
     fechaDePago:DataTypes.DATE,
     monto:DataTypes.INTEGER,
     id_producto_usuario: DataTypes.INTEGER

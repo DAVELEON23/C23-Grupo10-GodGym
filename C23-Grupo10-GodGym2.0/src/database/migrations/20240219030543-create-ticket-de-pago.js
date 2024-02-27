@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Metodo_de_Pagos', {
+    await queryInterface.createTable('Ticket_de_Pago', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -10,11 +10,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       pago: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.INTEGER,
         allowNull: true,
       },
       fechaDePago: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.DATE,
         allowNull: true,
       },
       monto: {
@@ -42,6 +42,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Metodo_de_Pagos');
+    await queryInterface.dropTable('Ticket_de_Pago');
   }
 };
