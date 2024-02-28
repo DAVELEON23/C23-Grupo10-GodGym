@@ -11,15 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       
-      this.belongsTo(models.roles, { 
+      this.hasOne(models.Roles, { 
         as:"Roles",
         foreignKey:"id_roles",
         });
-      this.hasOne(models.adress, { 
+      this.hasOne(models.Adress, { 
         as:"Adress",
         foreignKey:"id_usuario",
         });
-        this.belongsToMany(models.product, { 
+        this.belongsToMany(models.Product, { 
           as:"Product",
           through:"Product_user",
           foreignKey:"id_usuario",
