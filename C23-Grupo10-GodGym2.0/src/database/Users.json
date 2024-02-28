@@ -1,36 +1,32 @@
 [
     {
-        
         "nombre": "pepito",
         "apellido": "gonzalez",
         "fecha_de_nacimiento": "1995-12-23",
         "email": "pepe@hotnflns.com",
         "password": "ddmsammlf432",
-        "id_roles": 3, 
+        "id_roles": 3,
         "aptoMedico": true
     },
     {
-        
         "nombre": "roberto",
         "apellido": "roman",
         "fecha_de_nacimiento": "3133-12-12",
         "email": "rober@gmail.com",
         "password": "$2b$10$m9PlD3LR8IB5iab4gtOj1uPrsT2nQbL6WyRDYCCZOMFbhEAgl3eki",
         "id_roles": 3,
-        "aptoMedico": true  
+        "aptoMedico": true
     },
     {
-        
         "nombre": "david",
         "apellido": "gonzalez",
         "fecha_de_nacimiento": "1000-02-02",
         "email": "david@gmail.com",
         "password": "12345",
         "id_roles": 1,
-        "aptoMedico": true   
+        "aptoMedico": true
     },
     {
-        
         "nombre": "chango",
         "apellido": "chango",
         "fecha_de_nacimiento": "1998-02-23",
@@ -40,12 +36,21 @@
         "aptoMedico": true
     },
     {
-        
         "nombre": "diego",
         "apellido": "isray",
         "fecha_de_nacimiento": "2004-04-15",
         "email": "diegoisray2@gmail.com",
         "password": "$2b$10$ejNPJBktGboYs7Ykqy1H5uOXn64dEM/I0mnY2UVPrEJhtYWfxnKK.",
+        "id_roles": 1,
+        "aptoMedico": true
+    },
+    {
+        
+        "nombre": "david",
+        "apellido": "david",
+        "fecha_de_nacimiento": "1990-10-10",
+        "email": "david@h.com",
+        "password": "$2b$10$rjplZeKVNPNcgErnVI3A8.4FG7qaKWBNpbwQu2d4qptAf6S0wlWYe",
         "id_roles": 1,
         "aptoMedico": true
     }

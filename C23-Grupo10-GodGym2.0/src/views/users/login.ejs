@@ -17,10 +17,10 @@
      </div>
      <div class="caja-contraseña"> 
         <i class="fa-solid fa-lock icono-candado-input"></i>
-        <input type="password" name="contrasenia" placeholder="contraseña" class="input-contraseña" value="<%= locals.oldData ? oldData.contrasenia : null %>">
+        <input type="password" name="password" placeholder="contraseña" class="input-contraseña" value="<%= locals.oldData ? oldData.password : null %>">
      </div>
-     <% if (locals.errores && errores.contrasenia) { %>
-        <p><%= errores.contrasenia.msg  %></p>
+     <% if (locals.errores && errores.password) { %>
+        <p><%= errores.password.msg  %></p>
     <% } %>
      <div>
        <p class="input-recordamelo"> <input type="checkbox" name="remember" id="remember" value="true">Recordamelo</p>

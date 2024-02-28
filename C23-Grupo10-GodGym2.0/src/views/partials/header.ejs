@@ -14,7 +14,7 @@
                     <i class="fa-solid fa-user icono-session"
                     style="color: #ffffff;"></i>
                 </div>
-                <p class="nombre-session-usuario"><%= usuario.nombre.toUpperCase() %> <% if(locals.usuario && locals.usuario.rol == "admin"){ %>
+                <p class="nombre-session-usuario"><%= usuario.nombre.toUpperCase() %> <% if(locals.usuario && locals.usuario.id_roles == 1){ %>
                     ADMIN
                     <% } %></p>
             
