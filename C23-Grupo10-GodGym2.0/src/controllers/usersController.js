@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const session =  require('express-session')
 const usersFilePath = path.join(__dirname, '../database/Users.json');
 const { validationResult } = require("express-validator");
+const db = require("../database/models")
 
 
 const UsersJson = () =>{
@@ -55,7 +56,7 @@ const usersController = {
       },
 
       login: (req, res) => {
-        res.render('users/login', { title: 'GOD GYM' });
+        res.render('users/login', { title: 'GOD GYM',usuario:req.session.user });
       },
       logout: (req,res)=>{
         req.session.destroy()
@@ -70,22 +71,28 @@ const usersController = {
 
         if(!errores.isEmpty()) {
           res.render("users/login",{errores:errores.mapped(), title:'GOD GYM', usuario:req.session.user});
-        }
+        } else{
         const {email} = req.body;
-        const users = getJson("users")
-        const user = users.find(usuario => usuario.email == email)
-        
-        req.session.user = user
-        delete user.contrasenia
-        res.cookie('user', {nombre:user.nombre,apellido:user.apellido, email:user.email,id:user.id, rol:user.rol},{maxAge: 1000 * 60 * 15})
-        
-        if(req.body.remember == "true"){
+        db.User.findOne({
+          attributes:{
+            exclude:["password"]
+          }, 
+          where:{email}
+        })
+        .then((user)=>{
+          req.session.user = user.dataValues;
 
-          res.cookie('rememberMe', "true",{maxAge: 1000 * 60 * 15})
+        if(req.body.remember == "true"){
+          res.cookie('user',user.dataValues,{maxAge: 1000 * 60 * 15})
+          res.cookie('remember', "true",{maxAge: 1000 * 60 * 15})
           
           }res.redirect('/')
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
         
-      },
+      }},
 
       UserEditView: (req,res) => {
         const {id} = req.params;
@@ -124,9 +131,13 @@ const usersController = {
     },
     viewPerfil: (req,res) =>{
       const {id} = req.params;
-		    const users = UsersJson()
-        const user = users.find(elemento => elemento.id == id)
-        res.render('users/perfil',{title:"PERFIL",user, usuario:req.session.user})
+		    db.User.findByPk(req.session.user.id)
+        .then((response)=>{
+          res.render('users/perfil',{title:"PERFIL",user:response.dataValues, usuario:req.session.user})
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
     }
       
 }
