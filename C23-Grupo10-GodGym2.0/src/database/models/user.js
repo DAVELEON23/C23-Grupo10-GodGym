@@ -15,10 +15,10 @@ module.exports = (sequelize, DataTypes) => {
         as:"Roles",
         foreignKey:"id_roles",
         });
-      /*this.hasOne(models.adress, { 
+      this.hasOne(models.adress, { 
         as:"Adress",
         foreignKey:"id_usuario",
-        });*/
+        });
         this.belongsToMany(models.product, { 
           as:"Product",
           through:"Product_user",
