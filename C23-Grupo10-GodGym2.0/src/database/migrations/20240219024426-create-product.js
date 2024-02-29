@@ -21,6 +21,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
+      informacion: {
+        type: Sequelize.STRING(300),
+        allowNull: false,
+      },
       cupos: {
         type: Sequelize.INTEGER,
         allowNull: true,

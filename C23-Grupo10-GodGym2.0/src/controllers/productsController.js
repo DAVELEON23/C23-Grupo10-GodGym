@@ -17,9 +17,13 @@ const productsController = {
 
     detail: (req, res) => {
     const {id} = req.params;
-    const products = getJson()
-    const product = products.find(product => product.id == id);
-    res.render('products/detail', { title: product.nombre, product, usuario: req.session.user});
+    db.Product.findByPk(id,
+      {include:[{association:Imagen}]})
+      .then(function(product){
+        res.render('products/detail', { title: product.nombre, product:product, usuario: req.session.user});
+      })
+      .catch(error=> console.log(error));
+    
     },
 
     actividades: (req, res) => {
@@ -29,56 +33,53 @@ const productsController = {
     },
 
     productCart: (req, res) => {
-      const {id} = req.params;
-		  const products = getJson()
+    const {id} = req.params;
+		const products = getJson()
+   
       res.render('products/cart', { title: 'GOD GYM', products, usuario: req.session.user});
     },
 
     dashboard:(req, res) => {
-      const {id} = req.params;
-		  const products = getJson()
-      res.render('products/dashboard', { title: 'DASHBOARD', products, usuario: req.session.user });
+    //const {id} = req.params;
+		//const products = getJson()
+    db.Product.findAll()
+      .then(function(product){
+        res.render('products/dashboard', {
+          title: 'DASHBOARD',
+          product:product,
+          usuario: req.session.user
+            });
+      })
+      .catch(error=> console.log(error));
     },
 
     // vista formulario de edicion
-    productEditView:(req, res) => {
-      const {id} = req.params;
-		  const products = getJson()
-      const product = products.find(elemento => elemento.id == id );
-      res.render('products/productEdit', { title: 'EDITAR PRODUCTO', product, usuario: req.session.user });
+    productEditView:(req, res)=>{
+      res.send('esta es la vista de editar')
     },
-
     //metodo de edicion
     edit: (req,res) =>{
-      const images = [] // --------------------BORRAR
-      if(req.files){    // --------------------BORRAR
-        files.forEach(element => { //----------BORRAR
-          images.push(element.filename) //-----BORRAR
-        });
-      }
-      const {nombre,imagen,informacion,horario,precio} = req.body;//***QUEDA*******
-      const {id} = req.params;//***QUEDA*******
-		  const products = getJson()//--------------------BORRAR
-      const nuevoArray = products.map(product => {//---BORRAR
-        if(product.id == id){                    //----BORRAR
-          return{
-          //db.product.update({})**AGREGAR**
-            id:+id,
-            nombre:nombre ? nombre : product.nombre,            //actividad:actividad.trim(),
-            imagen: images.length > 0 ? images : product.imagen,//horario:horario.trim
-            horario:horario ? horario : product.horario,//-------precio:precio
-            informacion:informacion ? informacion : product.informacion,//cupos:cupos 
-            precio:+precio, //----------------------------------imagen:req.file ? req.filename : default.webp
-          }
-          /* {where:{  **AGREGAR**
+      const {actividad,imagen_id,informacion,horario,precio,cupos} = req.body;
+      const {id} = req.params;
+      db.Product.update(
+        {
+          actividad:actividad.trim(),
+          horario:horario.trim,
+          precio:precio,
+          cupos:cupos ,
+          imagen_id:req.file ? req.file.filename : 'default.webp',
+          informacion:informacion
+        },
+        {
+          where:{
             id,
-          }}*/
-        }
-        return product
-      })
-      const json = JSON.stringify(nuevoArray)//-----BORRAR
-		fs.writeFileSync(productsFilePath,json,"utf-8");//-----BORRAR
-		res.redirect(`/products/dashboard`);//***QUEDA*******
+          }
+        }) 
+        .then((resp) => {
+          res.redirect(`/products/dashboard`);
+        })
+        .catch((err) => console.log(err));
+        
     },
 
     // vista formulario de creacion
@@ -112,8 +113,21 @@ const productsController = {
     
     //metodo de eliminacion
     productDelete: (req,res)=>{
+      const { id } = req.params;
+      db.User.destroy({
+        where: {
+          id,
+        }
+      })
+        .then((resp) => {
+          res.redirect("/products/dashboard");
+        })
+        .catch((err) => console.log(err));
+    }
+   
+ 
       
-      const products = getJson();
+    /* { const products = getJson();
       const product = products.find(producto => producto.id == +req.params.id)
       const newList = products.filter(elemento => elemento.id !== +req.params.id);
       const json = JSON.stringify(newList);
@@ -125,7 +139,7 @@ const productsController = {
         
       fs.writeFileSync(productsFilePath,json,'utf-8');
       res.redirect('/products/dashboard')
-    }
+    }*/
   }
     
 

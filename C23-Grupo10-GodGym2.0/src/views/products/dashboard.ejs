@@ -5,14 +5,12 @@
     
         <h3 class="slogan-main-detalle"> Lista de Actividades </h3>
         <div class="crearActidad"><a href="/products/create"><i class="fa-solid fa-plus-minus"></i> AGREGAR ACTIVIDAD</a></div>
-                <% products.forEach(product =>{ %>
+                <% Products.forEach(product =>{ %>
             <h3 class="nombre-producto"> Entrenamiento : <%= product.nombre %></h3>
         <article class="articulo-producto">
-            <img src="/images/<%= product.imagen %>"  class="detalleProduct-imagen dashboard_img"> 
+            <img src="../../database/models/imagen.js<% product.imagen_id %>"  class="detalleProduct-imagen dashboard_img"> 
             <div class="caja-producto dashboard_caja-producto">
-            <!-- <p class="info-producto"><%= product.informacion %></p> -->
-                
-                <!-- <p class="horarios-producto"><%= product.horario %></p> -->
+            
                 
                 <div class="seccion-tablet-info dashboard-seccion-tablet-info">
                 
