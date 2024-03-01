@@ -3,6 +3,7 @@
         "actividad": "CROSSFIT",
         "imagen_id": 1,
         "horario": "Lunes: 10:00 a 11:00 hs",
+        "informacion":"informacion",
         "cupos":30,
         "precio": 8000
     },
@@ -10,6 +11,7 @@
         "actividad": "MUSCULACIÓN",
         "imagen_id": 1,
         "horario": "Lunes : 11:00 a 12:00 hs",
+        "informacion":"informacion",
         "cupos":30,
         "precio": 10000
     },
@@ -17,6 +19,7 @@
         "actividad": "ZUMBA",
         "imagen_id": 1,
         "horario": "Martes: 14hs a 15hs",
+        "informacion":"informacion",
         "cupos":30,
         "precio": 6000
     },
@@ -24,6 +27,7 @@
         "actividad": "FUNCIONAL",
         "imagen_id": 1,
         "horario": "Viernes: 11:00 a 12:00 hs",
+        "informacion":"informacion",
         "cupos":30,
         "precio": 10000
     }

@@ -17,6 +17,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      informacion:{
+        type:Sequelize.STRING,
+        allowNull: false,
+      },
       precio: {
         type: Sequelize.INTEGER,
         allowNull: false,

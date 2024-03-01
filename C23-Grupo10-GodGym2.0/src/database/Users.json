@@ -2,6 +2,8 @@
     {
         "nombre": "pepito",
         "apellido": "gonzalez",
+        "direccion": "",
+        "cp": 1,
         "fecha_de_nacimiento": "1995-12-23",
         "email": "pepe@hotnflns.com",
         "password": "ddmsammlf432",
@@ -11,6 +13,8 @@
     {
         "nombre": "roberto",
         "apellido": "roman",
+        "direccion": "",
+        "cp": 1,
         "fecha_de_nacimiento": "3133-12-12",
         "email": "rober@gmail.com",
         "password": "$2b$10$m9PlD3LR8IB5iab4gtOj1uPrsT2nQbL6WyRDYCCZOMFbhEAgl3eki",
@@ -20,6 +24,8 @@
     {
         "nombre": "david",
         "apellido": "gonzalez",
+        "direccion": "",
+        "cp": 1,
         "fecha_de_nacimiento": "1000-02-02",
         "email": "david@gmail.com",
         "password": "12345",
@@ -29,6 +35,8 @@
     {
         "nombre": "chango",
         "apellido": "chango",
+        "direccion": "",
+        "cp": 1,
         "fecha_de_nacimiento": "1998-02-23",
         "email": "chango@gmail.com",
         "password": "$2b$10$51ZIs3tvrJ2Z6Yj7O1wmDuifv4ZQTcXzVXXG694lEac9PvmwjIPZa",
@@ -38,6 +46,8 @@
     {
         "nombre": "diego",
         "apellido": "isray",
+        "direccion": "",
+        "cp": 1,
         "fecha_de_nacimiento": "2004-04-15",
         "email": "diegoisray2@gmail.com",
         "password": "$2b$10$ejNPJBktGboYs7Ykqy1H5uOXn64dEM/I0mnY2UVPrEJhtYWfxnKK.",
@@ -48,6 +58,8 @@
         
         "nombre": "david",
         "apellido": "david",
+        "direccion": "",
+        "cp": 1,
         "fecha_de_nacimiento": "1990-10-10",
         "email": "david@h.com",
         "password": "$2b$10$rjplZeKVNPNcgErnVI3A8.4FG7qaKWBNpbwQu2d4qptAf6S0wlWYe",

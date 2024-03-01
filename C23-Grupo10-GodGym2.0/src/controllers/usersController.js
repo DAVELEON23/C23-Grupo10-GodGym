@@ -1,7 +1,7 @@
 const {getJson,setJson} = require('../utility/jsonMethod')
 const fs = require("fs");
 const path = require("path");
-const { v4: uuidv4 } = require('uuid');
+// const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
 const session =  require('express-session')
 const usersFilePath = path.join(__dirname, '../database/Users.json');
@@ -18,10 +18,10 @@ const UsersJson = () =>{
 const usersController = {
   //vista del Registro
     viewRegister: (req, res) => {
-      const users = UsersJson()
-        res.render('users/register', { title: 'GOD GYM', users, usuario:req.session.user});
+        res.render('users/register', { title: 'GOD GYM', usuario:null});
       },
   //vista para llenar el formulario
+
       createRegister:(req,res) =>{
         const resultValidation = validationResult(req);
         console.log(resultValidation)
@@ -32,28 +32,52 @@ const usersController = {
             title: 'GOD GYM',
             usuario:req.session.user
           });
-
-        }
-        else{
+        } else {
         
-        const users = UsersJson()
-        const {nombre,apellido,fecha,email,contrasenia,rol} = req.body;
-        const newUser = {
-          id: uuidv4(),
-          nombre: nombre.trim(),
-          apellido: apellido.trim(),
-          fecha,
-          email:email.trim(),
-          contrasenia: bcrypt.hashSync(contrasenia,10),
-          rol: rol ? rol : "usuario"
-        }
-        users.push(newUser)
-        const jsonUsers = JSON.stringify(users)
-        fs.writeFileSync(usersFilePath, jsonUsers, 'utf-8')
-        res.redirect('/users/login')
-      } 
+        const {nombre,apellido,fecha_de_nacimiento,email,password,} = req.body;
+        db.User.create({
+              nombre: nombre.trim(),
+              apellido: apellido.trim(),
+              // direccion: direccion.trim(),
+              // cp ,
+              fecha_de_nacimiento,                         //variable modificada
+              email:email.trim(),
+              password: bcrypt.hashSync(password,10),
+              // aptoMedico,
+              id_roles:3, 
+              createAt: Date
+        })
+        .then(()=>{
+            res.redirect("/users/login")
+        })
+        .catch((err)=>{
+              console.log(err)
+            });       
+    }
+    },
+      //   const {nombre,apellido,fecha_de_nacimiento,email,password,aptoMedico,id_roles} = req.body; 
+      //   const user ={
+      //     nombre: nombre.trim(),
+      //     apellido: apellido.trim(),
+      //     direccion: direccion.trim(),
+      //     cp ,
+      //     fecha_de_nacimiento,                         //variable modificada
+      //     email:email.trim(),
+      //     password: bcrypt.hashSync(password,10),
+      //     aptoMedico,                                 //nueva variable agregada
+      //     id_roles: 3,         //variable roles modificada
+      //   }
+      //   db.user.create(user)
+      //   .then((user)=>{
+      //     users.push(user)
+      //       res.redirect('/users/login')
+      //   })
+      //   .catch((err)=>{
+      //     console.log(err)
+      //   });       
+      // } 
         
-      },
+      // },
 
       login: (req, res) => {
         res.render('users/login', { title: 'GOD GYM',usuario:req.session.user });
