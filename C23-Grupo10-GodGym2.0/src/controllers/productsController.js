@@ -42,8 +42,13 @@ const productsController = {
     dashboard:(req, res) => {
     //const {id} = req.params;
 		//const products = getJson()
-    db.Product.findAll()
-      .then(function(product){
+    db.Product.findAll({
+      where:{
+        id:{[Op.ne]:req.session.user.id}
+      }
+    })
+
+      .then((product)=>{
         res.render('products/dashboard', {
           title: 'DASHBOARD',
           product:product,
