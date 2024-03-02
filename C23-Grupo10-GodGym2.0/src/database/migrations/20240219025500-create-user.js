@@ -26,7 +26,7 @@ module.exports = {
         allowNull: true,
       },
       fecha_de_nacimiento: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false,
       },
       email: {

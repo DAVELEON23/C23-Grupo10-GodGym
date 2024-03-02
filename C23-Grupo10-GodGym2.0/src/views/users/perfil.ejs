@@ -6,29 +6,44 @@
         
             
         <% if(locals.usuario){ %>
+            <form  action="/users/perfil/<%= usuario.id %>?_method=PUT" method="post" >
+
             <div class="formulario-userEdit">
                 <h2 class="titulo-form-userEdit">PERFIL:</h2>     
-               <label class="label-userEdit" for="nombre">NOMBRE: </label>
-               <input class="input-userEdit" type="text" id="nombre" name="nombre" value="<%= usuario.nombre %>">
-   
-               <label class="label-userEdit" for="apellido">APELLIDO:</label>
-               <input class="input-userEdit" type="text" id="apellido" name="apellido" value="<%= usuario.apellido %>">
-              
-               <label class="label-userEdit" id="email">EMAIL:</label>
-                <input type="email" name="email" id="email" class="input-userEdit" value="<%= usuario.email %>">
-   
-               
-              <section class="seccion-perfil">
-              <a href="/users/edit/<%= usuario.id %>" class="usuario-perfil"> <i class="fa-solid fa-user-pen edit-perfil"></i>Editar Perfil</a>
-          
-               <a class="log-out" href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i>Cerrar sesion</a>
+                <label class="label-userEdit" for="nombre">NOMBRE: </label>
+                <input class="input-userEdit" type="text" id="nombre" name="nombre" value="<%= usuario.nombre %>">
+
+                <label class="label-userEdit" for="apellido">APELLIDO:</label>
+                <input class="input-userEdit" type="text" id="apellido" name="apellido" value="<%= usuario.apellido %>">
+
+                <label class="label-userEdit" for="direccion">DIRECCION:</label>
+                <input class="input-userEdit" type="text" id="direccion" name="direccion" value="<%= usuario.direccion %>">
+
+                <label class="label-userEdit" for="cp">CP:</label>
+                <input class="input-userEdit" type="text" id="cp" name="cp" value="<%= usuario.cp %>">
+
+                
+                <label class="label-userEdit" for="fecha_de_nacimiento">FECHA DE NACIMIENTO:</label>
+                <input class="input-userEdit" type="text" id="fecha_de_nacimiento" name="fecha_de_nacimiento" value="<%= usuario.fecha_de_nacimiento %>">
+
+                <label class="label-userEdit" id="email">EMAIL:</label>
+                <input type="email" name="email" id="email" class="input-userEdit" value="<%= usuario.email %>" disabled>
+
+                <label class="label-userEdit" for="aptoMedico">APTO MEDICO:</label>
+                <input class="input-userEdit" type="text" id="aptoMedico" name="aptoMedico" value="<%= usuario.aptoMedico %>">
+
+                <section class="seccion-perfil">
+                <div class="botones-registro">
+                    <button class="boton-userEdit" type="submit">ENVIAR</button>
+                </div>
+
+                <a class="log-out" href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i>Cerrar sesion</a>
             </section>
-                 
-           </div>
-           
-    
+
+            </div>
+        </form>
             <% }   %>
-    
-             
+
+
     </main>
     <%- include("../partials/footerdetail.ejs") %>
