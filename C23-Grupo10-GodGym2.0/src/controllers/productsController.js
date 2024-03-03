@@ -1,35 +1,36 @@
 const db = require('../database/models')
-
+const {Op} = require('sequelize');
 const fs = require("fs");
 const path = require("path");
+const { log } = require('console');
 
 const productsFilePath = path.join(__dirname, '../database/products.json');
 
-const getJson = () =>{
-	const productsFilePath = path.join(__dirname, '../database/products.json');
-	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-	return products
-}
 
 
 
 const productsController = {
 
     detail: (req, res) => {
-    const {id} = req.params;
-    db.Product.findByPk(id,
-      {include:[{association:Imagen}]})
-      .then(function(product){
-        res.render('products/detail', { title: product.nombre, product:product, usuario: req.session.user});
+    const id = req.params.id;
+    const product = db.Product.findByPk(id);
+      Promise.all([product])
+      .then(([product])=>{
+       return res.render('products/detail', { title: product.actividad, product:product, usuario: req.session.user});
       })
       .catch(error=> console.log(error));
     
     },
 
     actividades: (req, res) => {
-    const {id} = req.params;
-    const products = getJson()
-    res.render('products', { title: 'GOD GYM', products, usuario: req.session.user });
+      const products = db.Product.findAll();
+      Promise.all([products])
+      .then(([products])=>{
+        res.render('products', { title: 'GOD GYM', products, usuario: req.session.user });
+      })
+      .catch((error)=>console.log(error))
+    
+    
     },
 
     productCart: (req, res) => {
@@ -40,47 +41,44 @@ const productsController = {
     },
 
     dashboard:(req, res) => {
-    //const {id} = req.params;
-		//const products = getJson()
-    db.Product.findAll({
-      where:{
-        id:{[Op.ne]:req.session.user.id}
-      }
-    })
-
-      .then((product)=>{
-        res.render('products/dashboard', {
-          title: 'DASHBOARD',
-          product:product,
-          usuario: req.session.user
-            });
-      })
-      .catch(error=> console.log(error));
+      const product = db.Product.findAll();
+        Promise.all([product])
+        .then(([product])=>{
+         return res.render('products/dashboard', { title:"DASHBOARD", Products:product, usuario: req.session.user});
+        })
+        .catch(error=> console.log(error));
     },
 
     // vista formulario de edicion
     productEditView:(req, res)=>{
-      res.send('esta es la vista de editar')
+      const id = req.params.id;
+    const product = db.Product.findByPk(id);
+      Promise.all([product])
+      .then(([product])=>{
+       return res.render('products/productEdit', { title: product.actividad, product:product, usuario: req.session.user});
+      })
+      .catch(error=> console.log(error));
     },
     //metodo de edicion
     edit: (req,res) =>{
-      const {actividad,imagen_id,informacion,horario,precio,cupos} = req.body;
-      const {id} = req.params;
+      const {actividad,imagen,informacion,horario,precio,cupos} = req.body;
+      const {id}= req.params
       db.Product.update(
         {
           actividad:actividad.trim(),
-          horario:horario.trim,
-          precio:precio,
+          horario:horario.trim(),
           cupos:cupos ,
-          imagen_id:req.file ? req.file.filename : 'default.webp',
-          informacion:informacion
+          precio:precio,
+          imagen:req.file ? req.file.filename : imagen,
+          informacion:informacion,
+          updatedAt: new Date(),
         },
         {
           where:{
             id,
           }
         }) 
-        .then((resp) => {
+        .then(() => {
           res.redirect(`/products/dashboard`);
         })
         .catch((err) => console.log(err));

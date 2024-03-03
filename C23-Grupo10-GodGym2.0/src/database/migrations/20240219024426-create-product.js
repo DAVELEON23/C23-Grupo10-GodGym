@@ -17,6 +17,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      informacion:{
+        type:Sequelize.STRING,
+        allowNull: false,
+      },
       precio: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -29,14 +33,8 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: true,
       },
-      imagen_id: {
-        type: Sequelize.INTEGER,
-        references:{
-        model:{
-          tableName:"imagens"
-        },
-        key:"id"
-        },
+      imagen: {
+        type: Sequelize.STRING(100),
         allowNull: false,
       },
       createdAt: {

@@ -17,8 +17,16 @@ module.exports = {
         type: Sequelize.STRING(50),
         allowNull: false,
       },
+      direccion:{
+        type:Sequelize.STRING,
+        allowNull: true,
+      },
+      cp:{
+        type:Sequelize.INTEGER,
+        allowNull: true,
+      },
       fecha_de_nacimiento: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false,
       },
       email: {
@@ -32,7 +40,7 @@ module.exports = {
       },
       aptoMedico: {
         type: Sequelize.BOOLEAN,
-        allowNull: false,
+        allowNull: true,
       },
       id_roles: {
         type: Sequelize.INTEGER,

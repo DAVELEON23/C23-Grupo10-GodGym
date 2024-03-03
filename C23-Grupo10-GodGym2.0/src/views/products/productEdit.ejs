@@ -8,15 +8,15 @@
         <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="form-producto" enctype="multipart/form-data">
 <section class="seccion-edit">
             <div class="form-producto-imagen">
-                <label class="label-seleccion-imagen" for="imagen_id">SELECCIÓN DE IMÁGEN
-                <input class="" type="file" id="imagen_id" name="imagen_id" accept="image/*">
-                <img src="/images/<%= product.imagen_id %>"  class="form-imagen" value="<%= product.imagen_id %>"> 
+                <label class="label-seleccion-imagen" for="imagen">SELECCIÓN DE IMÁGEN
+                <input class="" type="file" id="imagen" name="imagen" accept="image/*">
+                <img src="/images/<%= product.imagen %>"  class="form-imagen" value="<%= product.imagen %>"> 
             </label>
             </div>
 
             <div class="div-form-nombre-edit">
                 <label class="label-form-edit" for="actividad">NOMBRE DEL PRODUCTO</label>
-                 <input class="input-form-nombre-edit" type="text" id="actividad" name="actividad" value="<%= product.nombre %>">
+                 <input class="input-form-nombre-edit" type="text" id="actividad" name="actividad" value="<%= product.actividad %>">
               </div>
             </section>
                      <section class="seccion-edit-2">

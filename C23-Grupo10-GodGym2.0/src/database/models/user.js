@@ -15,10 +15,6 @@ module.exports = (sequelize, DataTypes) => {
         as:"Roles",
         foreignKey:"id_roles",
         });
-      this.hasOne(models.Adress, { 
-        as:"Adress",
-        foreignKey:"id_usuario",
-        });
         this.belongsToMany(models.Product, { 
           as:"Product",
           through:"Product_user",
@@ -31,7 +27,9 @@ module.exports = (sequelize, DataTypes) => {
   User.init({
     nombre: DataTypes.STRING,
     apellido: DataTypes.STRING,
-    fecha_de_nacimiento: DataTypes.DATE,
+    direccion:DataTypes.STRING,
+    cp: DataTypes.INTEGER,
+    fecha_de_nacimiento: DataTypes.DATEONLY,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     aptoMedico:DataTypes.BOOLEAN,
