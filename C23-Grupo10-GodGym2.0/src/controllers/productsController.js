@@ -87,9 +87,8 @@ const productsController = {
 
     // vista formulario de creacion
     productCreateView: (req,res)=>{
-      const product = req.body 
-    const products = getJson()
-    res.render("products/productCreate",{ title: "CREAR PRODUCTO",products, usuario: req.session.user});
+      res.redirect('esta es la vista de crear')
+    //res.render("products/productCreate",{ title: "CREAR PRODUCTO", usuario: req.session.user});
     } ,
 
     //metodo de creacion
