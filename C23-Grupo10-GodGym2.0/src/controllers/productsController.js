@@ -110,8 +110,11 @@ const productsController = {
           informacion:req.body.informacion,
           updatedAt: new Date(),
       })
+      .then(()=>{
+        res.redirect("/products/dashboard")
+      })
     
-    res.redirect("/products/dashboard")
+    
     } ,
     
     //metodo de eliminacion
@@ -122,7 +125,10 @@ const productsController = {
           id,
         }
       })
-      res.redirect("/products/dashboard");
+      .then(()=>{
+        res.redirect("/products/dashboard");
+      })
+      
     }
   }
     
