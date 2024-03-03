@@ -34,10 +34,14 @@ const productsController = {
     },
 
     productCart: (req, res) => {
-    const {id} = req.params;
-		const products = getJson()
-   
-      res.render('products/cart', { title: 'GOD GYM', products, usuario: req.session.user});
+    //const {id} = req.params;
+		//const products = getJson()
+   const {id} = req.params
+      db.Product.findByPk(id)
+        .then(() => {
+          res.render('products/cart', { title: 'GOD GYM', usuario: req.session.user});
+      })
+      
     },
 
     dashboard:(req, res) => {
@@ -87,61 +91,39 @@ const productsController = {
 
     // vista formulario de creacion
     productCreateView: (req,res)=>{
-      res.redirect('esta es la vista de crear')
-    //res.render("products/productCreate",{ title: "CREAR PRODUCTO", usuario: req.session.user});
+    //  res.send('esta_es-la_vista_de_crear')
+
+     //const product = db.Product.findAll()
+     //   -then((product)=>{})
+
+        res.render("products/productCreate",{ title: "CREAR PRODUCTO" ,usuario: req.session.user});
     } ,
 
     //metodo de creacion
     create: (req,res)=>{
-      
-    const file = req.file;
-    const {nombre,imagen,informacion,horario,precio} = req.body;
-    const products = getJson() //BORRAR
-    const id = products[products.length -1].id +1 ;
-		const nuevoObj = {
-			id:+id,
-      nombre,
-      imagen: file ? file.filename : "default.webp",
-      horario,
-      informacion, 
-      precio:+precio,
-		}
+      db.Product.create({
+        actividad:req.body.actividad,
+          horario:req.body.horario,
+          cupos:req.body.cupos ,
+          precio:req.body.precio,
+          imagen:req.file ? req.file.filename : "default.webp",
+          informacion:req.body.informacion,
+          updatedAt: new Date(),
+      })
     
-    products.push(nuevoObj);
-    const productJson = JSON.stringify(products);
-    fs.writeFileSync(path.join(__dirname,"../database/products.json"),productJson,"utf-8");
     res.redirect("/products/dashboard")
     } ,
     
     //metodo de eliminacion
     productDelete: (req,res)=>{
       const { id } = req.params;
-      db.User.destroy({
+      db.Product.destroy({
         where: {
           id,
         }
       })
-        .then((resp) => {
-          res.redirect("/products/dashboard");
-        })
-        .catch((err) => console.log(err));
+      res.redirect("/products/dashboard");
     }
-   
- 
-      
-    /* { const products = getJson();
-      const product = products.find(producto => producto.id == +req.params.id)
-      const newList = products.filter(elemento => elemento.id !== +req.params.id);
-      const json = JSON.stringify(newList);
-      
-      fs.unlink(`./public/images/${product.imagen}`, (err)=>{
-        if(err) throw err;
-        console.log(`borre el archivo ${product.imagen}`)
-        })
-        
-      fs.writeFileSync(productsFilePath,json,'utf-8');
-      res.redirect('/products/dashboard')
-    }*/
   }
     
 
