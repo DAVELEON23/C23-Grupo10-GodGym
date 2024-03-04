@@ -16,7 +16,7 @@ const productsController = {
     const product = db.Product.findByPk(id);
       Promise.all([product])
       .then(([product])=>{
-       return res.render('products/detail', { title: product.actividad, product:product, usuario: req.session.user});
+      return res.render('products/detail', { title: product.actividad, product:product, usuario: req.session.user});
       })
       .catch(error=> console.log(error));
     
@@ -36,7 +36,7 @@ const productsController = {
     productCart: (req, res) => {
     //const {id} = req.params;
 		//const products = getJson()
-   const {id} = req.params
+      const {id} = req.params
       db.Product.findByPk(id)
         .then(() => {
           res.render('products/cart', { title: 'GOD GYM', usuario: req.session.user});
@@ -48,7 +48,7 @@ const productsController = {
       const product = db.Product.findAll();
         Promise.all([product])
         .then(([product])=>{
-         return res.render('products/dashboard', { title:"DASHBOARD", Products:product, usuario: req.session.user});
+        return res.render('products/dashboard', { title:"DASHBOARD", Products:product, usuario: req.session.user});
         })
         .catch(error=> console.log(error));
     },
@@ -59,7 +59,7 @@ const productsController = {
     const product = db.Product.findByPk(id);
       Promise.all([product])
       .then(([product])=>{
-       return res.render('products/productEdit', { title: product.actividad, product:product, usuario: req.session.user});
+      return res.render('products/productEdit', { title: product.actividad, product:product, usuario: req.session.user});
       })
       .catch(error=> console.log(error));
     },
