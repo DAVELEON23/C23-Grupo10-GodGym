@@ -6,11 +6,12 @@
         <h3 class="slogan-main-detalle">BE SMART - BE STRONG - BE FAST</h3>
         
                 <% products.forEach(product =>{ %>
-            <h2 class="nombre-producto"><%= product.nombre %></h2>
+            <h2 class="nombre-producto"><%= product.actividad %></h2>
         <article class="articulo-producto">
-            <img src="/images/<%= product.imagen %>"  class="detalleProduct-imagen"> 
+            <img src=" /images/<%= product.imagen%>"  class="detalleProduct-imagen"> 
             <div class="caja-producto">
             <p class="info-producto"><%= product.informacion %></p>
+            
                 
                 <p class="horarios-producto"><%= product.horario %></p>
                 <div class="seccion-tablet-info">

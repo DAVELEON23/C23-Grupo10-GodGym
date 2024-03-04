@@ -1,1 +1,69 @@
-[{"id":null,"nombre":"pepito","apellido":"gonzalez","fecha":"1995-12-23","email":"pepe@hotnflns.com","contrasenia":"ddmsammlf432"},{"id":"91190af9-ba88-4ed5-9b73-eb861dff82f9","nombre":"roberto","apellido":"roman","fecha":"3133-12-12","email":"rober@gmail.com","contrasenia":"$2b$10$m9PlD3LR8IB5iab4gtOj1uPrsT2nQbL6WyRDYCCZOMFbhEAgl3eki"},{"id":"acdb1a6b-65b3-419a-b45a-25018efde11a","nombre":"david","apellido":"gonzalez","fecha":"1000-02-02","email":"david@gmail.com","contrasenia":"12345","rol":"admin"},{"id":"1025c68c-9455-4536-83c4-8fe4f68bd349","nombre":"chango","apellido":"chango","fecha":"1998-02-23","email":"chango@gmail.com","contrasenia":"$2b$10$51ZIs3tvrJ2Z6Yj7O1wmDuifv4ZQTcXzVXXG694lEac9PvmwjIPZa","rol":"usuario"},{"id":"9c0e9942-1159-4b89-8f3d-5cf643a85f95","nombre":"diego","apellido":"isray","fecha":"2004-04-15","email":"diegoisray2@gmail.com","contrasenia":"$2b$10$ejNPJBktGboYs7Ykqy1H5uOXn64dEM/I0mnY2UVPrEJhtYWfxnKK.","rol":"admin"},{"id":"770cc582-f4b8-4ecd-9a37-c8dcb0752d84","nombre":"gustavo","apellido":"insfran","fecha":"1980-08-28","email":"gus_ins@gmail.com","contrasenia":"$2b$10$XMBZ6MwE6O2k3MBcnZYU9O4qTZfAs4QLFpAZLoyl.TDaw62TjqvCe","rol":"admin"}]
+[
+    {
+        "nombre": "pepito",
+        "apellido": "gonzalez",
+        "direccion": "",
+        "cp": 1,
+        "fecha_de_nacimiento": "1995-12-23",
+        "email": "pepe@hotnflns.com",
+        "password": "ddmsammlf432",
+        "id_roles": 3,
+        "aptoMedico": true
+    },
+    {
+        "nombre": "roberto",
+        "apellido": "roman",
+        "direccion": "",
+        "cp": 1,
+        "fecha_de_nacimiento": "3133-12-12",
+        "email": "rober@gmail.com",
+        "password": "$2b$10$m9PlD3LR8IB5iab4gtOj1uPrsT2nQbL6WyRDYCCZOMFbhEAgl3eki",
+        "id_roles": 3,
+        "aptoMedico": true
+    },
+    {
+        "nombre": "david",
+        "apellido": "gonzalez",
+        "direccion": "",
+        "cp": 1,
+        "fecha_de_nacimiento": "1000-02-02",
+        "email": "david@gmail.com",
+        "password": "12345",
+        "id_roles": 1,
+        "aptoMedico": true
+    },
+    {
+        "nombre": "chango",
+        "apellido": "chango",
+        "direccion": "",
+        "cp": 1,
+        "fecha_de_nacimiento": "1998-02-23",
+        "email": "chango@gmail.com",
+        "password": "$2b$10$51ZIs3tvrJ2Z6Yj7O1wmDuifv4ZQTcXzVXXG694lEac9PvmwjIPZa",
+        "id_roles": 2,
+        "aptoMedico": true
+    },
+    {
+        "nombre": "diego",
+        "apellido": "isray",
+        "direccion": "",
+        "cp": 1,
+        "fecha_de_nacimiento": "2004-04-15",
+        "email": "diegoisray2@gmail.com",
+        "password": "$2b$10$ejNPJBktGboYs7Ykqy1H5uOXn64dEM/I0mnY2UVPrEJhtYWfxnKK.",
+        "id_roles": 1,
+        "aptoMedico": true
+    },
+    {
+        
+        "nombre": "david",
+        "apellido": "david",
+        "direccion": "",
+        "cp": 1,
+        "fecha_de_nacimiento": "1990-10-10",
+        "email": "david@h.com",
+        "password": "$2b$10$rjplZeKVNPNcgErnVI3A8.4FG7qaKWBNpbwQu2d4qptAf6S0wlWYe",
+        "id_roles": 1,
+        "aptoMedico": true
+    }
+]
