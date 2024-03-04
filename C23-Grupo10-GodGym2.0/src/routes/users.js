@@ -17,10 +17,9 @@ router
 .get('/login', login)
 .post('/login', validationLogin, processLogin)
 
-.get("/edit/:id",UserEditView)
-.put("/edit/:id", edit )
-
 .get("/perfil/:id",accountValidate, viewPerfil)
+.put("/perfil/:id", edit )
+
 .get('/logout', logout)
 
 module.exports = router;
