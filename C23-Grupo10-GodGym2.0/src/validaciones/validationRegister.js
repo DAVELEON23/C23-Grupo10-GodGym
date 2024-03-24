@@ -16,10 +16,6 @@ const validationRegister = [
         
     body("email").notEmpty().withMessage('Por favor complete este campo').bail()
         .isEmail().withMessage('Debe ingresar un formato de correo valido').bail()
-        // .custom(value => {
-        //     const usuario = users.find(usuario => usuario.email == value);
-        //     return usuario ? false : true;
-        // }).withMessage('El email ya existe , por favor elija otro'),
         .custom(value => {
             return db.User.findOne({
                 where: {email: value}
