@@ -55,6 +55,7 @@ const productsApiController = {
                 delete erroresMaped[key].type;
                 delete erroresMaped[key].location;
                 delete erroresMaped[key].path;
+                
             }
             const jsonError = JSON.stringify(erroresMaped)
            

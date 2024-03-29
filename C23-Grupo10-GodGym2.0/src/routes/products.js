@@ -5,7 +5,7 @@ const {detail,actividades, productCart,dashboard,edit,create,productCreateView, 
 /* GET home page. */
 const accountValidate = require('../middlewares/accountValidate')
 const multer = require('multer');
-
+const validationProduct = require('../validaciones/validationProduct')
 const adminValidate = require('../middlewares/adminValidate')
 
 const storage = multer.diskStorage({
@@ -29,10 +29,10 @@ router
 .get("/dashboard", adminValidate, dashboard)
 
 .get("/create", adminValidate ,productCreateView)
-.post("/create",adminValidate, upload.single("imagen"), create)
+.post("/create",adminValidate, upload.single("imagen"),validationProduct, create)
 
 .get("/edit/:id", adminValidate ,productEditView)
-.put("/edit/:id", upload.single("imagen"), edit )
+.put("/edit/:id", upload.single("imagen"),validationProduct,edit )
 
 router.delete('/delete/:id', adminValidate, productDelete); 
 
