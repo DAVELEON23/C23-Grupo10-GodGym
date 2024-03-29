@@ -38,6 +38,15 @@
     transform: scale(0.95);
 }
 
+.informacion{
+    font-weight: bold;
+    width: 75%;
+    color: #000;
+    margin: 15px;
+    text-align: center;
+
+}
+
 @media(min-width: 768px){
     .formulario-userEdit{
         width: 81%;

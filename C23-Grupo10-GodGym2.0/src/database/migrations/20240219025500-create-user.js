@@ -39,7 +39,7 @@ module.exports = {
         allowNull: false,
       },
       aptoMedico: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.STRING(10),
         allowNull: true,
       },
       id_roles: {
