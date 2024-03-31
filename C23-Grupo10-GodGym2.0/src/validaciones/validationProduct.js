@@ -11,11 +11,11 @@ const validationProduct = [
        .bail(),
     body("imagen")
         .notEmpty()
-        .withMessage('Este campo no puede estar vaio')
+        .withMessage('Este campo no puede estar vacio')
         .bail(),
     body("horario")
         .notEmpty()
-        .withMessage('Este campo no puede estar vaco')
+        .withMessage('Este campo no puede estar vacio')
         .bail()
         .isLength({min:3,max:15})
         .withMessage('Ingresar entre 3 y 15 caracteres')
