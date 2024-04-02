@@ -30,7 +30,15 @@
                 <input type="email" name="email" id="email" class="input-userEdit" value="<%= usuario.email %>" disabled>
 
                 <label class="label-userEdit" for="aptoMedico">APTO MEDICO:</label>
-                <input class="input-userEdit" type="text" id="aptoMedico" name="aptoMedico" value="<%= usuario.aptoMedico %>">
+                <!-- <select class="input-userEdit" id="aptoMedico" name="aptoMedico"> -->
+                <select class="input-userEdit" id="aptoMedico" name="aptoMedico" <%= usuario.id_roles==1  ? '' : 'disabled' %>>
+                    <option value="NO" <%= usuario.aptoMedico == "NO" ? 'selected' : null %>>NO</option>
+                    <option value="SI" <%= usuario.aptoMedico == "SI" ? 'selected' : null %>>SI</option>
+                </select>
+                    <div class="informacion">
+                        ¿No tenes tu formulario de apto fisico? <a href="https://sportsfacilities.com.ar/v2/wp-content/uploads/2016/02/Apto-Medico.pdf">Descargalo aca!!! </a>
+                        <br>IMPORTANTE:  Debes presentar personalmente el formulario de apto fisico para poder realizar cualquier actividad! 
+                    </div>
 
                 <section class="seccion-perfil">
                 <div class="botones-registro">

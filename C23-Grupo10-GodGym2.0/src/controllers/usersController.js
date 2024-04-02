@@ -32,7 +32,7 @@ const usersController = {
               fecha_de_nacimiento,                         //variable modificada
               email:email.trim(),
               password: bcrypt.hashSync(password,10),
-              // aptoMedico,
+              aptoMedico:"NO",
               id_roles:3, 
               createAt: Date
         })
@@ -100,6 +100,7 @@ const usersController = {
       const {nombre,apellido,fecha_de_nacimiento,direccion,cp,aptoMedico} = req.body;
     db.User.findByPk(id)
       .then((user)=>{ 
+        console.log ("lo que llega del usuario",user)
         return user.update(
           {
             nombre: nombre.trim(),
@@ -107,7 +108,7 @@ const usersController = {
             direccion: direccion.trim(),
             cp ,
             fecha_de_nacimiento,                         //variable modificada
-            aptoMedico, 
+            aptoMedico: aptoMedico == "true" ? "si" : "no", 
             updatedAt: new Date()
       })
       })
