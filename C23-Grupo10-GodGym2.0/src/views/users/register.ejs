@@ -41,7 +41,7 @@
                 <% } %>
 
                 <label class="label-register" for="password">CONTRASEÑA</label>
-                <input type="password" name="password" class="input-register"
+                <input type="password" name="password" id="password" class="input-register"
                     value="<%= locals.oldData ? oldData.password : null %>">
                 <span></span>
                 <% if (locals.errors && errors.password) { %>
@@ -64,8 +64,8 @@
                         <% } %>
                 
                 <div class="botones-registro">
-                    <button class="boton-register" type="submit">Enviar</button>
-                    <button class="boton-register" type="reset">Reset</button> 
+                    <button class="boton-register" id="submit" type="submit">Enviar</button>
+                    <button class="boton-register"  id="reset" type="reset">Reset</button> 
                 </div> 
                 
         </form>

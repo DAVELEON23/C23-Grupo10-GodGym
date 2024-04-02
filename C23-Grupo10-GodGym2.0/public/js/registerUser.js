@@ -1,52 +1,92 @@
-window.addEventListener("load",function(){
+window.addEventListener("load", function () {
 
-const nombre = document.querySelector("#nombre");
-const apellido = document.querySelector('[name=apellido]');
-const email = document.querySelector('[name=email]');
-const password = document.querySelector('[name=password]');
-const formulario = document.querySelector(".formulario-register");
+    const nombre = document.querySelector("#nombre");
+    const apellido = document.querySelector('#apellido');
+    const email = document.querySelector('#email');
+    const password = document.querySelector('#password');
+    const formulario = document.querySelector(".formulario-register");
 
-const validacion = (e) => {
-    const field = e.target;
-    const fieldValue = e.target.value;
-    if(fieldValue.trim().length === 0){
-        field.classList.add("invalid");
-        field.nextElementSibling.classList.add("errores");
-        field.nextElementSibling.innerText = `${field.name} es requerido`
+    const validarNombre = () => {
+        const fieldValue = nombre.value.trim();
+        if (fieldValue.length === 0) {
+            mostrarError(nombre, `${nombre.name} es requerido`);
+        } else if (!entre(fieldValue.length, 5, 10)) {
+            mostrarError(nombre, `${nombre.name} debe tener entre 5 y 10 caracteres`);
+        } else {
+            ocultarError(nombre);
+        }
+    };
 
-    }else{
-        field.classList.remove("invalid");
-        field.nextElementSibling.classList.remove("errores");
-        field.nextElementSibling.innerText = "";
-    }
-}
+    const validarApellido = () => {
+        const fieldValue = apellido.value.trim();
+        if (fieldValue.length === 0) {
+            mostrarError(apellido, `${apellido.name} es requerido`);
+        } else {
+            ocultarError(apellido);
+        }
+    };
 
-const validacionEmail =  e => {
-    const field = e.target;
-    const fieldValue = e.target.value;
-    const regex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
-    if (fieldValue.trim().length > 5 && !regex.test(fieldValue)) {
-        field.classList.add("invalid");
-        field.nextElementSibling.classList.add("errores");
-        field.nextElementSibling.innerText = " Ingrese un formato de email valido"
+    const validarEmail = () => {
+        const fieldValue = email.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (fieldValue.length === 0) {
+            mostrarError(email, `${email.name} es requerido`);
+        } else if (!emailRegex.test(fieldValue)) {
+            mostrarError(email, `Ingrese un ${email.name} válido`);
+        } else {
+            ocultarError(email);
+        }
+    };
 
-    }else{
-        field.classList.remove("invalid");
-        field.nextElementSibling.classList.remove("errores");
-        field.nextElementSibling.innerText = ""
-    }
-  }
+    const validarPassword = () => {
+        const fieldValue = password.value.trim();
+        if (fieldValue.length === 0) {
+            mostrarError(password, `${password.name} es requerido`);
+        } else if (fieldValue.length <= 8) {
+            mostrarError(password, `${password.name} debe tener más de 8 caracteres`);
+        } else {
+            ocultarError(password);
+        }
+    };
 
-nombre.addEventListener("blur",validacion);
+    const mostrarError = (campo, mensaje) => {
+        campo.classList.add("invalid");
+        campo.nextElementSibling.classList.add("errores");
+        campo.nextElementSibling.innerText = mensaje;
+    };
 
-apellido.addEventListener("blur",validacion);
+    const ocultarError = (campo) => {
+        campo.classList.remove("invalid");
+        campo.nextElementSibling.classList.remove("errores");
+        campo.nextElementSibling.innerText = "";
+    };
 
- email.addEventListener("blur",validacion);
+    const entre = (value, min, max) => {
+        return value >= min && value <= max;
+    };
 
- //email.addEventListener("input",validacionEmail)
+    nombre.addEventListener("blur", validarNombre);
+    apellido.addEventListener("blur", validarApellido);
+    email.addEventListener("blur", validarEmail);
+    password.addEventListener("blur", validarPassword);
 
- password.addEventListener("blur",validacion);
+    //const alerta =document.querySelector("#reset");
+   /* alerta.addEventListener("click",function(){
+        Swal.fire({
+            title: "estas seguro, perderas los cambios?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Save",
+            denyButtonText: `Don't save`
+          }).then((result) => {
+            // Read more about isConfirmed, isDenied below 
+            if (result.isConfirmed) {
+              Swal.fire("Saved!", "", "success");
+            } else if (result.isDenied) {
+              Swal.fire("Changes are not saved", "", "info");
+            }
+          });
+    })*/
 
-
-
-})
+   
+});

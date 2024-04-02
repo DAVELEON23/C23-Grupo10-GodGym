@@ -35,8 +35,9 @@ window.addEventListener("load", function(){
     password.addEventListener("blur", function(e){
         limpiarErrores();
         if(password.value.trim() === ""){
-            alerta.innerHTML += "<li>El campo password es obligatorio</li>";
-            password.classList.add("invalid");
+            //alerta.innerHTML += "<li>El campo password es obligatorio</li>";
+            //password.classList.add("invalid");
+            mostrarError("El campo password es obligatorio")
         }
     });
     formulario.addEventListener('submit',function(e){
