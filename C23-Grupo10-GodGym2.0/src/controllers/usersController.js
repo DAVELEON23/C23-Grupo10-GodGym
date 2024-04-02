@@ -25,14 +25,14 @@ const usersController = {
           });
         } else {
         
-        const {nombre,apellido,fecha_de_nacimiento,email,password,} = req.body;
+        const {nombre,apellido,fecha_de_nacimiento,email,password} = req.body;
         db.User.create({
               nombre: nombre.trim(),
               apellido: apellido.trim(),
               fecha_de_nacimiento,                         //variable modificada
               email:email.trim(),
               password: bcrypt.hashSync(password,10),
-              aptoMedico:"NO",
+              // aptoMedico:"NO",
               id_roles:3, 
               createAt: Date
         })

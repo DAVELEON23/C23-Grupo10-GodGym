@@ -27,9 +27,12 @@
 
                 <label class="label-userEdit" id="email">EMAIL:</label>
                 <input type="email" name="email" id="email" class="input-userEdit" value="<%= users.email %>" disabled>
-
+                
                 <label class="label-userEdit" for="aptoMedico">APTO MEDICO:</label>
-                <input class="input-userEdit" type="text" id="aptoMedico" name="aptoMedico" value="<%= users.aptoMedico %>">
+                <select class="input-userEdit" id="aptoMedico" name="aptoMedico" >
+                    <option value="NO" <%= users.aptoMedico == "NO" ? 'selected' : null %>>NO</option>
+                    <option value="SI" <%= users.aptoMedico == "SI" ? 'selected' : null %>>SI</option>
+                </select>
 
                 <section class="seccion-perfil">
                 <div class="botones-registro">

@@ -6,18 +6,16 @@
       <h2 class="slogan-main-detalle"> Lista de usuarios </h2>
       
                <% Users.forEach(user =>{ %>
-                  <h5 class="nombre-producto"> usuario : <%= user.nombre %></h5>
-                  <h5 class="nombre-producto"> rol : <%= user.id_roles %></h5>
+                  
             <article class="articulo-producto">
             
             <div class="caja-producto dashboard_caja-producto">
             
-                
-                <div class="seccion-tablet-info dashboard-seccion-tablet-info">
+
+               <div class="seccion-tablet-info dashboard-seccion-tablet-info">
+                  <h5 class="secciones-header"><%= user.nombre %></h5>
+                  <h5 class="secciones-header"> rol: <%= user.id_roles %></h5>
                <div class="box_dashboard_option">
-                  <!-- <a class="icon_edit_dashboard" href="/users/perfil/<%= user.nombre %>"
-                  ><i class="fa-regular fa-address-book"></i>
-                  </a> -->
 
                   <a class="icon_edit_dashboard" href="/users/editPerfil/<%= user.id %>"
                   ><i class="fa-solid fa-highlighter"></i>
