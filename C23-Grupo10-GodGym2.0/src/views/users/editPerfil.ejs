@@ -1,0 +1,48 @@
+<%- include("../partials/head.ejs") %>
+<body class="body-register">
+    <%- include("../partials/header.ejs") %> 
+    <main class="main-register">
+        
+        
+        
+            <form  action="/users/editPerfil/<%= users.id %>?_method=PUT" method="post" >
+
+            <div class="formulario-userEdit">
+                <h2 class="titulo-form-userEdit">PERFIL:</h2>     
+                <label class="label-userEdit" for="nombre">NOMBRE: </label>
+                <input class="input-userEdit" type="text" id="nombre" name="nombre" value="<%= users.nombre %>">
+
+                <label class="label-userEdit" for="apellido">APELLIDO:</label>
+                <input class="input-userEdit" type="text" id="apellido" name="apellido" value="<%= users.apellido %>">
+
+                <label class="label-userEdit" for="direccion">DIRECCION:</label>
+                <input class="input-userEdit" type="text" id="direccion" name="direccion" value="<%= users.direccion %>"disabled>
+
+                <label class="label-userEdit" for="cp">CP:</label>
+                <input class="input-userEdit" type="text" id="cp" name="cp" value="<%= users.cp %>"disabled>
+
+                
+                <label class="label-userEdit" for="fecha_de_nacimiento">FECHA DE NACIMIENTO:</label>
+                <input class="input-userEdit" type="text" id="fecha_de_nacimiento" name="fecha_de_nacimiento" value="<%= users.fecha_de_nacimiento %>" disabled>
+
+                <label class="label-userEdit" id="email">EMAIL:</label>
+                <input type="email" name="email" id="email" class="input-userEdit" value="<%= users.email %>" disabled>
+
+                <label class="label-userEdit" for="aptoMedico">APTO MEDICO:</label>
+                <input class="input-userEdit" type="text" id="aptoMedico" name="aptoMedico" value="<%= users.aptoMedico %>">
+
+                <section class="seccion-perfil">
+                <div class="botones-registro">
+                    <button class="boton-userEdit" type="submit">ENVIAR</button>
+                </div>
+
+                <a class="log-out" href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i>Cerrar sesion</a>
+            </section>
+
+            </div>
+        </form>
+        
+
+
+    </main>
+    <%- include("../partials/footerdetail.ejs") %>
