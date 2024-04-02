@@ -72,7 +72,7 @@ const productsController = {
           actividad:actividad.trim(),
           horario:horario.trim(),
           cupos:cupos ,
-          precio:precio,
+          precio:precio ? precio : 0,
           imagen:req.file ? req.file.filename : imagen,
           informacion:informacion,
           updatedAt: new Date(),

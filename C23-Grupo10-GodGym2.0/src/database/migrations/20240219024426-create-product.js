@@ -23,7 +23,7 @@ module.exports = {
       },
       precio: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
       },
       cupos: {
         type: Sequelize.INTEGER,

@@ -26,14 +26,14 @@ const usersController = {
           });
         } else {
         
-        const {nombre,apellido,fecha_de_nacimiento,email,password,} = req.body;
+        const {nombre,apellido,fecha_de_nacimiento,email,password} = req.body;
         db.User.create({
               nombre: nombre.trim(),
               apellido: apellido.trim(),
               fecha_de_nacimiento,                         //variable modificada
               email:email.trim(),
               password: bcrypt.hashSync(password,10),
-              // aptoMedico,
+              // aptoMedico:"NO",
               id_roles:3, 
               createAt: Date
         })
@@ -95,11 +95,13 @@ const usersController = {
           console.log(err)
         })
     },
+  
     edit: (req,res) =>{
       const id = req.params.id;
       const {nombre,apellido,fecha_de_nacimiento,direccion,cp,aptoMedico} = req.body;
       db.User.findByPk(id)
       .then((user)=>{ 
+        console.log ("lo que llega del usuario",user)
         console.log ("lo que llega del usuario",user)
         return user.update(
           {
@@ -117,9 +119,69 @@ const usersController = {
       })
       .catch((err)=>{
             console.log(err)
-          });
-  }   
+          });       
+  },
+  //DASHBOARD DE USUARIO
+  userDashboard:(req, res) => {
+    const user = db.User.findAll();
+      Promise.all([user])
+      .then(([user])=>{
+      return res.render('users/dashboard', { title:"userdashboard", Users:user, usuario: req.session.user});
+      })
+      .catch(error=> console.log(error));
+  },
+
+  perfilDashboard: (req,res) =>{
+    const {id} = req.params;
+      db.User.findByPk(id)
+      .then((user)=>{
+        res.render('users/editPerfil',{title:"dashboard",users:user,usuario:req.session.user})
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+  },
+
+  editDashboard: (req,res) =>{
+    const id = req.params.id;
+    const {nombre,apellido,fecha_de_nacimiento,direccion,cp,aptoMedico} = req.body;
+  db.User.findByPk(id)
+    .then((user)=>{ 
+      return user.update(
+        {
+          nombre: nombre.trim(),
+          apellido: apellido.trim(),
+          direccion: direccion,
+          cp ,
+          fecha_de_nacimiento,                         //variable modificada
+          aptoMedico, 
+          updatedAt: new Date()
+    })
+    })
+    
+    .then(() => {
+      res.redirect(`/users/dashboard`);
+    })
+    .catch((err)=>{
+          console.log(err)
+        });       
+},
+
+//metodo de eliminacion
+userDelete: (req,res)=>{
+  const { id } = req.params;
+  db.User.destroy({
+    where: {
+      id,
+    }
+  })
+  .then(()=>{
+    res.redirect("/users/dashboard");
+  })
+  
 }
+}
+
 
 
 module.exports = usersController
