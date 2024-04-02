@@ -96,31 +96,29 @@ const usersController = {
         })
     },
     edit: (req,res) =>{
-      const{ id} = req.params;
+      const id = req.params.id;
       const {nombre,apellido,fecha_de_nacimiento,direccion,cp,aptoMedico} = req.body;
-      db.User.update(
-      {
-      nombre: nombre.trim(),
-      apellido: apellido.trim(),
-      direccion: direccion.trim(),
-      cp ,
-      fecha_de_nacimiento,                         //variable modificada
-      aptoMedico, 
-      updatedAt: new Date()
-     },
-     {
-      where:{
-        id,
-      }
-     }) 
-      .then(() => {
-        res.redirect(`/users/perfil/`);
+      db.User.findByPk(id)
+      .then((user)=>{ 
+        console.log ("lo que llega del usuario",user)
+        return user.update(
+          {
+            nombre: nombre.trim(),
+            apellido: apellido.trim(),
+            direccion: direccion.trim(),
+            cp ,
+            fecha_de_nacimiento,                         //variable modificada
+            aptoMedico: aptoMedico == "true" ? "si" : "no", 
+            updatedAt: new Date()
+      })
+      })
+.then(() => {
+        res.redirect(`/users/perfil/${id}`);
       })
       .catch((err)=>{
             console.log(err)
-          });       
-  
-    }     
+          });
+  }   
 }
 
 
