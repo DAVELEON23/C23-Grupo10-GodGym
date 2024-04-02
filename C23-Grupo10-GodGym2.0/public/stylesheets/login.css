@@ -34,6 +34,19 @@
         text-align: center;
 
 }
+.invalid{
+    border: solid 1px #ab222b ;
+    box-shadow: 0 0 10px red;
+}
+.errores{
+    text-decoration: underline 2px;
+    font-size: 15px;
+    color: #f14141;
+    text-align: center;
+       
+        
+
+}
 
 .input-user {
     font-size: 12px;
