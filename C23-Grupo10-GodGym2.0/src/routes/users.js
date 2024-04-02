@@ -6,7 +6,7 @@ const accountValidate = require('../middlewares/accountValidate')
 
 const validationRegister = require('../validaciones/validationRegister')
 const validationLogin = require("../validaciones/validationLogin")
-
+const validacionPerfil = require('../validaciones/validacionesPerfil')
 /* GET users listing. */
 
 router
@@ -18,7 +18,7 @@ router
 .post('/login', validationLogin, processLogin)
 
 .get("/perfil/:id",accountValidate, viewPerfil)
-.put("/perfil/:id", edit )
+.put("/perfil/:id",validacionPerfil ,edit )
 
 .get('/logout', logout)
 
