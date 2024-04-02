@@ -125,7 +125,7 @@ const usersController = {
     const user = db.User.findAll();
       Promise.all([user])
       .then(([user])=>{
-      return res.render('users/dashboard', { title:"USERDASH", Users:user, usuario: req.session.user});
+      return res.render('users/dashboard', { title:"userdashboard", Users:user, usuario: req.session.user});
       })
       .catch(error=> console.log(error));
   },
@@ -165,7 +165,22 @@ const usersController = {
           console.log(err)
         });       
 },
+
+//metodo de eliminacion
+userDelete: (req,res)=>{
+  const { id } = req.params;
+  db.User.destroy({
+    where: {
+      id,
+    }
+  })
+  .then(()=>{
+    res.redirect("/users/dashboard");
+  })
+  
 }
+}
+
 
 
 module.exports = usersController

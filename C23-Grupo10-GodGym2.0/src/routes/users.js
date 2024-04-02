@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {viewRegister,createRegister,login,editDashboard,perfilDashboard,edit, processLogin, viewPerfil,userDashboard, logout} = require('../controllers/usersController')
+const {viewRegister,createRegister,login,editDashboard,perfilDashboard,edit, processLogin, viewPerfil,userDashboard, logout,userDelete} = require('../controllers/usersController')
 
 const accountValidate = require('../middlewares/accountValidate');
 const adminValidate = require('../middlewares/adminValidate'); //
@@ -28,5 +28,7 @@ router
 .put("/perfil/:id", edit )
 
 .get('/logout', logout)
+
+router.delete('/delete/:id', adminValidate, userDelete);
 
 module.exports = router;
