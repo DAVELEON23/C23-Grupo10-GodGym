@@ -106,7 +106,7 @@ const usersController = {
             nombre: nombre.trim(),
             apellido: apellido.trim(),
             direccion: direccion.trim(),
-            cp ,
+            cp : cp ? cp:0,
             fecha_de_nacimiento,                         //variable modificada
             aptoMedico: aptoMedico == "true" ? "si" : "no", 
             updatedAt: new Date()
