@@ -2,6 +2,9 @@
 
  **Nuestro servicio apunta a todo el público que desee sentirse bien física y mentalmente a través de nuestras instalaciones con equipamento de última generación, y con un equipo profesional certificado junto a un grupo de nutricionistas para brindarte el mejor servicio.**
  
+## Para ingresar como admin.
+-email = diegoisray2@gmail.com
+-password = diego123
 
 ### integrantes:
 - Diego Isray
