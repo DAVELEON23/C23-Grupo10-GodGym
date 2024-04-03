@@ -4,7 +4,8 @@ const path = require("path");
 const bcrypt = require('bcrypt');
 const session =  require('express-session')
 const { validationResult } = require("express-validator");
-const db = require("../database/models")
+const db = require("../database/models");
+const { where } = require("sequelize");
 
 const usersController = {
   //vista del Registro
@@ -98,22 +99,22 @@ const usersController = {
     edit: (req,res) =>{
       const id = req.params.id;
       const {nombre,apellido,fecha_de_nacimiento,direccion,cp,aptoMedico} = req.body;
-    db.User.findByPk(id)
+      db.User.findByPk(id)
       .then((user)=>{ 
+        console.log ("lo que llega del usuario",user)
         console.log ("lo que llega del usuario",user)
         return user.update(
           {
             nombre: nombre.trim(),
             apellido: apellido.trim(),
             direccion: direccion.trim(),
-            cp ,
+            cp : cp ? cp:0,
             fecha_de_nacimiento,                         //variable modificada
             aptoMedico: aptoMedico == "true" ? "si" : "no", 
             updatedAt: new Date()
       })
       })
-      
-      .then(() => {
+.then(() => {
         res.redirect(`/users/perfil/${id}`);
       })
       .catch((err)=>{

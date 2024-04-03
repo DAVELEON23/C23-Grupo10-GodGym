@@ -1,3 +1,4 @@
+
 <%- include("../partials/head.ejs") %>
 <body class="body-register">
     <%- include("../partials/header.ejs") %> 
@@ -12,9 +13,17 @@
                 <h2 class="titulo-form-userEdit">PERFIL:</h2>     
                 <label class="label-userEdit" for="nombre">NOMBRE: </label>
                 <input class="input-userEdit" type="text" id="nombre" name="nombre" value="<%= usuario.nombre %>">
+                <span></span>
+                <% if (locals.errors && errors.nombre) { %>
+                    <p class="register_invalido"><%= errors.nombre.msg  %></p>
+                <% } %>
 
                 <label class="label-userEdit" for="apellido">APELLIDO:</label>
                 <input class="input-userEdit" type="text" id="apellido" name="apellido" value="<%= usuario.apellido %>">
+                <span></span>
+                <% if (locals.errors && errors.apellido) { %>
+                    <p class="register_invalido"><%= errors.apellido.msg  %></p>
+                <% } %>
 
                 <label class="label-userEdit" for="direccion">DIRECCION:</label>
                 <input class="input-userEdit" type="text" id="direccion" name="direccion" value="<%= usuario.direccion %>">
@@ -25,6 +34,9 @@
                 
                 <label class="label-userEdit" for="fecha_de_nacimiento">FECHA DE NACIMIENTO:</label>
                 <input class="input-userEdit" type="text" id="fecha_de_nacimiento" name="fecha_de_nacimiento" value="<%= usuario.fecha_de_nacimiento %>">
+                <% if (locals.errors && errors.fecha_de_nacimiento) { %>
+                    <p class="register_invalido"><%= errors.fecha_de_nacimiento.msg  %></p>
+                    <% } %>
 
                 <label class="label-userEdit" id="email">EMAIL:</label>
                 <input type="email" name="email" id="email" class="input-userEdit" value="<%= usuario.email %>" disabled>
@@ -54,4 +66,5 @@
 
 
     </main>
+    <script src="/js/perfil.js"></script>
     <%- include("../partials/footerdetail.ejs") %>

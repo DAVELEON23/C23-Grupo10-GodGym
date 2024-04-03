@@ -10,16 +10,16 @@
 
                 <label class="label-register" for="nombre">NOMBRE</label>
                 <input class="input-register" type="text" id="nombre" name="nombre"
-                        value="<%= locals.oldData ? oldData.nombre : null %>"
-                >
+                        value="<%= locals.oldData ? oldData.nombre : null %>">
+                <span></span>
                 <% if (locals.errors && errors.nombre) { %>
                     <p><%= errors.nombre.msg  %></p>
                 <% } %>
-    
+                   
                 <label class="label-register" for="apellido">APELLIDO</label>
                 <input class="input-register" type="text" id="apellido" name="apellido"
-                        value="<%= locals.oldData ? oldData.apellido : null %>"
-                >
+                        value="<%= locals.oldData ? oldData.apellido : null %>">
+                <span></span>
                 <% if (locals.errors && errors.apellido) { %>
                 <p><%= errors.apellido.msg  %></p>
                 <% } %>
@@ -35,14 +35,15 @@
                 <label class="label-register" id="email">EMAIL</label>
                 <input type="email" name="email" id="email" class="input-register"
                 value="<%= locals.oldData ? oldData.email : null %>">
-                
+                <span></span>
                 <% if (locals.errors && errors.email) { %>
                     <p class="register_invalido"><%= errors.email.msg  %></p>
                 <% } %>
 
                 <label class="label-register" for="password">CONTRASEÑA</label>
-                <input type="password" name="password" class="input-register"
+                <input type="password" name="password" id="password" class="input-register"
                     value="<%= locals.oldData ? oldData.password : null %>">
+                <span></span>
                 <% if (locals.errors && errors.password) { %>
                 <p class="register_invalido"><%= errors.password.msg  %></p>
                 <% } %>
@@ -63,11 +64,12 @@
                         <% } %>
                 
                 <div class="botones-registro">
-                    <button class="boton-register" type="submit">Enviar</button>
-                    <button class="boton-register" type="reset">Reset</button> 
+                    <button class="boton-register" id="submit" type="submit">Enviar</button>
+                    <button class="boton-register"  id="reset" type="reset">Reset</button> 
                 </div> 
                 
         </form>
     </main>
     <%- include("../partials/footerdetail.ejs") %>
+    <script src="/js/registerUser.js"></script>
 </body>
