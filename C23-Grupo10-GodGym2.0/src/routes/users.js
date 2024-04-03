@@ -6,15 +6,8 @@ const accountValidate = require('../middlewares/accountValidate');
 const adminValidate = require('../middlewares/adminValidate'); //
 const validationRegister = require('../validaciones/validationRegister');
 const validationLogin = require("../validaciones/validationLogin");
+const validacionPerfil = require('../validaciones/validacionesPerfil');
 
-
-<<<<<<< HEAD
-const validationRegister = require('../validaciones/validationRegister')
-const validationLogin = require("../validaciones/validationLogin")
-const validacionPerfil = require('../validaciones/validacionesPerfil')
-=======
-
->>>>>>> 6b7c92554752a05094f31926197d2d76dda00ee3
 /* GET users listing. */
 
 router
