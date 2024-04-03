@@ -72,7 +72,7 @@ const productsController = {
           actividad:actividad.trim(),
           horario:horario.trim(),
           cupos:cupos ,
-          precio:precio,
+          precio:precio ? precio : 0,
           imagen:req.file ? req.file.filename : imagen,
           informacion:informacion,
           updatedAt: new Date(),
@@ -91,10 +91,6 @@ const productsController = {
 
     // vista formulario de creacion
     productCreateView: (req,res)=>{
-    //  res.send('esta_es-la_vista_de_crear')
-
-     //const product = db.Product.findAll()
-     //   -then((product)=>{})
 
         res.render("products/productCreate",{ title: "CREAR PRODUCTO" ,usuario: req.session.user});
     } ,

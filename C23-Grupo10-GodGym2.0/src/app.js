@@ -14,7 +14,8 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products')
 const cookieValidate = require('./middlewares/cookieValidate');
 const app = express();
-
+// RUTAS DE API
+const productApiRouter = require('./routes/apiRoute/productApiRoute')
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -36,6 +37,8 @@ app.use(cookieValidate)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
+//API RUTAS
+app.use('/api', productApiRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

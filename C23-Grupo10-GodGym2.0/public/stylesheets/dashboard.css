@@ -56,6 +56,11 @@
     transform: scale(0.80);
 }
 
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
 
 @media(min-width: 768px){
     .dashboard_img{ 
