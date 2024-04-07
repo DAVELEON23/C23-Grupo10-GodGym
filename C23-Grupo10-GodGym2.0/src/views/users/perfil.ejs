@@ -41,6 +41,9 @@
                 <label class="label-userEdit" id="email">EMAIL:</label>
                 <input type="email" name="email" id="email" class="input-userEdit" value="<%= usuario.email %>" disabled>
 
+                <label class="label-userEdit" id="imagenUrl">IMAGEN:</label>
+                <input type="file" name="imagenUrl" id="imagenUrl" class="input-userEdit" value="<%= usuario.imagenUrl %>" disabled>
+
                 <label class="label-userEdit" for="aptoMedico">APTO MEDICO:</label>
                 <!-- <select class="input-userEdit" id="aptoMedico" name="aptoMedico"> -->
                 <select class="input-userEdit" id="aptoMedico" name="aptoMedico" <%= usuario.id_roles==1  ? '' : 'disabled' %>>

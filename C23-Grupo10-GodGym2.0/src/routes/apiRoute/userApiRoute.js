@@ -1,25 +1,20 @@
-// const express = require('express');
-// const router = express.Router();
-// const {viewRegister,createRegister,login,UserEditView,edit, processLogin, viewPerfil, logout} = require('../controllers/userApiController')
+const express = require('express');
+const router = express.Router();
+const {all,userId,} = require('../../controllers/apiController/userApiController')
 
 // const accountValidate = require('../middlewares/accountValidate')
 
 // const validationRegister = require('../validaciones/validationRegister')
 // const validationLogin = require("../validaciones/validationLogin")
 
-// /* GET users listing. */
 
-// router
-// .get('/register', viewRegister)
+router
+.get('/allusers', all)
+.get('/user/:id', userId)
 
-// // .post('/register',validationRegister,createRegister)
+// .delete('/user/:id', destroy)
+// .post('/create',validationProduct,create)
+// .put("/perfil/:id", validationProduct, edit)
 
-// .get('/login', login)
-// .post('/login', validationLogin, processLogin)
+module.exports = router;
 
-// .get("/perfil/:id",accountValidate, viewPerfil)
-// .put("/perfil/:id", edit )
-
-// // .get('/logout', logout)
-
-// module.exports = userApiRoute;
