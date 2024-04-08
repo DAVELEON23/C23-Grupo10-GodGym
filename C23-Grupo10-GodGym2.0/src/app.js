@@ -16,6 +16,7 @@ const cookieValidate = require('./middlewares/cookieValidate');
 const app = express();
 // RUTAS DE API
 const productApiRouter = require('./routes/apiRoute/productApiRoute')
+const userApiRouter = require('./routes/apiRoute/userApiRoute')
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -39,8 +40,10 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter)
 //API RUTAS
 app.use('/api', productApiRouter)
+app.use('/api', userApiRouter)
 
 // catch 404 and forward to error handler
+
 app.use(function(req, res, next) {
   next(createError(404));
 });

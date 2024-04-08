@@ -8,7 +8,8 @@
         "email": "pepe@hotnflns.com",
         "password": "ddmsammlf432",
         "id_roles": 3,
-        "aptoMedico": true
+        "imagenUrl":"https://thumbs.dreamstime.com/z/un-color-de-perfil-icono-rojo-y-no-sombra-con-c%C3%ADrculo-oscuro-fondo-blanco-194702104.jpg?ct=jpeg",
+        "aptoMedico": "SI"
     },
     {
         "nombre": "roberto",
@@ -19,7 +20,8 @@
         "email": "rober@gmail.com",
         "password": "$2b$10$m9PlD3LR8IB5iab4gtOj1uPrsT2nQbL6WyRDYCCZOMFbhEAgl3eki",
         "id_roles": 3,
-        "aptoMedico": true
+        "imagenUrl":"https://thumbs.dreamstime.com/z/un-color-de-perfil-icono-rojo-y-no-sombra-con-c%C3%ADrculo-oscuro-fondo-blanco-194702104.jpg?ct=jpeg",
+        "aptoMedico": "NO"
     },
     {
         "nombre": "david",
@@ -29,8 +31,9 @@
         "fecha_de_nacimiento": "1000-02-02",
         "email": "david@gmail.com",
         "password": "12345",
-        "id_roles": 1,
-        "aptoMedico": true
+        "id_roles": 3,
+        "imagenUrl":"https://thumbs.dreamstime.com/z/un-color-de-perfil-icono-rojo-y-no-sombra-con-c%C3%ADrculo-oscuro-fondo-blanco-194702104.jpg?ct=jpeg",
+        "aptoMedico": "NO"
     },
     {
         "nombre": "chango",
@@ -41,7 +44,8 @@
         "email": "chango@gmail.com",
         "password": "$2b$10$51ZIs3tvrJ2Z6Yj7O1wmDuifv4ZQTcXzVXXG694lEac9PvmwjIPZa",
         "id_roles": 2,
-        "aptoMedico": true
+        "imagenUrl":"https://thumbs.dreamstime.com/z/un-color-de-perfil-icono-rojo-y-no-sombra-con-c%C3%ADrculo-oscuro-fondo-blanco-194702104.jpg?ct=jpeg",
+        "aptoMedico": "SI"
     },
     {
         "nombre": "diego",
@@ -52,7 +56,8 @@
         "email": "diegoisray2@gmail.com",
         "password": "$2b$10$ejNPJBktGboYs7Ykqy1H5uOXn64dEM/I0mnY2UVPrEJhtYWfxnKK.",
         "id_roles": 1,
-        "aptoMedico": true
+        "imagenUrl":"https://thumbs.dreamstime.com/z/un-color-de-perfil-icono-rojo-y-no-sombra-con-c%C3%ADrculo-oscuro-fondo-blanco-194702104.jpg?ct=jpeg",
+        "aptoMedico": "NO"
     },
     {
         
@@ -64,6 +69,7 @@
         "email": "david@h.com",
         "password": "$2b$10$rjplZeKVNPNcgErnVI3A8.4FG7qaKWBNpbwQu2d4qptAf6S0wlWYe",
         "id_roles": 1,
-        "aptoMedico": true
+        "imagenUrl":"https://thumbs.dreamstime.com/z/un-color-de-perfil-icono-rojo-y-no-sombra-con-c%C3%ADrculo-oscuro-fondo-blanco-194702104.jpg?ct=jpeg",
+        "aptoMedico": "SI"
     }
 ]

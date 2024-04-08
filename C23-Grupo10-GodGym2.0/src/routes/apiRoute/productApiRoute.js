@@ -23,7 +23,7 @@ router
 .get('/all', all)
 .get('/product/:id', getProduct)
 .post('/product',validationProduct,create)
-.put('/product/;id',validationProduct, update)
+.put('/product/:id',validationProduct, update)
 .delete('/product/:id', destroy)
 
 /*

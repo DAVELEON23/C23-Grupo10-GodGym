@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const {viewRegister,createRegister,login,UserEditView,edit, processLogin, viewPerfil, logout} = require('../controllers/usersController')
+const {viewRegister,createRegister,login,editDashboard,perfilDashboard,edit, processLogin, viewPerfil,userDashboard, logout,userDelete} = require('../controllers/usersController')
 
-const accountValidate = require('../middlewares/accountValidate')
-
-const validationRegister = require('../validaciones/validationRegister')
-const validationLogin = require("../validaciones/validationLogin")
+const accountValidate = require('../middlewares/accountValidate');
+const adminValidate = require('../middlewares/adminValidate'); //
+const validationRegister = require('../validaciones/validationRegister');
+const validationLogin = require("../validaciones/validationLogin");
+const validacionPerfil = require('../validaciones/validacionesPerfil');
 
 /* GET users listing. */
 
@@ -17,9 +18,16 @@ router
 .get('/login', login)
 .post('/login', validationLogin, processLogin)
 
+.get("/dashboard", adminValidate, userDashboard)            //dash
+
+.get("/editPerfil/:id",adminValidate, perfilDashboard)
+.put("/editPerfil/:id", editDashboard)
+
 .get("/perfil/:id",accountValidate, viewPerfil)
-.put("/perfil/:id", edit )
+.put("/perfil/:id",validacionPerfil ,edit )
 
 .get('/logout', logout)
+
+router.delete('/delete/:id', adminValidate, userDelete);
 
 module.exports = router;
