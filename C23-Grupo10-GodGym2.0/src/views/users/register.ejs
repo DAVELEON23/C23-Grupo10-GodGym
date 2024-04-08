@@ -24,6 +24,10 @@
                 <p><%= errors.apellido.msg  %></p>
                 <% } %>
 
+                <label class="label-register" for="imagen">IMAGEN DE PERFIL</label>
+                <input class="select-register" type="file" id="imagen" name="imagen"
+                        value="<%= locals.oldData ? oldData.apellido : null %>">
+
                 <label class="label-register" for="fecha_de_nacimiento">FECHA DE NACIMIENTO</label>
                 <input class="input-register" type="date" id="fecha_de_nacimiento" name="fecha_de_nacimiento" 
                         value="<%= locals.oldData ? oldData.fecha_de_nacimiento: null %>" >
