@@ -1,7 +1,7 @@
 const {body} = require('express-validator');
 
 
-const validationProduct = [
+const validationProductEdit = [
     body("actividad")
        .notEmpty()
        .withMessage('Este campo no puede estar vacio')
@@ -43,4 +43,4 @@ const validationProduct = [
 
 ]
 
-module.exports = validationProduct
+module.exports = validationProductEdit

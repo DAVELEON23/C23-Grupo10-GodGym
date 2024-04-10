@@ -30,3 +30,4 @@
 
 ## Sprint N°5
 ![Alt text](public/images/RETRO_SPRINT_N5.png)
+![Alt text](src/database/esquema-DB/Esquema-DataBase.png) //esquema de la base de datos 

@@ -6,6 +6,7 @@ const {detail,actividades, productCart,dashboard,edit,create,productCreateView, 
 const accountValidate = require('../middlewares/accountValidate')
 const multer = require('multer');
 const validationProduct = require('../validaciones/validationProduct')
+const validationProductEdit = require('../validaciones/validationProductEdit')
 const adminValidate = require('../middlewares/adminValidate')
 
 const storage = multer.diskStorage({
@@ -32,7 +33,8 @@ router
 .post("/create",adminValidate, upload.single("imagen"),validationProduct, create)
 
 .get("/edit/:id", adminValidate ,productEditView)
-.put("/edit/:id", upload.single("imagen"),validationProduct,edit )
+//Se creo validationProductEdit
+.put("/edit/:id", upload.single("imagen"),validationProductEdit,edit ) 
 
 router.delete('/delete/:id', adminValidate, productDelete); 
 

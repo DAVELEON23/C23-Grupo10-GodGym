@@ -1,0 +1,45 @@
+<%- include("../partials/head.ejs") %>
+<body>
+   <%- include("../partials/header.ejs") %>
+   <main class="body-detail">
+   
+      <h2 class="slogan-main-detalle"> Lista de usuarios </h2>
+      
+               <% Users.forEach(user =>{ %>
+                  
+            <article class="articulo-producto">
+            
+            <div class="caja-producto dashboard_caja-producto">
+            
+
+               <div class="seccion-tablet-info dashboard-seccion-tablet-info">
+                  <h5 class="secciones-header"> Usuario: <%= user.nombre %></h5>
+                  <h5 class="secciones-header"> Rol: <%= user.id_roles %></h5>
+               <div class="box_dashboard_option">
+
+                  <a class="icon_edit_dashboard" href="/users/editPerfil/<%= user.id %>"
+                  ><i class="fa-solid fa-highlighter"></i>
+                  </a>
+                  
+                  <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
+                        <button  class="botonDelete" type="submit"><i class="fa-solid fa-trash tacho-dashboard"></i></button>
+                  
+                  </form>
+                  
+                  </div>
+      </div>
+               </div>
+               
+      </article>
+      <% })  %>
+
+   </main>
+   <%- include("../partials/footerdetail.ejs") %>
+</body>
+</html>
+
+
+   </main>
+   <%- include("../partials/footerdetail.ejs") %>
+</body>
+</html>

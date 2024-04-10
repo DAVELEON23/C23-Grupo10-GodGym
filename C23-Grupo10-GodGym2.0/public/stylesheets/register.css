@@ -1,4 +1,13 @@
-
+.invalid{
+    border: solid 1px #ab222b ;
+    box-shadow: 0 0 10px red;
+}
+.errores{
+    text-decoration: underline 2px;
+    font-size: 15px;
+    color: #f14141;
+    text-align: center;
+}
 
 
 /*seccion del main-------------------------------------*/
@@ -54,10 +63,10 @@
     box-shadow: 5px 5px 5px 2px var(--color-amarillo);
     transition: all 0.8s;
 }
-.input-register:hover{
+/*.input-register:hover{
     box-shadow: 5px 5px 5px 2px var(--color-amarillo);
     transition: all 0.8s;
-}
+}*/
 .select-register:hover{
     box-shadow: 5px 5px 5px 2px var(--color-amarillo);
     transition: all 0.8s;
