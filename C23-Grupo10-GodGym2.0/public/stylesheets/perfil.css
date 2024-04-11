@@ -10,6 +10,16 @@
 .edit-perfil{
     padding: 3px;
 }
+.imagenPrefil img{
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    margin:3px;
+}
+.imagenPrefil{
+    justify-content: center;
+    text-align: center;
+}
 
 @media(min-width: 768px){
     .seccion-perfil {

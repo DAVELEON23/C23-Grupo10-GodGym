@@ -95,14 +95,15 @@ const usersController = {
           console.log(err)
         })
     },
-  
+    
+    //edicion de perfil por parte del usuario
     edit: (req,res) =>{
       const id = req.params.id;
-      const {nombre,apellido,fecha_de_nacimiento,direccion,cp,aptoMedico} = req.body;
+      const {nombre,apellido,fecha_de_nacimiento,direccion,cp,aptoMedico,imagen} = req.body;
       db.User.findByPk(id)
       .then((user)=>{ 
         console.log ("lo que llega del usuario",user)
-        console.log ("lo que llega del usuario",user)
+        
         return user.update(
           {
             nombre: nombre.trim(),
@@ -110,7 +111,8 @@ const usersController = {
             direccion: direccion.trim(),
             cp : cp ? cp:0,
             fecha_de_nacimiento,                         //variable modificada
-            aptoMedico: aptoMedico == "true" ? "si" : "no", 
+            imagen,
+            aptoMedico: aptoMedico == "true" ? "SI" : "NO", 
             updatedAt: new Date()
       })
       })
@@ -142,9 +144,10 @@ const usersController = {
       })
   },
 
+  //edicion de perfil por parte del admin
   editDashboard: (req,res) =>{
     const id = req.params.id;
-    const {nombre,apellido,fecha_de_nacimiento,direccion,cp,aptoMedico} = req.body;
+    const {nombre,apellido,fecha_de_nacimiento,direccion,cp,aptoMedico,imagen} = req.body;
   db.User.findByPk(id)
     .then((user)=>{ 
       return user.update(
@@ -154,6 +157,7 @@ const usersController = {
           direccion: direccion,
           cp ,
           fecha_de_nacimiento,                         //variable modificada
+          imagen,
           aptoMedico, 
           updatedAt: new Date()
     })

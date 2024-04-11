@@ -3,13 +3,18 @@
 <body class="body-register">
     <%- include("../partials/header.ejs") %> 
     <main class="main-register">
-        
-        
-            
+
         <% if(locals.usuario){ %>
+            
             <form  action="/users/perfil/<%= usuario.id %>?_method=PUT" method="post" >
+            
 
             <div class="formulario-userEdit">
+
+            <div class="imagenPrefil">
+                    <img src="/images/userImage/<%= usuario.imagen %>" >
+            </div>
+            
                 <h2 class="titulo-form-userEdit">PERFIL:</h2>     
                 <label class="label-userEdit" for="nombre">NOMBRE: </label>
                 <input class="input-userEdit" type="text" id="nombre" name="nombre" value="<%= usuario.nombre %>">
@@ -40,15 +45,16 @@
 
                 <label class="label-userEdit" id="email">EMAIL:</label>
                 <input type="email" name="email" id="email" class="input-userEdit" value="<%= usuario.email %>" disabled>
-
-                <label class="label-userEdit" id="imagenUrl">IMAGEN:</label>
-                <input type="file" name="imagenUrl" id="imagenUrl" class="input-userEdit" value="<%= usuario.imagenUrl %>" disabled>
-
+                
+                
+                <label class="label-userEdit" id="imagen">IMAGEN:</label>
+                <input type="file" name="imagen" id="imagen" class="input-userEdit" value="<%= usuario.imagen %>" >
+                
                 <label class="label-userEdit" for="aptoMedico">APTO MEDICO:</label>
                 <!-- <select class="input-userEdit" id="aptoMedico" name="aptoMedico"> -->
                 <select class="input-userEdit" id="aptoMedico" name="aptoMedico" <%= usuario.id_roles==1  ? '' : 'disabled' %>>
-                    <option value="NO" <%= usuario.aptoMedico == "NO" ? 'selected' : null %>>NO</option>
-                    <option value="SI" <%= usuario.aptoMedico == "SI" ? 'selected' : null %>>SI</option>
+                    <option value="false" <%= usuario.aptoMedico == "NO" ? 'selected' : null %>>NO</option>
+                    <option value="true" <%= usuario.aptoMedico == "SI" ? 'selected' : null %>>SI</option>
                 </select>
                     <div class="informacion">
                         ¿No tenes tu formulario de apto fisico? <a href="https://sportsfacilities.com.ar/v2/wp-content/uploads/2016/02/Apto-Medico.pdf">Descargalo aca!!! </a>

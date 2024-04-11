@@ -38,8 +38,8 @@ module.exports = {
         type: Sequelize.STRING(100),
         allowNull: false,
       },
-      imagenUrl: {
-        type: Sequelize.STRING(200),
+      imagen: {
+        type: Sequelize.STRING(100),
         allowNull: true,
       },
       aptoMedico: {

@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     fecha_de_nacimiento: DataTypes.DATEONLY,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    imagenUrl:DataTypes.STRING,
+    imagen:DataTypes.STRING,
     aptoMedico:DataTypes.STRING,
     id_roles: DataTypes.INTEGER,
     
