@@ -6,12 +6,35 @@ const {validationResult} = require('express-validator')
 
 
 const productsApiController = {
-    all:(req,res) => {
-      db.Product.findAll()
-      .then(respuesta => {
-        res.send(respuesta)
-      })
+  // TODOS LOS PRODUCTOS
+
+    all: async(req,res) => {
+      let {limit=10 , page=1} = req.query;
+      limit = parseInt(limit);
+      const offset = limit * (parseInt(page) - 1) ;
+      try{
+        const products = await db.Product.findAll({
+          limit,
+          offset
+        });
+        return res.status(200).send({
+          meta: {
+            status: 200,
+            count: products.length,
+            url:'/products',
+          },
+          product:products
+        })
+      }catch (error) {
+        return res.status(400).send(error.message)
+      }
+      
+      
+        
+      
     },
+
+// MUESTRA UN PRODUCTO POT ID
     getProduct: async (req,res) => {
       try {
         const id = parseInt(req.params.id);
@@ -33,7 +56,7 @@ const productsApiController = {
       }
     },
     
-     //metodo de creacion
+     //CREA UN PRODUCTO
      create: async (req,res)=>{
         const errores = validationResult(req);
         try {
@@ -72,6 +95,7 @@ const productsApiController = {
       update: async (req,res) => {
         try {
           const errores = validationResult(req);
+          console.log("esto es errores: ",errores)
           const id = parseInt(req.params.id);
           if (!Number.isInteger(id)) {
             throw new Error(`El ID indicado debe ser un numero entero`);
@@ -98,6 +122,7 @@ const productsApiController = {
           return res.status(400).send(error.message);
         }
       },
+      //ELIMINA UN PRODUCTO
       destroy: async (req,res) => {
         try {
           const id = parseInt(req.params.id);
