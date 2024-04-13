@@ -26,7 +26,7 @@ const usersController = {
           });
         } else {
         
-        const {nombre,apellido,fecha_de_nacimiento,email,password} = req.body;
+        const {nombre,apellido,fecha_de_nacimiento,email,password,} = req.body;
         db.User.create({
               nombre: nombre.trim(),
               apellido: apellido.trim(),
@@ -35,6 +35,7 @@ const usersController = {
               password: bcrypt.hashSync(password,10),
               // aptoMedico:"NO",
               id_roles:3, 
+              imagen:"imageDefault.jpg",
               createAt: Date
         })
         .then(()=>{
@@ -111,7 +112,7 @@ const usersController = {
             direccion: direccion.trim(),
             cp : cp ? cp:0,
             fecha_de_nacimiento,                         //variable modificada
-            imagen,
+            imagen:req.file ? req.file.filename : imagen,
             aptoMedico: aptoMedico == "true" ? "SI" : "NO", 
             updatedAt: new Date()
       })
@@ -121,7 +122,8 @@ const usersController = {
       })
       .catch((err)=>{
             console.log(err)
-          });       
+          }); 
+          
   },
   //DASHBOARD DE USUARIO
   userDashboard:(req, res) => {
@@ -157,7 +159,7 @@ const usersController = {
           direccion: direccion,
           cp ,
           fecha_de_nacimiento,                         //variable modificada
-          imagen,
+          imagen:req.file ? req.file.filename : imagen,
           aptoMedico, 
           updatedAt: new Date()
     })

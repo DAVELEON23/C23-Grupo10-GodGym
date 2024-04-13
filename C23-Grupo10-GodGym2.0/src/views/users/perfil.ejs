@@ -6,7 +6,7 @@
 
         <% if(locals.usuario){ %>
             
-            <form  action="/users/perfil/<%= usuario.id %>?_method=PUT" method="post" >
+            <form  action="/users/perfil/<%= usuario.id %>?_method=PUT" method="post" enctype="multipart/form-data" >
             
 
             <div class="formulario-userEdit">
@@ -48,7 +48,7 @@
                 
                 
                 <label class="label-userEdit" id="imagen">IMAGEN:</label>
-                <input type="file" name="imagen" id="imagen" class="input-userEdit" value="<%= usuario.imagen %>" >
+                <input type="file" name="imagen" id="imagen" accept="image/*" class="input-userEdit" value="<%= usuario.imagen %>" >
                 
                 <label class="label-userEdit" for="aptoMedico">APTO MEDICO:</label>
                 <!-- <select class="input-userEdit" id="aptoMedico" name="aptoMedico"> -->

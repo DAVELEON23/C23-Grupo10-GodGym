@@ -5,9 +5,14 @@
         
         
         
-            <form  action="/users/editPerfil/<%= users.id %>?_method=PUT" method="post" >
+            <form  action="/users/editPerfil/<%= users.id %>?_method=PUT" method="post" enctype="multipart/form-data" >
 
             <div class="formulario-userEdit">
+                
+                <div class="imagenPrefil">
+                    <img src="/images/userImage/<%= usuario.imagen %>" >
+                </div>
+                
                 <h2 class="titulo-form-userEdit">PERFIL:</h2>     
                 <label class="label-userEdit" for="nombre">NOMBRE: </label>
                 <input class="input-userEdit" type="text" id="nombre" name="nombre" value="<%= users.nombre %>">
@@ -33,6 +38,9 @@
                     <option value="NO" <%= users.aptoMedico == "NO" ? 'selected' : null %>>NO</option>
                     <option value="SI" <%= users.aptoMedico == "SI" ? 'selected' : null %>>SI</option>
                 </select>
+
+                <label class="label-userEdit" id="imagen">IMAGEN:</label>
+                <input type="file" name="imagen" id="imagen" accept="image/*" class="input-userEdit" value="<%= usuario.imagen %>" >
 
                 <section class="seccion-perfil">
                 <div class="botones-registro">
