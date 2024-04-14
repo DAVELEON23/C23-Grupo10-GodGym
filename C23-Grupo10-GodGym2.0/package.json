@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./src/bin/www",
+    "start": "concurrently \"npm run server\" \"npm run client:start\"",
+    "server": "nodemon ./src/bin/www",
+    "client:start": "cd admin & npm run dev",
+    "client:build": "cd admin & npm run build",
     "db": "sequelize db:drop & sequelize db:create & sequelize db:migrate & sequelize db:seed:all"
-    
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -26,5 +28,8 @@
     "sequelize": "^6.37.1",
     "sequelize-cli": "^6.6.2",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
