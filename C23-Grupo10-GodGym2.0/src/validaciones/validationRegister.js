@@ -24,7 +24,7 @@ const validationRegister = [
                 if (user) {return Promise.reject('El email se encuentra registrado')}
             })
             .catch(() => {
-                return Promise.reject('El email se encuentra registrado')
+                return Promise.reject('El email se encuentra registrado 2')
             })
     }),
         
