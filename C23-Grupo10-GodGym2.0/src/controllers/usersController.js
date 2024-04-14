@@ -26,7 +26,7 @@ const usersController = {
           });
         } else {
         
-        const {nombre,apellido,fecha_de_nacimiento,email,password} = req.body;
+        const {nombre,apellido,fecha_de_nacimiento,email,password,imagen} = req.body;
         db.User.create({
               nombre: nombre.trim(),
               apellido: apellido.trim(),
@@ -34,7 +34,8 @@ const usersController = {
               email:email.trim(),
               password: bcrypt.hashSync(password,10),
               // aptoMedico:"NO",
-              id_roles:3, 
+              id_roles:3,
+              imagen:file ? file.name :"user-Image.jpg", 
               createAt: Date
         })
         .then(()=>{

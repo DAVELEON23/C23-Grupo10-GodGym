@@ -8,7 +8,7 @@ const multer = require('multer');
 const validationProduct = require('../validaciones/validationProduct')
 const validationProductEdit = require('../validaciones/validationProductEdit')
 const adminValidate = require('../middlewares/adminValidate')
-
+// MULTER---------------
 const storage = multer.diskStorage({
   destination: (req,file,cb) => {
     cb(null,path.join(__dirname,"../../public/images"))
@@ -19,6 +19,7 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({storage})
+//---------------------
 
 router
 .get('/detail/:id', detail )
