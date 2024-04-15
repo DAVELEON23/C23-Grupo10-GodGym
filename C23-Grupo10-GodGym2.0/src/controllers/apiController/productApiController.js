@@ -49,7 +49,7 @@ const productsApiController = {
           throw new Error(`No existe un producto con el ID ${id} indicado`);
         }
   
-        res.status(200).send(product)
+        return res.status(200).send(product)
       }
        catch (error) {
         return res.status(400).send(error.message)
