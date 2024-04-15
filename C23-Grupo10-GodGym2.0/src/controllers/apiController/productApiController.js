@@ -25,8 +25,15 @@ const productsApiController = {
         if(!product){
           throw new Error(`No existe un producto con el ID ${id} indicado`);
         }
+        const infoProduct ={
+          id:product.id,
+          actividad:product.actividad,
+          info:product.informacion,
+          precio:product.precio,
+          imaagen:`/images/${product.imagen}`
+        }
   
-        res.status(200).send(product)
+        res.status(200).send(infoProduct)
       }
        catch (error) {
         return res.status(400).send(error.message)
