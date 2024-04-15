@@ -26,7 +26,7 @@ export default function SideBar() {
 						<a href="http://localhost:3000/products/dashboard" className="nav-link">Productos</a>
 						<a href="http://localhost:3000/users/dashboard" className="nav-link">Usuarios</a>
 					<hr className="sidebar-divider"/>
-						<a href="/" className="nav-link">HOME</a>
+						<a href="http://localhost:3000" className="nav-link">HOME</a>
 					<hr class="sidebar-divider d-none d-md-block"/>
 			</li>
 		</ul>
