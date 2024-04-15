@@ -6,7 +6,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require("method-override");
-
+const cors = require('cors')
 
 
 const indexRouter = require('./routes/index');
@@ -18,6 +18,10 @@ const app = express();
 const productApiRouter = require('./routes/apiRoute/productApiRoute')
 const userApiRouter = require('./routes/apiRoute/userApiRoute')
 // view engine setup
+
+app.use(cors({
+  origin: "http://localhost:5173"
+}))
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
