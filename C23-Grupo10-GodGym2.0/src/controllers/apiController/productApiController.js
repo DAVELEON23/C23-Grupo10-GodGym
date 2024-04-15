@@ -6,12 +6,25 @@ const {validationResult} = require('express-validator')
 
 
 const productsApiController = {
-    all:(req,res) => {
-      db.Product.findAll()
-      .then(respuesta => {
-        res.send(respuesta)
+  all: async(req,res) => {
+    let {limit=10 , page=1} = req.query;
+    limit = parseInt(limit);
+    const offset = limit * (parseInt(page) - 1) ;
+    try{
+      const products = await db.Product.findAll({
+        limit,
+        offset
+      });
+      return res.status(200).send({
+
+        count: products.length,
+        
+        product:products
       })
-    },
+    }catch (error) {
+      return res.status(400).send(error.message)
+    }
+  },
     getProduct: async (req,res) => {
       try {
         const id = parseInt(req.params.id);
