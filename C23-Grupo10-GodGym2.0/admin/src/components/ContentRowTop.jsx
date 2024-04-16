@@ -4,6 +4,7 @@ import LastProduct from "./LastProduct";
 import ContentWrapper from "./ContentWrapper";
 import PropTypes from "prop-types"
 
+
 export default function ContentRowTop({apiData,productData}) {
     return(
             <div className="container-fluid">
@@ -16,7 +17,16 @@ export default function ContentRowTop({apiData,productData}) {
 						/>
 
 					<div className="row">
-						<LastProduct/>
+						<LastProduct product ={
+							productData.map()
+							
+							}
+							   
+
+
+
+
+						/>
 						<Users />
 					</div>
 				</div>
@@ -31,7 +41,9 @@ ContentWrapper.propTypes = {
     }),
 	productData: PropTypes.shape({
         count: PropTypes.number,
-
+		actividades:PropTypes.string,
+		informacion:PropTypes.string,
+		imagen
 		//seguir completando con codigo para producto....
 	}),
 };

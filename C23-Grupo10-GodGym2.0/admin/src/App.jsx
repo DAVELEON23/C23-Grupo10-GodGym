@@ -32,13 +32,7 @@ function App() {
   );
 }
 
-<<<<<<< HEAD
-export default App
-
-// consumir apis enviar a los hojos impotar
-=======
 export default App;
 
 
 //CONSUMIR APIS Y ENVIARLOS A LOS HIJOS, IMPORTARLOS EN CONTAINER SECCION. 
->>>>>>> a711ea35aea130b9ac650fee938b598a501dd5aa
