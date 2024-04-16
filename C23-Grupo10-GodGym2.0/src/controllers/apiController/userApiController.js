@@ -14,8 +14,9 @@ const usersApiController = {
         .then(usuarios => {
             const usersArray = usuarios.map(usuario => ({
                 id: usuario.id,
-                name: usuario.nombre,
+                name: usuario.nombre.charAt(0).toUpperCase() + usuario.nombre.slice(1).toLowerCase(),
                 email: usuario.email,
+                aptoMedico:usuario.aptoMedico,
                 detail: `/api/user/${usuario.id}`
             }));
 
