@@ -8,7 +8,7 @@ export default function ContentRowTop({apiData,productData}) {
     return(
             <div className="container-fluid">
 					<div className="d-sm-flex align-items-center justify-content-between mb-4">
-						<h1 className="h1 mb-0 text-gray-800">GOD GYM</h1>
+						<h1 className="h1 mb-0 text-gray-800 ">GOD GYM</h1>
 					</div>
 					
 						<PanelContador 	countUser = {apiData && apiData.count}
