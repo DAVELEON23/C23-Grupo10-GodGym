@@ -2,7 +2,8 @@
     <img class= "logo" src="/images/logo-proyecto.svg" alt="logo">
     <section class="seccion-header">
         <h1 class="titulo-home">GOD GYM</h1>
-        <div class="boton-hamburguesa">
+        <div class="boton-hamburguesa"> 
+            <!-- /////// agregar funcionanildad, boton checkout CSS (usar over y z-index ) o boton con funcionalidad de js. -->
             <i class="fa-solid fa-bars"></i>
         </div>
         <nav class="nav-registros">
@@ -14,8 +15,11 @@
                 <p class="nombre-session-usuario"><%= usuario.nombre.toUpperCase() %> <% if(locals.usuario && locals.usuario.id_roles == 1){ %>
                     ADMIN
                     <span>
-                        <a href="/products/dashboard" class="dash-admin"><i class="fa-solid fa-gear"></i></i></i></a>
-                        <a href="/users/dashboard" class="dash-admin"><i class="fa-solid fa-users-gear"></i></i></i></a> 
+                        <!-- <a href="/products/dashboard" class="dash-admin"><i class="fa-solid fa-trash"></i></i></i></a>
+                        <a href="/users/dashboard" class="dash-admin"><i class="fa-solid fa-users-gear"></i></i></i></a>  -->
+                        
+                        <!-- //PARA ENTRAR AL DASH DE REACT -->
+                        <a href="http://localhost:5173/" class="dash-admin"><i class="fa-solid fa-gear"></i></i></i></a>  
                     </span>
                     <% } %></p>
             

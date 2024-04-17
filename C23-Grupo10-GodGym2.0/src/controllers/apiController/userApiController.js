@@ -4,122 +4,124 @@
 // const bcrypt = require('bcrypt');
 // const session =  require('express-session')
 // const { validationResult } = require("express-validator");
-// const db = require("../database/models")
+const db = require("../../database/models");
+const {Op, json} = require('sequelize');
 
-// const usersController = {
-//   //vista del Registro
-//     viewRegister: (req, res) => {
-//         res.render('users/register', { title: 'GOD GYM', usuario:null});
-//       },
-//   //vista para llenar el formulario
+const usersApiController = {
+    all: (req, res) => {
+        db.User
+        .findAll()
+        .then(usuarios => {
+            const usersArray = usuarios.map(usuario => ({
+                id: usuario.id,
+                name: usuario.nombre.charAt(0).toUpperCase() + usuario.nombre.slice(1).toLowerCase(),
+                email: usuario.email,
+                aptoMedico:usuario.aptoMedico,
+                detail: `/api/user/${usuario.id}`
+            }));
 
-//       createRegister:(req,res) =>{
-//         const resultValidation = validationResult(req);
-//         console.log(resultValidation)
-//         if(resultValidation.errors.length > 0){
-//             res.render('users/register', { 
-//             errors:resultValidation.mapped(),
-//             oldData: req.body,
-//             title: 'GOD GYM',
-//             usuario:req.session.user
-//           });
-//         } else {
+            return res.status(200).json({
+                count: usuarios.length,
+                users: usersArray
+            });
+        })
+        .catch(error => {
+            console.error("Error al obtener usuarios:", error);
+            return res.status(500).json({
+                message: "Error al obtener usuarios"
+            });
+        });
+    },
+
+    //vista del Registro
+    userId: (req, res) => {
+        db.User
+        .findByPk(req.params.id)
+        .then(usuario => {
+            if (!usuario) {
+                return res.status(404).json({
+                    message: "Usuario no encontrado"
+                });
+            }
+
+            // Información del usuario
+            const userData = {
+                id: usuario.id,
+                name: usuario.nombre,
+                email: usuario.email,
+                imagen: `/images/userImage/${usuario.imagen}`, 
+            };
+
+            return res.status(200).json(userData);
+        })
+        .catch(error => {
+            console.error("Error al obtener usuario por ID:", error);
+            return res.status(500).json({
+                message: "Error al obtener usuario por ID"
+            });
+        });
+    },
+    // Crear Usuario    
+    create: (req,res) => {
+        db.User
+        .create(req.body)
+        .then(usuario => {
+            return res.status(200).json({
+                status: 200,
+                data: usuario,
+                })
+            })
+        },
+
+    //Eliminar Usuario
+    delete: (req,res) => {
+        db.User
+        destroy({
+            where: {                       //NO OLVIDAR NUNCA COLOCAR EL WHERE EN EL METODO DELETE!!
+                id: req.params.id
+            }
+        })
+        .then(resp =>{
+            return res.json(resp)
+        })
+    },
+
+}
+
+
+// const usersApiController = {
+//     all: async (req,res) => {
+//         try {
+//             const users = await db.User.findAll()
         
-//         const {nombre,apellido,fecha_de_nacimiento,email,password,} = req.body;
-//         db.User.create({
-//               nombre: nombre.trim(),
-//               apellido: apellido.trim(),
-//               fecha_de_nacimiento,                         //variable modificada
-//               email:email.trim(),
-//               password: bcrypt.hashSync(password,10),
-//               // aptoMedico,
-//               id_roles:3, 
-//               createAt: Date
-//         })
-//         .then(()=>{
-//             res.redirect("/users/login")
-//         })
-//         .catch((err)=>{
-//               console.log(err)
-//             });       
-//     }
-//     },
+//         const usuarios = users.map(user=>{
+//             const datos = {...user.toJSON()}
+//             delete datos.apellido;
+//             delete datos.direccion;
+//             delete datos.cp;
+//             delete datos.fecha_de_nacimiento;
+//             delete datos.password;
+//             delete datos.aptoMedico;
+//             delete datos.id_roles;
+//             delete datos.createdAt;
+//             delete datos.updatedAt;
 
-//       login: (req, res) => {
-//         res.render('users/login', { title: 'GOD GYM',usuario:req.session.user });
-//       },
-//       logout: (req,res)=>{
-//         req.session.destroy()
-//         if(req.cookies.user){
-//           res.clearCookie('user')
-//           res.clearCookie('remember')
+//             return datos
+//         });
+//         const userCount = usuarios.length;
+//         const response = {
+//         meta:{
+//             status: 200,
+//             total: userCount,
+//             data: usuarios,
+            
+//             },
+//         };
+//         res.json(response)
+//         } catch (error) {
+//             res.status(500)
 //         }
-//         res.redirect('/')
-//       },
-//       processLogin: (req,res) =>{
-//         const errores = validationResult(req);
-
-//         if(!errores.isEmpty()) {
-//           res.render("users/login",{errores:errores.mapped(), title:'GOD GYM', usuario:req.session.user});
-//         } else{
-//         const {email} = req.body;
-//         db.User.findOne({
-//           attributes:{
-//             exclude:["password"]
-//           }, 
-//           where:{email}
-//         })
-//         .then((user)=>{
-//           req.session.user = user.dataValues;
-
-//         if(req.body.remember == "true"){
-//           res.cookie('user',user.dataValues,{maxAge: 1000 * 60 * 15})
-//           res.cookie('remember', "true",{maxAge: 1000 * 60 * 15})
-          
-//           }res.redirect('/')
-//         })
-//         .catch((err)=>{
-//           console.log(err)
-//         })
         
-//       }},
-
-//     viewPerfil: (req,res) =>{
-//       const {id} = req.params;
-// 		    db.User.findByPk(req.session.user.id)
-//         .then((response)=>{
-//           res.render('users/perfil',{title:"PERFIL",usuario:response.dataValues,})
-//         })
-//         .catch((err)=>{
-//           console.log(err)
-//         })
 //     },
-//     edit: (req,res) =>{
-//       const id = req.params.id;
-//       const {nombre,apellido,fecha_de_nacimiento,direccion,cp,aptoMedico} = req.body;
-//     db.User.findByPk(id)
-//       .then((user)=>{ 
-//         return user.update(
-//           {
-//             nombre: nombre.trim(),
-//             apellido: apellido.trim(),
-//             direccion: direccion.trim(),
-//             cp ,
-//             fecha_de_nacimiento,                         //variable modificada
-//             aptoMedico, 
-//             updatedAt: new Date()
-//       })
-//       })
-      
-//       .then(() => {
-//         res.redirect(`/users/perfil/${id}`);
-//       })
-//       .catch((err)=>{
-//             console.log(err)
-//           });       
-//   },
-      
-// }
 
-
-// module.exports = usersApiController
+module.exports = usersApiController
