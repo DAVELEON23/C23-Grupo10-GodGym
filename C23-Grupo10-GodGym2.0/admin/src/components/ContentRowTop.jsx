@@ -2,7 +2,7 @@ import PanelContador from "./PanelContador";
 import Users from "./Users";
 import LastProduct from "./LastProduct";
 import ContentWrapper from "./ContentWrapper";
-import PropTypes from "prop-types"
+import PropTypes, { number } from "prop-types"
 
 
 export default function ContentRowTop({apiData,productData}) {
@@ -17,15 +17,10 @@ export default function ContentRowTop({apiData,productData}) {
 						/>
 
 					<div className="row">
-						<LastProduct product ={
-							productData.map()
-							
-							}
-							   
-
-
-
-
+						<LastProduct nombre = {productData && productData.ultimo_producto.actividad}
+						info ={productData && productData.ultimo_producto.informacion}
+						imagen = {productData && productData.ultimo_producto.imagen}
+						id = {productData && productData.ultimo_producto.id}
 						/>
 						<Users />
 					</div>
@@ -41,9 +36,11 @@ ContentWrapper.propTypes = {
     }),
 	productData: PropTypes.shape({
         count: PropTypes.number,
-		actividades:PropTypes.string,
+		actividad:PropTypes.string,
 		informacion:PropTypes.string,
-		imagen
+		imagen:PropTypes.string,
+		id : number,
+
 		//seguir completando con codigo para producto....
 	}),
 };

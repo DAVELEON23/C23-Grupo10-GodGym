@@ -15,10 +15,13 @@ const productsApiController = {
         limit,
         offset
       });
+      const lastProduct = await db.Product.findOne({
+        order:[["id","DESC"]]
+      })
       return res.status(200).send({
 
         count: products.length,
-        
+        ultimo_producto:lastProduct,
         product:products
       })
     }catch (error) {
@@ -43,7 +46,7 @@ const productsApiController = {
           actividad:product.actividad,
           info:product.informacion,
           precio:product.precio,
-          imaagen:`/images/${product.imagen}`
+          imagen:`/images/${product.imagen}`
         }
   
         res.status(200).send(infoProduct)

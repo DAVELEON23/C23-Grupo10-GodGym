@@ -1,6 +1,6 @@
 
 
-export default function LastMovie({product,detailProduct}) {
+export default function LastMovie({nombre,info,imagen,id}) {
 
 
 //logica encima del div contenedor
@@ -11,14 +11,14 @@ export default function LastMovie({product,detailProduct}) {
 		
 							<div className="card shadow mb-4">
 								<div className="card-header py-3">
-									<h5 className="m-0 font-weight-bold text-gray-800">{product}</h5>
+									<h5 className="m-0 font-weight-bold text-gray-800">{nombre}</h5>
 								</div>
 			<div className="card-body">
 				<div className="text-center">
-					<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src="/images/mandalorian.jpg" alt=" Star Wars - Mandalorian "/>
+					<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src={`http://localhost:3000/images/${imagen}`} alt=" Star Wars - Mandalorian "/>
 				</div>
-				<p>{detailProduct}</p>
-				<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+				<p>{info}</p>
+				<a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:3000/products/detail/${id}`}>Ver detalle del producto</a>
 			</div>
 			</div>
 			</div>
