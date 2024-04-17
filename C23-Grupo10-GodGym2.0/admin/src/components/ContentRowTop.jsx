@@ -22,7 +22,11 @@ export default function ContentRowTop({apiData,productData}) {
 						imagen = {productData && productData.ultimo_producto.imagen}
 						id = {productData && productData.ultimo_producto.id}
 						/>
-						<Users />
+						<Users userList={apiData ? apiData.users : []} />
+						{/* {apiData && apiData.users.map((data,index)=>{
+							return <Users {...data} key={index} />
+						})} */}
+						
 					</div>
 				</div>
     )
@@ -30,7 +34,13 @@ export default function ContentRowTop({apiData,productData}) {
 
 ContentWrapper.propTypes = {
     apiData: PropTypes.shape({
-        count: PropTypes.number,
+        count: PropTypes.number, 
+		users: PropTypes.arrayOf(
+			PropTypes.shape({
+				// id: PropTypes.number,
+				name: PropTypes.string
+			})
+		)
 		//seguir completando con codigo para usuarios....
         
     }),
