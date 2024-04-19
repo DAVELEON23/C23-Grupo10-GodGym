@@ -15,12 +15,12 @@
                     
                     <p class="horarios-producto"><%= product.horario %></p>
                     <div class="seccion-tablet-info">
-                    <p class="precio-producto">Pase mensual : $<%= product.precio %></p>
+                    <p class="precio-producto">Pase mensual : $<span class="precio"><%= product.precio %></span></p>
                     
-                    <a href="/products/productCart" class="boton-carrito caja-boton-carrito">AGREGAR AL CARRITO</a>
+                    <a href="/products/productCart" class="boton-carrito caja-boton-carrito">SUSCRIBITE!</a>
                     
-            </div>
                     </div>
+                </div>
             </article>
             <% })  %>
         </section>
@@ -28,6 +28,6 @@
 
     </main>
     <%- include("./partials/footerdetail.ejs") %>
-    <script src="/js/products/carrito.js"></script>
+    
 </body>
 </html>

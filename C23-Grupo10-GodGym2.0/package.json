@@ -29,6 +29,7 @@
     "prop-types": "^15.8.1",
     "sequelize": "^6.37.1",
     "sequelize-cli": "^6.6.2",
+    "sweetalert2": "^11.10.8",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
