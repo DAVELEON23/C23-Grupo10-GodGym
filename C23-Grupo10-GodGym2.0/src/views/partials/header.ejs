@@ -2,10 +2,58 @@
     <img class= "logo" src="/images/logo-proyecto.svg" alt="logo">
     <section class="seccion-header">
         <h1 class="titulo-home">GOD GYM</h1>
-        <div class="boton-hamburguesa"> 
-            <!-- /////// agregar funcionanildad, boton checkout CSS (usar over y z-index ) o boton con funcionalidad de js. -->
-            <i class="fa-solid fa-bars"></i>
+        <div class="boton-hamburguesa">
+            <nav>
+                <input type="checkbox" name="" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            
+                <ul >
+                    <li><i class="fa-solid fa-house"></i><a href="/" class="secciones-header">HOME</a></li>
+                    <li><i class="fa-solid fa-dumbbell"></i><a href="/products" class="seccion-home-footer">ACTIVIDADES</a></li>
+                    <li><i class="fa-regular fa-address-card"></i><a href="/users/register">PASE DE PRUEBA</a></li>
+                    <% if( locals.usuario){%>
+                    <li><a href="/users/perfil/<%= usuario.id %>" class="secciones-header">PERFIL</a></li>
+                    <%} %>
+                    <li><a href="/users/login">LOGIN</a></li>
+                    <li><a href="/users/register">REGISTRATE</a></li>
+                </ul>
+                <div class="caja-logueado">
+                    <% if(locals.usuario){%>
+                        <div class="caja-session">
+                            <div>
+                    </div>
+                    <p class="nombre-session-usuario"><%= usuario.nombre.toUpperCase() %> <% if(locals.usuario && locals.usuario.id_roles == 1){ %>
+                        ADMIN
+                        <span>
+                            <!-- <a href="/products/dashboard" class="dash-admin"><i class="fa-solid fa-trash"></i></i></i></a>
+                            <a href="/users/dashboard" class="dash-admin"><i class="fa-solid fa-users-gear"></i></i></i></a>  -->
+                            
+                            <!-- //PARA ENTRAR AL DASH DE REACT -->
+                            <a href="http://localhost:5173/" class="dash-admin"><i class="fa-solid fa-gear"></i></i></i></a>  
+                        </span>
+                        <% } %></p>
+                
+                    </div>
+                        <% } else { %>
+                            <a href="/users/login" class="boton-login"><i class="fa-solid fa-user icono-login-header"></i>
+                                <a href="/users/login">
+                                    <h4 class="login">LOGIN</h4>
+                                </a>
+                            </a>
+                        </div>
+                        <div class="caja-logueado-registro">
+                            <a href="/users/register">
+                                <h4 class="registrado">REGISTRATE</h4>
+                            </a>
+                        </div>
+                        <%  } %>
+            </nav>
         </div>
+        
+
+        <!-- ---------------------//SECCION DEL HEADER TABLET Y DESKTOP------------------ -->
         <nav class="nav-registros">
             <div class="caja-logueado">
                 <% if(locals.usuario){%>
@@ -37,10 +85,8 @@
                         </a>
                     </div>
                     <%  } %>
-
-                
-    
         </nav>
+
         <nav class="nav-header-home">
             <ul class="secciones">
         

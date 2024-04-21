@@ -7,13 +7,12 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require("method-override");
 const cors = require('cors')
-
-
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products')
 const cookieValidate = require('./middlewares/cookieValidate');
 const app = express();
+
 // RUTAS DE API
 const productApiRouter = require('./routes/apiRoute/productApiRoute')
 const userApiRouter = require('./routes/apiRoute/userApiRoute')
@@ -64,8 +63,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-
 
 
 module.exports = app;
