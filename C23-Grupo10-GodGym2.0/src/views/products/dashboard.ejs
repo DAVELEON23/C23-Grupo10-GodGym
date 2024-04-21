@@ -26,10 +26,14 @@
                     ><i class="fa-solid fa-highlighter"></i>
                     </a>
                     
-                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                        <button  class="botonDelete" type="submit"><i class="fa-solid fa-trash tacho-dashboard"></i></button>
-                    
-                    </form>
+                     <form action="/products/delete/<%= product.id %>?_method=DELETE" class="formulario-eliminar" method="POST">
+                        <button  class="botonDelete" type="submit">
+                            <i class="fa-solid fa-trash tacho-dashboard"></i>
+                        </button>
+                    </form> 
+                    <!-- <button class="botonDelete" onclick="deleteProduct('<%= product.id %>')">
+                        <i class="fa-solid fa-trash tacho-dashboard"></i>
+                    </button> -->
                     
                     </div>
         </div>
@@ -40,24 +44,32 @@
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-    function deleteProduct(productId) {
-        Swal.fire({
-            title: "¿Estás seguro?",
-            text: "No podrás revertir esto!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Sí, eliminarlo!"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // Enviar el formulario de eliminación
-                document.getElementById(`deleteForm${productId}`).submit();
-            }
-        });
-    }
-</script>
+    <script>
+        // let eliminar = document.querySelector('.formulario-eliminar');
+        //     eliminar.addEventListener('submit',(e)=>{
+        //         e.preventDefault()
+
+        //     })
+
+
+//                 Swal.fire({
+//           title: "Are you sure?",
+//           text: "You won't be able to revert this!",
+//           icon: "warning",
+//           showCancelButton: true,
+//           confirmButtonColor: "#3085d6",
+//           cancelButtonColor: "#d33",
+//           confirmButtonText: "Yes, delete it!"
+//      }).then((result) => {
+//          if (result.isConfirmed) {
+//          Swal.fire({
+//               title: "Deleted!",
+//              text: "Your file has been deleted.",
+//              icon: "success"
+//          });
+//           }
+//      });
+    </script>
     <%- include("../partials/footerdetail.ejs") %>
 </body>
 </html>

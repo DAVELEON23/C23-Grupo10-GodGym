@@ -40,9 +40,9 @@ window.addEventListener("load", function(){
             mostrarError("El campo password es obligatorio")
         }
     });
-    formulario.addEventListener('submit',function(e){
-        Swal.fire("bienvenido!"); 
-    })
+    // formulario.addEventListener('submit',function(e){
+    //     Swal.fire("bienvenido!"); 
+    // })
    
 });
 console.log("llego a la terminal?")
