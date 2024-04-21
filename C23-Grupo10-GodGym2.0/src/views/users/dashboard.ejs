@@ -11,10 +11,10 @@
             
             <div class="caja-producto dashboard_caja-producto">
             
-
                <div class="seccion-tablet-info dashboard-seccion-tablet-info">
-                  <h5 class="secciones-header"> Usuario: <%= user.nombre %></h5>
-                  <h5 class="secciones-header"> Rol: <%= user.id_roles %></h5>
+                  <h6 class="secciones-header"> ID : <%= user.id %></h6>
+                  <h6 class="secciones-header"> USUARIO: <%= user.nombre.toUpperCase() %></h6>
+                  <h6 class="secciones-header"> ROL: <%= user.Roles.roles.toUpperCase() %></h6>
                <div class="box_dashboard_option">
 
                   <a class="icon_edit_dashboard" href="/users/editPerfil/<%= user.id %>"

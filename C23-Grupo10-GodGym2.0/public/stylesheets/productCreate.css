@@ -16,16 +16,59 @@
 }
 label {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 20px;
     color: #fff;
 }
+.seccion-edit{
+    width: 100%;
+    text-align: center;
+}
+.div-form-nombre-edit{
+    width: 97%;
+    text-align: center;
+    background-color: rgb(166 165 165 / 30%);
+    box-shadow: 0px 0px 10px rgb(166, 165, 165) ;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.div-form-edit-precio{
+    width: 97%;
+    text-align: center;
+    background-color: rgb(166 165 165 / 30%);
+    box-shadow: 0px 0px 10px rgb(166, 165, 165) ;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.textarea-horario-edit{
+    font-weight: bold;
+    font-size: 8px;
+    height: 25px;
+    margin: 1% 0;
+    width: 85%;
+} 
+.input-form-nombre-edit {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 1%;
+    width: 85%;
+    height: 25px;
+}
+.form-descripcion-edit{
+    font-weight: bold;
+    font-size: 12px;
+    height: 50px;
+    width: 90%;
+    margin: 10px auto;
+} 
 /* DIV SELECCION DE IMAGEN--------------------------*/
 .form-producto-imagen {
     text-align: center;
     border-radius: 40px;
-    width: 95%;
+    width: 100%;
     /*border: 1px solid rgb(17, 0, 255);*/
 }
+
 .form-imagen{
     border-radius: 40px;
     width: 75%;
@@ -107,18 +150,46 @@ label {
         transform: scale(0.95);
     }
     
+    .input-form-precio-edit{
+        margin: 10px auto;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        width: 85%;
+    }
 /*|||||||||| MEDIA QUERIE TABLET ||||||||||||||||||||||||||||||||||*/
 @media(min-width: 768px){
-
+    .div-container-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    /* .div-form-nombre-create{
+    width: 60%;
+    text-align: center;
+    background-color: rgb(166 165 165 / 30%);
+    box-shadow: 0px 0px 10px rgb(166, 165, 165);
+    margin-top: 20px;
+    border-radius: 10px;
+    } */
     .form-imagen{
         width: 80%;
     }
+    
     .label-seleccion-imagen,
     .label-form-descripcion,
     .label-form-horario,
+    .form-descripcion-edit {
+        font-weight: bold;
+        font-size: 20px;
+        height: 44px;
+        width: 90%;
+        margin: 10px auto;
+    }
     .label-form-precio
     {
-        font-size: 2rem;
+        font-size: 20px;
         font-weight: bold;
     }
     .form-precio-producto input {
@@ -156,10 +227,51 @@ label {
             box-shadow: 0px 0px 20px #ff000094;
         }
     }
-
+    .seccion-edit{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    /* .div-form-nombre-edit{
+        width: 82%;
+    } */
+    .textarea-horario-edit {
+        font-weight: bold;
+        font-size: 9px;
+        margin: 1% 0;
+        width: 85%;
+        height: 30px;
+    }
 
 /*|||||||||| MEDIA QUERIE LAPTOP|||||||||||||||||||||||||||||||||*/
 @media(min-width: 1024px){
+    .seccion-edit {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        
+    }
+    .seccion-edit-imagen{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly ;
+    }
+    .container-edit-nombre{
+        width: 85%;
+
+    }
+    .div-form-edit {
+        margin: auto;
+        width: 45%;
+    }
+    .div-container-1{
+        width: 40%;
+        margin-top: 3%;
+    }
+    .div-form-edit-precio{
+        width: 60%;
+    }
     .form-producto{
         display: flex;
         flex-direction: row;
@@ -167,8 +279,12 @@ label {
         
     }
     .form-producto-imagen{
-       
+    
         width: 45%;
+    }
+    .form-producto-imagen img{
+    
+        width: 100%;
     }
     .form-descripcion-producto,
     .horario-producto,
@@ -208,8 +324,33 @@ label {
         font-size: 35px;
         margin-right: 20%;
     }
+    .textarea-horario-edit {
+        font-weight: bold;
+        font-size: 17px;
+        margin: 1% 0;
+        width: 85%;
+        height: 2rem;
+    }
+    .label-form-edit{
+        font-size: 20px;
+        font-weight: bold;
+    } 
+    .contenedor-submit{
+        width: 100%;
+        text-align: center;
+    }
+    
 }
-
+@media(min-width: 1440px){
+    .form-producto {
+        display: flex;
+        justify-content: center;
+}
+.form-producto-imagen {
+    width: 40%;
+    align-content: center;
+}
+}
     
 
 

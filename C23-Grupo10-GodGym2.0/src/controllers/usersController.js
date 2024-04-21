@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const session =  require('express-session')
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
-const { where } = require("sequelize");
+const { where, Association } = require("sequelize");
 
 const usersController = {
   //vista del Registro
@@ -127,7 +127,7 @@ const usersController = {
   },
   //DASHBOARD DE USUARIO
   userDashboard:(req, res) => {
-    const user = db.User.findAll();
+    const user = db.User.findAll({include: [{association:"Roles"}]});
       Promise.all([user])
       .then(([user])=>{
       return res.render('users/dashboard', { title:"userdashboard", Users:user, usuario: req.session.user});
