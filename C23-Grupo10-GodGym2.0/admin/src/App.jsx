@@ -6,7 +6,7 @@ import ContentWrapper from './components/ContentWrapper'
 function App() {
   const [apiData, setApiData] = useState(null);
   const [productData, setProductData] = useState(null);
-
+  const [categoryData,setCategoryData]= useState(null)
   useEffect(() => {
     const fetchData = async (url, setData) => {
       try {
@@ -20,13 +20,14 @@ function App() {
 
     fetchData('http://localhost:3000/api/allusers', setApiData); //users
     fetchData('http://localhost:3000/api/all', setProductData); //products
+    fetchData('http://localhost:3000/api/allcategories', setCategoryData);//categorias
   }, []); 
 
   return (
     <>
       <div id="wrapper">
         <SideBar />
-        <ContentWrapper apiData={apiData} productData={productData} />
+        <ContentWrapper apiData={apiData} productData={productData} categoryData={categoryData}/>
       </div>
     </>
   );

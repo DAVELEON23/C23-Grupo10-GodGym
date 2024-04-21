@@ -5,7 +5,7 @@ import ContentWrapper from "./ContentWrapper";
 import PropTypes, { number } from "prop-types"
 
 
-export default function ContentRowTop({apiData,productData}) {
+export default function ContentRowTop({apiData,productData,categoryData}) {
     return(
             <div className="container-fluid">
 					<div className="d-sm-flex align-items-center justify-content-between mb-4">
@@ -14,6 +14,7 @@ export default function ContentRowTop({apiData,productData}) {
 					
 						<PanelContador 	countUser = {apiData && apiData.count}
 										countProduct={productData && productData.count}
+										countCategory={categoryData && categoryData.count}
 						/>
 
 					<div className="row">
@@ -52,6 +53,11 @@ ContentWrapper.propTypes = {
 		id : number,
 
 		//seguir completando con codigo para producto....
+	}),
+	
+	categoryData: PropTypes.shape({
+		count: PropTypes.number, 
+			
 	}),
 };
 
