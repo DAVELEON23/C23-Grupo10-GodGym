@@ -7,28 +7,35 @@
             incluyen Profesores matriculados,
             nutricionistas, seguro medico y 
             locker propio en los vestuarios</p>
+<div class="container-carrito">
+    <section class="actividades">
+        <% products.forEach(product => { %>
+            <article class="actividades-container">
+                <label for="<%= product.actividad %>">
+                    <input type="checkbox" name="actividad" id="<%= product.actividad %>" class="check" data-precio="<%= product.precio %>" data-producto="<%= product.actividad %>">
+                    <img src=" /images/<%= product.imagen%>"  class="detalleProduct-imagen-mediano"> 
+                    PLAN <span class="producto"><%= product.actividad %></span> : $ <span class="precio"><%= product.precio %></span> por mes
+                </label>
+            </article>
+        <% }) %>
+       
+    </section>
+<section class="tamaño-img">
+    <img src="/images/publicidad2.gif" alt="gymnasio" class="publicidad">
+    <img src="/images/workout-motivation.gif" alt="gymnasio" class="publicidad publicidad2">
+</section>
+</div>
+    
 
-            <section class="actividades">
-                <% products.forEach(product => { %>
-                    <article>
-                        <label for="<%= product.actividad %>">
-                            <input type="checkbox" name="actividad" id="<%= product.actividad %>" class="check" data-precio="<%= product.precio %>" data-producto="<%= product.actividad %>">
-                            PLAN <span class="producto"><%= product.actividad %></span> : $ <span class="precio"><%= product.precio %></span> por mes
-                        </label>
-                    </article>
-                <% }) %>
-            </section>
+    
+    <div class="subtotal">SUBTOTAL : <span class="total">0</span> $ </div>
+    <div class="caja-1">
+        <img src="/images/Metodos-de-pago1.webp" alt="publicidad" class="pagos">
+        <button class="boton-finalizar-compra">SUSCRIBIRSE !</button>
+    </div>
+
             
-            <div class="subtotal">SUBTOTAL : <span class="total">0</span> $ </div>
-            <div class="caja-1">
-                <img src="/images/Metodos-de-pago1.webp" alt="medios de pagos" class="pagos">
-                <button class="boton-finalizar-compra">FINALIZAR COMPRA</button>
-            </div>
             
-            <!--<div class="lista-compra">
-                <h2>Lista de Compra</h2>
-                <ul class="lista-productos"></ul>
-            </div>-->
             
 
     </main>
