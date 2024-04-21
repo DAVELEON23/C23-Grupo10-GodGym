@@ -7,26 +7,35 @@
             incluyen Profesores matriculados,
             nutricionistas, seguro medico y 
             locker propio en los vestuarios</p>
+<div class="container-carrito">
+    <section class="actividades">
+        <% products.forEach(product => { %>
+            <article class="actividades-container">
+                <label for="<%= product.actividad %>">
+                    <input type="checkbox" name="actividad" id="<%= product.actividad %>" class="check" data-precio="<%= product.precio %>" data-producto="<%= product.actividad %>">
+                    <img src=" /images/<%= product.imagen%>"  class="detalleProduct-imagen-mediano"> 
+                    PLAN <span class="producto"><%= product.actividad %></span> : $ <span class="precio"><%= product.precio %></span> por mes
+                </label>
+            </article>
+        <% }) %>
+       
+    </section>
+<section class="tamaño-img">
+    <img src="/images/publicidad2.gif" alt="gymnasio" class="publicidad">
+    <img src="/images/workout-motivation.gif" alt="gymnasio" class="publicidad publicidad2">
+</section>
+</div>
+    
 
-            <section class="actividades">
-                <article><label for="actividad"> <input type="checkbox" name="actividad" id="actividad" class="check"> PLAN CROSSFIT : $8000 por
-                        mes</label>
-                    </article>
-                <article><label for="actividad"> <input type="checkbox" name="actividad" id="actividad" class="check">PLAN MUSCULACION : $10000
-                        por mes </label>
-                    </article>
-                <article><label for="actividad"> <input type="checkbox" name="actividad" id="actividad" class="check">PLAN ZUMBA : $6000 por
-                        mes</label> 
-                    </article>
-                <article><label for="actividad"> <input type="checkbox" name="actividad" id="actividad" class="check">PLAN FUNCIONAL : $10000 por
-                        mes </label> 
-                    </article>
-            </section>
-            <div class="subtotal">SUBTOTAL : $ </div>
-            <div class="caja-1">
-            <img src="/images/Metodos-de-pago1.webp" alt="medios de pagos" class="pagos">
-            <button class="boton-finalizar-compra"> FINALIZAR COMPRA </button>
-            </div>
+    
+    <div class="subtotal">SUBTOTAL : <span class="total">0</span> $ </div>
+    <div class="caja-1">
+        <img src="/images/Metodos-de-pago1.webp" alt="publicidad" class="pagos">
+        <button class="boton-finalizar-compra">SUSCRIBIRSE !</button>
+    </div>
+
+            
+            
             
 
     </main>
@@ -35,4 +44,6 @@
 
 
     <%- include("../partials/footerdetail.ejs") %>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/products/carrito.js"></script>
 </body>
