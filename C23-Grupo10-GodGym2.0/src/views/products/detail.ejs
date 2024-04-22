@@ -4,7 +4,8 @@
     <main class="body-detail">
         
         <h3 class="slogan-main-detalle">BE SMART - BE STRONG - BE FAST</h3>
-            <h2 class="nombre-producto"><%= product.actividad %></h2>
+        
+             <h2 class="nombre-producto"><%= product.actividad %></h2>
         <article class="articulo-producto">
             <img src="/images/<%= product.imagen %>"  class="detalleProduct-imagen"> 
             <div class="caja-producto">
@@ -19,9 +20,12 @@
             </div>
            </div>
         </article>
+       
+        
         
 
     </main>
     <%- include("../partials/footerdetail.ejs") %>
+    
 </body>
 </html>

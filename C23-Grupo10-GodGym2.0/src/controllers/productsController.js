@@ -32,9 +32,9 @@ const productsController = {
     //const {id} = req.params;
 		//const products = getJson()
       const {id} = req.params
-      db.Product.findByPk(id)
-        .then(() => {
-          res.render('products/cart', { title: 'GOD GYM', usuario: req.session.user});
+      db.Product.findAll()
+        .then((products) => {
+          res.render('products/cart', { title: 'GOD GYM',products, usuario: req.session.user});
       })
       
     },
