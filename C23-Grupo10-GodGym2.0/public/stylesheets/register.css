@@ -8,7 +8,13 @@
     color: #f14141;
     text-align: center;
 }
-
+p {
+    color:#ab222b;
+    font-size: 2rem;
+}
+span{
+    font-size: 2rem;
+}
 
 /*seccion del main-------------------------------------*/
 .main-register {

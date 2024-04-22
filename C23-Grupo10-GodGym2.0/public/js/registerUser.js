@@ -70,6 +70,24 @@ window.addEventListener("load", function () {
     email.addEventListener("blur", validarEmail);
     password.addEventListener("blur", validarPassword);
 
+    const hayErrores = document.querySelector('.lista-de-errores')
+
+    formulario.addEventListener('submit', function(event) {
+    const nombreError = document.querySelector('.errorNombre');
+    const apellidolError = document.querySelector('.errorApellido');
+    const emailError = document.querySelector('.errorEmail');
+    const paswordError = document.querySelector('.errorPasword');
+
+    const algunError = nombreError.innerText || apellidolError.innerText ||emailError.innerText || paswordError.innerText;
+
+        if(algunError) {
+            hayErrores.style.display = 'block';
+            event.preventDefault()
+        }else{
+            hayErrores.style.display ='none';
+        }
+    })
+
     //const alerta =document.querySelector("#reset");
    /* alerta.addEventListener("click",function(){
         Swal.fire({
