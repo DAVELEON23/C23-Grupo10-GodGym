@@ -81,7 +81,6 @@ const productsApiController = {
                 
             }
             const jsonError = JSON.stringify(erroresMaped)
-           
             throw new Error(jsonError)
         }
         }

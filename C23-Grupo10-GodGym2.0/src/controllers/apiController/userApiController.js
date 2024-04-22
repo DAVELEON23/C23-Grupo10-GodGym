@@ -88,40 +88,4 @@ const usersApiController = {
 
 }
 
-
-// const usersApiController = {
-//     all: async (req,res) => {
-//         try {
-//             const users = await db.User.findAll()
-        
-//         const usuarios = users.map(user=>{
-//             const datos = {...user.toJSON()}
-//             delete datos.apellido;
-//             delete datos.direccion;
-//             delete datos.cp;
-//             delete datos.fecha_de_nacimiento;
-//             delete datos.password;
-//             delete datos.aptoMedico;
-//             delete datos.id_roles;
-//             delete datos.createdAt;
-//             delete datos.updatedAt;
-
-//             return datos
-//         });
-//         const userCount = usuarios.length;
-//         const response = {
-//         meta:{
-//             status: 200,
-//             total: userCount,
-//             data: usuarios,
-            
-//             },
-//         };
-//         res.json(response)
-//         } catch (error) {
-//             res.status(500)
-//         }
-        
-//     },
-
 module.exports = usersApiController

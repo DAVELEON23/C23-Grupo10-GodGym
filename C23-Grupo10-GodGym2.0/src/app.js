@@ -17,6 +17,7 @@ const app = express();
 // RUTAS DE API
 const productApiRouter = require('./routes/apiRoute/productApiRoute')
 const userApiRouter = require('./routes/apiRoute/userApiRoute')
+const categoryApiRouter = require('./routes/apiRoute/categoryApiRoute')
 // view engine setup
 
 app.use(cors({
@@ -45,6 +46,7 @@ app.use('/products', productsRouter)
 //API RUTAS
 app.use('/api', productApiRouter)
 app.use('/api', userApiRouter)
+app.use("/api",categoryApiRouter)
 
 // catch 404 and forward to error handler
 
