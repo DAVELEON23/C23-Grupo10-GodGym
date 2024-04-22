@@ -15,7 +15,7 @@ module.exports = {
       createdAt: new Date,
       updatedAt:new Date,
       },{
-        roles: 'User',
+        roles: 'Afiliado',
         createdAt: new Date,
         updatedAt: new Date,
         },], {});

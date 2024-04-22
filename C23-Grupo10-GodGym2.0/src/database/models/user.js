@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       
-      this.hasOne(models.Roles, { 
+      this.belongsTo(models.Roles, { 
         as:"Roles",
         foreignKey:"id_roles",
         });

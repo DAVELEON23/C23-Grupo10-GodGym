@@ -168,7 +168,7 @@
 /* ---------------MEDIA QUERIES DESKTOP------------------ */
 @media(min-width: 1024px){
     .body-detail {
-        padding-bottom: 6%;
+        /* padding-bottom: 6%; */
         background-position: center;
         background-size: 90%;
     }

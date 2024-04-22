@@ -1,44 +1,74 @@
 <%- include("../partials/head.ejs") %>
 <body>
-    <%- include("../partials/header.ejs") %>
-    <main class="body-detail">
-        
-        <h3 class="slogan-main-detalle">EDITAR PRODUCTO</h3>
-            
-        <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="form-producto" enctype="multipart/form-data">
-<section class="seccion-edit">
-            <div class="form-producto-imagen">
-                <label class="label-seleccion-imagen" for="imagen">SELECCIÓN DE IMÁGEN
-                <input class="" type="file" id="imagen" name="imagen" accept="image/*">
-                <img src="/images/<%= product.imagen %>"  class="form-imagen" value="<%= product.imagen %>"> 
-            </label>
-            </div>
+      <%- include("../partials/header.ejs") %>
+      <main class="body-detail">
 
-            <div class="div-form-nombre-edit">
-                <label class="label-form-edit" for="actividad">NOMBRE DEL PRODUCTO</label>
-                 <input class="input-form-nombre-edit" type="text" id="actividad" name="actividad" value="<%= product.actividad %>">
-              </div>
-            </section>
-                     <section class="seccion-edit-2">
-             <div class="div-form-edit">
-                <label class="label-form-edit" for="informacion">DESCRIPCIÓN DEL PRODUCTO</label>
-                <textarea class="form-descripcion-edit" name="informacion" id="informacion" cols="" rows="" value=""><%= product.informacion %></textarea>
-             </div>
-    
-             <div class="div-form-edit">
-                <label class="label-form-edit" for="horario">HORARIOS DEL PRODUCTO</label>
-                <textarea class="textarea-horario-edit" name="horario" id="horario" cols="" rows="" value=""><%= product.horario %></textarea>
-             </div>
-             </section>
-            <section class="seccion-edit-3">
-             <div class="div-form-edit-precio">
-               <label class="label-form-edit" for="precio">PRECIO DEL PRODUCTO</label>
-                <input class="input-form-precio-edit" type="number" id="precio" name="precio" value="<%= product.precio %>">
-             </div>
+         <h3 class="slogan-main-detalle">EDITAR ACTIVIDAD</h3>
             
-             
-             <button type="submit" class="boton-edit">GUARDAR</button>
+         <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="form-producto" enctype="multipart/form-data">
+            
+            <section class="seccion-edit-imagen">
+               <div class="form-producto-imagen">
+                     <label class="label-seleccion-imagen" for="imagen">SELECCIÓN DE IMÁGEN</label><br>
+                        <input class="" type="file" id="imagen" name="imagen" accept="image/*">
+                     <img src="/images/<%= product.imagen %>"  class="form-imagen" value="<%= product.imagen %>"> 
+               
+               </div>
+
+               <div class="div-container-1">
+                  <div class="div-form-nombre-edit container-edit-nombre">
+                     <label class="label-form-edit" for="actividad">NOMBRE</label><br>
+                        <input class="input-form-nombre-edit" type="text" id="actividad" name="actividad" value="<%= product.actividad %>">
+                  </div>
+               
+               <div class="div-form-nombre-edit container-edit-nombre">
+                  <label class="label-form-edit" for="category">CATEGORIAS</label><br>
+                     <select class="textarea-horario-edit" id="category" name="category" cols="" rows="">        
+                        <option value="1">CARDIO</option>
+                        <option value="2">AEROBICS</option>
+                        <option value="3">FUERZA</option>
+                        <option value="4">RESISTENCIA</option>
+                        <option value="5">DEPORTES</option>
+                        <option value="6">FLEXIBILIDAD</option>
+                     </select> 
+               </div>
+
+               <div class="div-form-nombre-edit container-edit-nombre">
+                  <label class="label-form-edit" for="horario">HORARIOS DE ACTIVIDADES</label>
+                     <select class="textarea-horario-edit" name="horario" id="horario" cols="" rows="">
+                        <option value="Lunes de 10:00hs a 12:00hs - Martes de 11:00hs a 12:00hs">Lunes de 10:00hs a 12:00hs - Martes de 11:00hs a 12:00hs</option>
+                        <option value="Martes de 14:00hs a 16:00hs - Miercoles de 15:00hs a 16:00hs"> Martes de 14:00hs a 16:00hs - Miercoles de 15:00hs a 16:00hs </option>
+                        <option value="Miercoles de 16:00hs a 17:00hs - Jueves de 17:00hs a 18:00hs"> Miercoles de 16:00hs a 17:00hs - Jueves de 17:00hs a 18:00hs</option>
+                        <option value="Jueves de 11:00hs a 13:00hs - Viernes de 12:00hs a 13:00hs"> Jueves de 11:00hs a 13:00hs - Viernes de 12:00hs a 13:00hs</option>
+                        <option value=" Viernes de 13:00hs a 14:30hs - Lunes de 14:00hs a 15:00hs"> Viernes de 13:00hs a 14:30hs - Lunes de 14:00hs a 15:00hs</option>
+                        <option value="Lunes de 16:00hs a 17:30hs - Martes de 17:00hs a 18:30hs"> Lunes de 16:00hs a 17:30hs - Martes de 17:00hs a 18:30hs</option>
+                        <option value="Martes de 20:00hs a 21:00hs - Miercoles de 21:00hs a 22:00hs"> Martes de 20:00hs a 21:00hs - Miercoles de 21:00hs a 22:00hs</option>
+                        <option value="Miercoles de 21:00hs a 21:30hs - Jueves de 22:00hs a 22:30hs">Miercoles de 21:00hs a 21:30hs - Jueves de 22:00hs a 22:30hs</option>
+                        <option value="Jueves de 15:00hs a 16:00hs - Viernes de 16:00hs a 17:00hs"> Jueves de 15:00hs a 16:00hs - Viernes de 16:00hs a 17:00hs</option>
+                        <option value="Viernes de 16:30hs a 17:30hs - Lunes de 16:30hs a 17:30hs"> Viernes de 16:30hs a 17:30hs - Lunes de 16:30hs a 17:30hs</option>
+                     </select>
+               </div>
+
+               <div class="div-form-nombre-edit container-edit-nombre">
+                  <label class="label-form-edit" for="precio">PRECIO</label><br>
+                  <input class="input-form-nombre-edit" type="number" id="precio" name="precio" value="<%= product.precio %>">
+               </div>
+                  
+               </div>
             </section>
+            
+            <section class="seccion-edit">
+
+                  <div class="div-form-nombre-edit">
+                     <label class="label-form-edit" for="informacion">DESCRIPCIÓN </label><br>
+                     <textarea class="form-descripcion-edit" name="informacion" id="informacion" cols="" rows="" value=""><%= product.informacion %></textarea>
+                  </div>
+
+                  <div class="contenedor-submit">
+                     <button type="submit" class="boton-edit">GUARDAR</button>
+                  </div>
+            </section>
+            
          </form>
          <script src="/js/products/productEditValidation.js"></script>
     </main>

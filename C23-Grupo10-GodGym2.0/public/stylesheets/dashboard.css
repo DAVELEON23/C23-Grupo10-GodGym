@@ -1,3 +1,14 @@
+@media (max-width: 425px) {
+    .box_dashboard_option{
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+        width: 100%;
+        height: 10px;
+    }
+    
+}
+
 .dashboard_img{ 
     width: 200px;
     height: 150px;
@@ -24,7 +35,7 @@
 }
 
 .dashboard-seccion-tablet-info{
-    width: 70%;
+    width: 85%;
     margin: auto;
 }
 
@@ -72,6 +83,7 @@
          width: 74%; 
         margin: 10px auto;
         height: 71px;
+        border: #ab222b8a solid;
     }
 
     .precio-producto_dashboard-box{
