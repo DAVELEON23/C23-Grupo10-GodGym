@@ -7,11 +7,10 @@
 -password = diego123
 
 ### integrantes:
-- Diego Isray
 - Gustavo Insfran
-- Sasha Toledo
 - David de Leon
-
+- Diego Isray
+  
 ### Wireframes:
 * [Home](https://www.figma.com/file/4gfAFzBZuaLLSeMhqr2HjO/Untitled?type=design&node-id=0-1&mode=design&t=UkQ0UcoqmuhsBFJt-0)
 * [DetalleDeProducto](https://www.figma.com/file/a9VNENa243MegoUHUbBy52/Untitled?type=design&node-id=0-1&mode=design&t=tCxasPJSbMs1cFDh-0)
