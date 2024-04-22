@@ -14,7 +14,7 @@ export default function SideBar() {
 			<li className="nav-item active">
 				<a className="nav-link" href="/">
 					<i className="fas fa-fw fa-tachometer-alt"></i>
-					<span>Dashboard</span></a>
+					<span>DASHBOARD</span></a>
 			</li>
 
 			<hr className="sidebar-divider"/>
@@ -23,8 +23,8 @@ export default function SideBar() {
 			
 			<li className="nav-item">
 					<i className="fas fa-fw fa-folder"></i>
-						<a href="http://localhost:3000/products/dashboard" className="nav-link">Productos</a>
-						<a href="http://localhost:3000/users/dashboard" className="nav-link">Usuarios</a>
+						<a href="http://localhost:3000/products/dashboard" className="nav-link">ACTIVIDADES</a>
+						<a href="http://localhost:3000/users/dashboard" className="nav-link">USUARIOS</a>
 					<hr className="sidebar-divider"/>
 						<a href="http://localhost:3000" className="nav-link">HOME</a>
 					<hr className="sidebar-divider d-none d-md-block"/>

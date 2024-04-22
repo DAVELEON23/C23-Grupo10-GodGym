@@ -22,14 +22,14 @@
                   </div>
                
                <div class="div-form-nombre-edit container-edit-nombre">
-                  <label class="label-form-edit" for="category">CATEGORIAS</label><br>
-                     <select class="textarea-horario-edit" id="category" name="category" cols="" rows="">        
-                        <option value="1">CARDIO</option>
-                        <option value="2">AEROBICS</option>
-                        <option value="3">FUERZA</option>
-                        <option value="4">RESISTENCIA</option>
-                        <option value="5">DEPORTES</option>
-                        <option value="6">FLEXIBILIDAD</option>
+                  <label class="label-form-edit" for="id_category">CATEGORIAS</label><br>
+                     <select class="textarea-horario-edit" id="id_category" name="id_category" <%= product.id_category %>>        
+                        <option value="1"<%=product.id_category== 1 ? "selected":null %>>CARDIO</option>
+                        <option value="2"<%=product.id_category== 2 ? "selected":null %>>AEROBICS</option>
+                        <option value="3"<%=product.id_category== 3 ? "selected":null %>>FUERZA</option>
+                        <option value="4"<%=product.id_category== 4 ? "selected":null %>>RESISTENCIA</option>
+                        <option value="5"<%=product.id_category== 5 ? "selected":null %>>DEPORTES</option>
+                        <option value="6"<%=product.id_category== 6 ? "selected":null %>>FLEXIBILIDAD</option>
                      </select> 
                </div>
 

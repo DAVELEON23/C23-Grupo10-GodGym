@@ -32,5 +32,17 @@
     opacity: 1;
     
 }
+.nombre-session-usuario{
+    color: #fff;
+    text-shadow: 0px 0px 10px rgb(255, 225, 0), 0px 0px 25px rgb(255, 225, 0), 0px 0px 50px rgb(255, 191, 0), 0px 0px 100px rgb(255, 111, 0);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+}
 }
 

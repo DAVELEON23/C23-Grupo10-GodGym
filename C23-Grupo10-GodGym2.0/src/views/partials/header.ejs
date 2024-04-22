@@ -10,20 +10,20 @@
                 </label>
             
                 <ul >
-                    <li><i class="fa-solid fa-house"></i><a href="/" class="secciones-header">HOME</a></li>
-                    <li><i class="fa-solid fa-dumbbell"></i><a href="/products" class="seccion-home-footer">ACTIVIDADES</a></li>
-                    <li><i class="fa-regular fa-address-card"></i><a href="/users/register">PASE DE PRUEBA</a></li>
+                    <li><a href="/" class="secciones-header">HOME</a></li>
+                    <li><a href="/products" class="seccion-home-footer">ACTIVIDADES</a></li>
+                    <li><a href="/users/register">PASE DE PRUEBA</a></li>
                     <% if( locals.usuario){%>
                     <li><a href="/users/perfil/<%= usuario.id %>" class="secciones-header">PERFIL</a></li>
                     <%} %>
-                    <li><a href="/users/login">LOGIN</a></li>
-                    <li><a href="/users/register">REGISTRATE</a></li>
-                </ul>
-                <div class="caja-logueado">
+                    <!-- <li><a href="/users/login">LOGIN</a></li>
+                    <li><a href="/users/register">REGISTRATE</a></li> -->
+                
+                <!-- <div class="caja-logueado-burguer"> -->
                     <% if(locals.usuario){%>
-                        <div class="caja-session">
-                            <div>
-                    </div>
+                        <!-- <div class="caja-session"> -->
+                            <!-- <div> -->
+                    <!-- </div> -->
                     <p class="nombre-session-usuario"><%= usuario.nombre.toUpperCase() %> <% if(locals.usuario && locals.usuario.id_roles == 1){ %>
                         ADMIN
                         <span>
@@ -35,20 +35,21 @@
                         </span>
                         <% } %></p>
                 
-                    </div>
+                    <!-- </div> -->
                         <% } else { %>
-                            <a href="/users/login" class="boton-login"><i class="fa-solid fa-user icono-login-header"></i>
-                                <a href="/users/login">
-                                    <h4 class="login">LOGIN</h4>
-                                </a>
-                            </a>
-                        </div>
-                        <div class="caja-logueado-registro">
-                            <a href="/users/register">
-                                <h4 class="registrado">REGISTRATE</h4>
-                            </a>
-                        </div>
+                            <!-- <a href="/users/login" > -->
+                                <li><a href="/users/login">LOGIN</a></li>
+                                    
+                                
+                            <!-- </a> -->
+                        <!-- </div>
+                        <div class="caja-logueado-registro"> -->
+                            <li><a href="/users/register">REGISTRATE</a></li>
+                                <!-- <h4 class="registrado"></h4> -->
+                            
+                        <!-- </div> -->
                         <%  } %>
+                    </ul>
             </nav>
         </div>
         

@@ -14,6 +14,7 @@
             
                 
                 <p class="horarios-producto"><%= product.horario %></p>
+                <p class="horarios-producto">Categoría: <%= product.Category.name.charAt(0).toUpperCase() + product.Category.name.slice(1).toLowerCase() %></p>
                 <div class="seccion-tablet-info">
                 <p class="precio-producto">Pase mensual : $<%= product.precio %></p>
                 <div class="caja-boton-carrito">
