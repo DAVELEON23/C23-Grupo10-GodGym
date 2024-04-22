@@ -69,7 +69,7 @@
 }
 .boton-carrito{
     font-weight: bold;
-    font-size: 12px;
+    font-size: 16px;
     color: #fff;
 }
 .caja-boton-carrito:hover{
@@ -193,7 +193,7 @@
     }
     .nombre-producto{
         font-size: 60px;
-        margin-top: 5%;
+        margin-top: 1%;
     }
     .articulo-producto{
         align-items: center;

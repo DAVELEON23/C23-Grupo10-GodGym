@@ -8,7 +8,7 @@ export default  function ContentRouteMovie({countUser,countProduct,countCategory
 								<div className="card-body">
 									<div className="row no-gutters align-items-center">
 										<div className="col mr-2">
-											<div className="h4text-xs font-weight-bold text-primary text-uppercase mb-1">Productos Registados:</div>
+											<div className="h4text-xs font-weight-bold text-primary text-uppercase mb-1">Actividades Registadas:</div>
 											<div className="h5 mb-0 font-weight-bold text-gray-800">{countProduct}</div>
 										</div>
 										<div className="col-auto">

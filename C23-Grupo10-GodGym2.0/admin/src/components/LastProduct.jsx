@@ -18,7 +18,7 @@ export default function LastMovie({nombre,info,imagen,id}) {
 					<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src={`http://localhost:3000/images/${imagen}`} alt=" Star Wars - Mandalorian "/>
 				</div>
 				<p>{info}</p>
-				<a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:3000/products/detail/${id}`}>Ver detalle del producto</a>
+				<a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:3000/products/detail/${id}`}>Detalle de Actividad</a>
 			</div>
 			</div>
 			</div>

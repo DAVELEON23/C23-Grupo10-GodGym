@@ -61,7 +61,7 @@
 /* -------------------------------------header media queries de tablet---------------------------------*/
 
 @media (min-width: 768px){
-    
+
     .seccion-header li:hover{
         transform: scale(1.1);
         transition: 0.2s;
@@ -202,6 +202,7 @@
 /* -----------------------------MEDIA QUERIE DESKTOP--------------------------- */
 
 @media(min-width: 1024px){
+
     .nav-header-home {
         margin-right: 8%;
         width: 100%;

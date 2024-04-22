@@ -3,17 +3,13 @@ const {Op} = require('sequelize');
 const fs = require("fs");
 const path = require("path");
 const { log } = require('console');
-
 const productsFilePath = path.join(__dirname, '../database/products.json');
-
-
-
 
 const productsController = {
 
     detail: (req, res) => {
     const id = req.params.id;
-    const product = db.Product.findByPk(id);
+    const product = db.Product.findByPk(id,{include: [{association:"Category"}]});
       Promise.all([product])
       .then(([product])=>{
       return res.render('products/detail', { title: product.actividad, product:product, usuario: req.session.user});
@@ -23,13 +19,12 @@ const productsController = {
     },
 
     actividades: (req, res) => {
-      const products = db.Product.findAll();
+      const products = db.Product.findAll({include: [{association:"Category"}]});
       Promise.all([products])
       .then(([products])=>{
         res.render('products', { title: 'GOD GYM', products, usuario: req.session.user });
       })
       .catch((error)=>console.log(error))
-    
     
     },
 
@@ -56,8 +51,8 @@ const productsController = {
     // vista formulario de edicion
     productEditView:(req, res)=>{
       const id = req.params.id;
-    const product = db.Product.findByPk(id);  //FALTA AGREGAR CODICO!!! INCLUDE+ ASSOCIATION--->>> Y DESPUES HACER LA LOGICA PARA MUESTRE EL NOMBRE 
-      Promise.all([product]) // ACA HAY UN PROBLEMA CON LA DB??
+      const product = db.Product.findByPk(id);  
+      Promise.all([product]) 
       
       .then(([product])=>{
       return res.render('products/productEdit', { title: product.actividad, product:product, usuario: req.session.user});
@@ -66,22 +61,26 @@ const productsController = {
     },
     //metodo de edicion
     edit: (req,res) =>{
-      const {actividad,imagen,informacion,horario,precio,cupos,category} = req.body;
+      const {actividad,imagen,informacion,horario,precio,cupos,id_category} = req.body;
       const {id}= req.params
-      db.Product.update(
-        {
-          actividad:actividad.trim(),
-          horario:horario.trim(),
-          cupos:cupos ,
-          precio:precio ? precio : 0,
-          imagen:req.file ? req.file.filename : imagen,
-          informacion:informacion,
-          id_category: category,
-          updatedAt: new Date(),
-          
-          // ver de agregar categorias!!!!!!!!!!!!!!!!!!!!!!
-
-        },
+      db.Product.findByPk(id)
+    .then((product) => {
+      if (product) {
+        
+        product.update(
+          {
+            actividad: actividad.trim(),
+            horario: horario.trim(),
+            cupos: cupos,
+            precio: precio ? precio : 0,
+            imagen: req.file ? req.file.filename : imagen,
+            informacion: informacion,
+            id_category,
+            updatedAt: new Date()
+          }
+        )
+      }
+    },
         {
           where:{
             id,
@@ -102,26 +101,25 @@ const productsController = {
 
     //metodo de creacion
     create: (req,res)=>{
-      db.Product.create({
-        actividad:req.body.actividad,
-          horario:req.body.horario,
-          cupos:req.body.cupos ,
-          precio:req.body.precio,
+      const {actividad,informacion,horario,precio,cupos,id_category} = req.body;
+
+        db.Product.create(
+          {
+          actividad,
+          horario,
+          cupos,
+          precio,
           imagen:req.file ? req.file.filename : "default.webp",
-          informacion:req.body.informacion,
+          informacion,
+          id_category,
           updatedAt: new Date(),        
-          // ver de agregar categorias!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-          //FALTAN LAS MIGRACIONES Y LOS SEEDERS
-
-      })
-      .then(()=>{
+          
+          })
+          .then(()=>{
         res.redirect("/products/dashboard")
       })
-    
-    
-    } ,
-    
+      },
+      
     //metodo de eliminacion
     productDelete: (req,res)=>{
       const { id } = req.params;
@@ -140,3 +138,6 @@ const productsController = {
 
   
 module.exports = productsController;
+
+
+//APLICAR ASYNC TRY AND CATCH Y VALIDACIONES BACK Y FRONT LAS QUE FALTEN 
