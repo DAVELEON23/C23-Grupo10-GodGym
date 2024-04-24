@@ -1,0 +1,121 @@
+@media (max-width: 425px) {
+    .box_dashboard_option{
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+        width: 100%;
+        height: 10px;
+    }
+    
+}
+
+.dashboard_img{ 
+    width: 200px;
+    height: 150px;
+}
+.crearActidad{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: x-large;
+    
+}
+.crearActidad a {
+    color: var(--color-crema)
+}
+
+.botonDelete{
+    background-color: rgb(147 146 218 / -70%);
+    padding: 3px;
+    border-radius: 4px;
+}
+
+.dashboard_caja-producto {
+    height: 80px;
+}
+
+.dashboard-seccion-tablet-info{
+    width: 100%;
+    margin: auto;
+}
+
+/* .fa-address-book{
+    padding: 1%;
+    size: 10px;
+    color: #ab222b;
+} */
+
+.icon_edit_dashboard{
+    color: #ab222b;
+    line-height: 3;
+    padding: 4%;
+}
+.icon_edit_dashboard:hover{
+    transform: scale(0.80);
+}
+.box_dashboard_option{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+}
+.tacho-dashboard{
+    color: var(--color-rojo);
+
+}
+.tacho-dashboard:hover{
+    transform: scale(0.80);
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+
+@media(min-width: 768px){
+    .dashboard_img{ 
+        width: 400px;
+        height: 280px;
+    }
+
+    .dashboard_caja-producto {
+         width: 74%; 
+        margin: 10px auto;
+        height: 71px;
+        border: #ab222b8a solid;
+    }
+
+    .precio-producto_dashboard-box{
+        width: 50%;
+    }
+
+    .box_dashboard_option{
+        width: 40%;
+    }
+}
+
+
+@media(min-width: 1024px){
+    .dashboard_caja-producto{
+        
+            width: 58%;
+            margin: auto;
+            height: 71px;
+        
+    }
+    .dashboard_img {
+        margin-right: 62px;
+        width: 30%;
+        height: 30%;
+    }
+    .icon_edit_dashboard {
+        color: #ab222b;
+        line-height: 2;
+        padding: 4%;
+        font-size: 25px;
+    }
+    .tacho-dashboard{
+        font-size: 25px;
+    }
+}

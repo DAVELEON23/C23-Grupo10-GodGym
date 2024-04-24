@@ -1,0 +1,77 @@
+<%- include("../partials/head.ejs") %>
+<body>
+      <%- include("../partials/header.ejs") %>
+      <main class="body-detail">
+
+         <h3 class="slogan-main-detalle">EDITAR ACTIVIDAD</h3>
+            
+         <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="form-producto" enctype="multipart/form-data">
+            
+            <section class="seccion-edit-imagen">
+               <div class="form-producto-imagen">
+                     <label class="label-seleccion-imagen" for="imagen">SELECCIÓN DE IMÁGEN</label><br>
+                        <input class="" type="file" id="imagen" name="imagen" accept="image/*">
+                     <img src="/images/<%= product.imagen %>"  class="form-imagen" value="<%= product.imagen %>"> 
+               
+               </div>
+
+               <div class="div-container-1">
+                  <div class="div-form-nombre-edit container-edit-nombre">
+                     <label class="label-form-edit" for="actividad">NOMBRE</label><br>
+                        <input class="input-form-nombre-edit" type="text" id="actividad" name="actividad" value="<%= product.actividad %>">
+                  </div>
+               
+               <div class="div-form-nombre-edit container-edit-nombre">
+                  <label class="label-form-edit" for="id_category">CATEGORIAS</label><br>
+                     <select class="textarea-horario-edit" id="id_category" name="id_category" <%= product.id_category %>>        
+                        <option value="1"<%=product.id_category== 1 ? "selected":null %>>CARDIO</option>
+                        <option value="2"<%=product.id_category== 2 ? "selected":null %>>AEROBICS</option>
+                        <option value="3"<%=product.id_category== 3 ? "selected":null %>>FUERZA</option>
+                        <option value="4"<%=product.id_category== 4 ? "selected":null %>>RESISTENCIA</option>
+                        <option value="5"<%=product.id_category== 5 ? "selected":null %>>DEPORTES</option>
+                        <option value="6"<%=product.id_category== 6 ? "selected":null %>>FLEXIBILIDAD</option>
+                     </select> 
+               </div>
+
+               <div class="div-form-nombre-edit container-edit-nombre">
+                  <label class="label-form-edit" for="horario">HORARIOS DE ACTIVIDADES</label>
+                     <select class="textarea-horario-edit" name="horario" id="horario" cols="" rows="">
+                        <option value="Lunes de 10:00hs a 12:00hs - Martes de 11:00hs a 12:00hs">Lunes de 10:00hs a 12:00hs - Martes de 11:00hs a 12:00hs</option>
+                        <option value="Martes de 14:00hs a 16:00hs - Miercoles de 15:00hs a 16:00hs"> Martes de 14:00hs a 16:00hs - Miercoles de 15:00hs a 16:00hs </option>
+                        <option value="Miercoles de 16:00hs a 17:00hs - Jueves de 17:00hs a 18:00hs"> Miercoles de 16:00hs a 17:00hs - Jueves de 17:00hs a 18:00hs</option>
+                        <option value="Jueves de 11:00hs a 13:00hs - Viernes de 12:00hs a 13:00hs"> Jueves de 11:00hs a 13:00hs - Viernes de 12:00hs a 13:00hs</option>
+                        <option value=" Viernes de 13:00hs a 14:30hs - Lunes de 14:00hs a 15:00hs"> Viernes de 13:00hs a 14:30hs - Lunes de 14:00hs a 15:00hs</option>
+                        <option value="Lunes de 16:00hs a 17:30hs - Martes de 17:00hs a 18:30hs"> Lunes de 16:00hs a 17:30hs - Martes de 17:00hs a 18:30hs</option>
+                        <option value="Martes de 20:00hs a 21:00hs - Miercoles de 21:00hs a 22:00hs"> Martes de 20:00hs a 21:00hs - Miercoles de 21:00hs a 22:00hs</option>
+                        <option value="Miercoles de 21:00hs a 21:30hs - Jueves de 22:00hs a 22:30hs">Miercoles de 21:00hs a 21:30hs - Jueves de 22:00hs a 22:30hs</option>
+                        <option value="Jueves de 15:00hs a 16:00hs - Viernes de 16:00hs a 17:00hs"> Jueves de 15:00hs a 16:00hs - Viernes de 16:00hs a 17:00hs</option>
+                        <option value="Viernes de 16:30hs a 17:30hs - Lunes de 16:30hs a 17:30hs"> Viernes de 16:30hs a 17:30hs - Lunes de 16:30hs a 17:30hs</option>
+                     </select>
+               </div>
+
+               <div class="div-form-nombre-edit container-edit-nombre">
+                  <label class="label-form-edit" for="precio">PRECIO</label><br>
+                  <input class="input-form-nombre-edit" type="number" id="precio" name="precio" value="<%= product.precio %>">
+               </div>
+                  
+               </div>
+            </section>
+            
+            <section class="seccion-edit">
+
+                  <div class="div-form-nombre-edit">
+                     <label class="label-form-edit" for="informacion">DESCRIPCIÓN </label><br>
+                     <textarea class="form-descripcion-edit" name="informacion" id="informacion" cols="" rows="" value=""><%= product.informacion %></textarea>
+                  </div>
+
+                  <div class="contenedor-submit">
+                     <button type="submit" class="boton-edit">GUARDAR</button>
+                  </div>
+            </section>
+            
+         </form>
+         <script src="/js/products/productEditValidation.js"></script>
+    </main>
+    <%- include("../partials/footerdetail.ejs") %>
+</body>
+</html>

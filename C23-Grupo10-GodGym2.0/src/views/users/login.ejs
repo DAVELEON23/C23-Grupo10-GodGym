@@ -1,0 +1,67 @@
+<%- include("../partials/head.ejs") %>
+<body class="body-home">
+    <%- include("../partials/header.ejs") %>
+    <main class="main-login">
+        <h1 class="titulo-formulario-login">Formulario de login</h1>
+        <section class="seccion-login">
+
+          
+
+    <form action="/users/login" method="post" class="formulario-login">
+        
+        <i class="fa-solid fa-user login-user"></i>
+        <p class="login-debajodel-icono">LOGIN</p>
+        
+     <div class="caja-user">
+        <i class="fa-solid fa-user icono-user-input"></i>
+        
+        <input type="text" name="email" placeholder="E-mail" class="input-user input" id="email" value="<%= locals.oldData ? oldData.email : null %>">
+        <span ></span>
+        <% if (locals.errores && errores.email) { %>
+            <p><%= errores.email.msg  %></p>
+        <% } %>
+     </div>
+     <div class="caja-contraseña"> 
+        <i class="fa-solid fa-lock icono-candado-input"></i>
+        <input type="password" name="password" placeholder="contraseña" class="input-contraseña input" id="password" value="<%= locals.oldData ? oldData.password : null %>">
+     </div>
+     <% if (locals.errores && errores.password) { %>
+        <p><%= errores.password.msg  %></p>
+    <% } %>
+     <div>
+       <p class="input-recordamelo"> <input type="checkbox" name="remember" id="remember" value="true">Recordamelo</p>
+     </div>
+     <div class="errores">
+        <ul>
+            
+        </ul>
+    </div>
+     <div class="caja-boton-logueado">
+        <button type="submit" class="boton-login-main">Login</button>
+        <% if (locals.error){ %>
+            <p> <%= error %></p>
+            <% }%>
+     </div>
+     
+    </form>
+    <section class="section-debajo-logueado">
+    <div class="caja-logueado-cuenta">
+        <p class="no-cuenta">¿No tenés cuenta?</p>                   
+        <a href="/users/register" class="registrate-caja">Registrate</a>
+    </div>
+    <div class="caja-logueado-segunda">
+        <p class="logueatecon">o logueate con</p>
+       <a href=""> <i class="fa-brands fa-facebook logo-face"></i></a>
+       <a href=""> <i class="fa-brands fa-google logo-google"></i></a>
+</div>
+</section>
+ 
+</section>
+
+       
+    
+</main>
+    <%- include("../partials/footer.ejs") %>
+    <script src="/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+    {
+        "actividad": "CROSSFIT",
+        "imagen":"crossfit.jpg",
+        "horario": "Lunes: 10:00 a 11:00 hs",
+        "informacion":"El CrossFit es un programa de entrenamiento físico de alta intensidad que combina elementos de levantamiento de pesas, ejercicio cardiovascular, movimientos con el peso corporal y otras formas de ejercicio para mejorar la aptitud física y resistencia en general.",
+        "cupos":30,
+        "id_category":1,
+        "precio": 8000
+    },
+    {
+        "actividad": "MUSCULACIÓN",
+        "imagen": "musculacion.jpeg",
+        "horario": "Lunes : 11:00 a 12:00 hs",
+        "informacion":"Es una alternativa de actividad física basada generalmente en ejercicio físico de media a alta intensidad, con la finalidad encontrar un equilibrio muscular entre los segmentos corporales, generalmente se utilizan estímulos anaeróbicos, principalmente se desarrolla en los gimnasios. También se le llama musculación a la actividad encaminada a hipertrofiar el músculo sin llegar a un desarrollo competitivo.",
+        "cupos":30,
+        "id_category":1,
+        "precio": 10000
+    },
+    {
+        "actividad": "ZUMBA",
+        "imagen":  "zumba.webp",
+        "horario": "Martes: 14hs a 15hs",
+        "informacion":"Zumba es un movimiento o disciplina fitness de origen colombiano,enfocado por una parte a mantener un cuerpo saludable y por otra a desarrollar, fortalecer y dar flexibilidad al cuerpo mediante movimientos de baile combinados con una serie de rutinas aeróbicas.",
+        "cupos":30,
+        "id_category":1,
+        "precio": 6000
+    },
+    {
+        "actividad": "FUNCIONAL",
+        "imagen":  "funcional.jpg",
+        "horario": "Viernes: 11:00 a 12:00 hs",
+        "informacion":"El entrenamiento funcional pretende trabajar los músculos mediante la imitación de movimientos cotidianos o gestos deportivos específicos. En base a esto, cada rutina de entrenamiento funcional debe estar individualizada y focalizada para cada persona, su disciplina deportiva y sus características específicas. Esto significa que los ejercicios del entrenamiento funcional se basan antes que nada en la utilidad para cualquier tipo de persona, da igual cual sea su condición física.",
+        "cupos":30,
+        "id_category":1,
+        "precio": 10000
+    }
+]

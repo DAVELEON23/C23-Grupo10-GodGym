@@ -1,0 +1,79 @@
+
+<%- include("../partials/head.ejs") %>
+<body class="body-register">
+    <%- include("../partials/header.ejs") %> 
+    <main class="main-register">
+
+        <% if(locals.usuario){ %>
+            
+            <form  action="/users/perfil/<%= usuario.id %>?_method=PUT" method="post" enctype="multipart/form-data" >
+            
+
+            <div class="formulario-userEdit">
+
+            <div class="imagenPrefil">
+                    <img src="/images/userImage/<%= usuario.imagen %>" >
+            </div>
+            
+                <h2 class="titulo-form-userEdit">PERFIL:</h2>     
+                <label class="label-userEdit" for="nombre">NOMBRE: </label>
+                <input class="input-userEdit" type="text" id="nombre" name="nombre" value="<%= usuario.nombre %>">
+                <span></span>
+                <% if (locals.errors && errors.nombre) { %>
+                    <p class="register_invalido"><%= errors.nombre.msg  %></p>
+                <% } %>
+
+                <label class="label-userEdit" for="apellido">APELLIDO:</label>
+                <input class="input-userEdit" type="text" id="apellido" name="apellido" value="<%= usuario.apellido %>">
+                <span></span>
+                <% if (locals.errors && errors.apellido) { %>
+                    <p class="register_invalido"><%= errors.apellido.msg  %></p>
+                <% } %>
+
+                <label class="label-userEdit" for="direccion">DIRECCION:</label>
+                <input class="input-userEdit" type="text" id="direccion" name="direccion" value="<%= usuario.direccion %>">
+
+                <label class="label-userEdit" for="cp">CP:</label>
+                <input class="input-userEdit" type="text" id="cp" name="cp" value="<%= usuario.cp %>">
+
+                
+                <label class="label-userEdit" for="fecha_de_nacimiento">FECHA DE NACIMIENTO:</label>
+                <input class="input-userEdit" type="text" id="fecha_de_nacimiento" name="fecha_de_nacimiento" value="<%= usuario.fecha_de_nacimiento %>">
+                <% if (locals.errors && errors.fecha_de_nacimiento) { %>
+                    <p class="register_invalido"><%= errors.fecha_de_nacimiento.msg  %></p>
+                    <% } %>
+
+                <label class="label-userEdit" id="email">EMAIL:</label>
+                <input type="email" name="email" id="email" class="input-userEdit" value="<%= usuario.email %>" disabled>
+                
+                
+                <label class="label-userEdit" id="imagen">IMAGEN:</label>
+                <input type="file" name="imagen" id="imagen" accept="image/*" class="input-userEdit" value="<%= usuario.imagen %>" >
+                
+                <label class="label-userEdit" for="aptoMedico">APTO MEDICO:</label>
+                <!-- <select class="input-userEdit" id="aptoMedico" name="aptoMedico"> -->
+                <select class="input-userEdit" id="aptoMedico" name="aptoMedico" <%= usuario.id_roles==1  ? '' : 'disabled' %>>
+                    <option value="false" <%= usuario.aptoMedico == "NO" ? 'selected' : null %>>NO</option>
+                    <option value="true" <%= usuario.aptoMedico == "SI" ? 'selected' : null %>>SI</option>
+                </select>
+                    <div class="informacion">
+                        ¿No tenes tu formulario de apto fisico? <a href="https://sportsfacilities.com.ar/v2/wp-content/uploads/2016/02/Apto-Medico.pdf">Descargalo aca!!! </a>
+                        <br>IMPORTANTE:  Debes presentar personalmente el formulario de apto fisico para poder realizar cualquier actividad! 
+                    </div>
+
+                <section class="seccion-perfil">
+                <div class="botones-registro">
+                    <button class="boton-userEdit" type="submit">ENVIAR</button>
+                </div>
+
+                <a class="log-out" href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i>Cerrar sesion</a>
+            </section>
+
+            </div>
+        </form>
+            <% }   %>
+
+
+    </main>
+    <script src="/js/perfil.js"></script>
+    <%- include("../partials/footerdetail.ejs") %>

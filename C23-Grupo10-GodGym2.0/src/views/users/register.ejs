@@ -1,0 +1,75 @@
+<%- include("../partials/head.ejs") %>
+<body class="body-register">
+    <%- include("../partials/header.ejs") %> 
+    <main class="main-register">
+    
+
+            <form action="/users/register" method="post" class="formulario-register">
+                <h2 class="titulo-form-register">Formulario de registro</h2>
+                <h2 class="pase-prueba">Obtene, gratis por un dia, tu pase de prueba !!!</h2>
+
+                <label class="label-register" for="nombre">NOMBRE</label>
+                <input class="input-register" type="text" id="nombre" name="nombre"
+                        value="<%= locals.oldData ? oldData.nombre : null %>">
+                <span class="errorNombre"></span>
+                <% if (locals.errors && errors.nombre) { %>
+                    <p><%= errors.nombre.msg  %></p>
+                <% } %>
+                   
+                <label class="label-register" for="apellido">APELLIDO</label>
+                <input class="input-register" type="text" id="apellido" name="apellido"
+                        value="<%= locals.oldData ? oldData.apellido : null %>">
+                <span class="errorApellido"></span>
+                <% if (locals.errors && errors.apellido) { %>
+                <p><%= errors.apellido.msg  %></p>
+                <% } %>
+
+                <label class="label-register" for="fecha_de_nacimiento">FECHA DE NACIMIENTO</label>
+                <input class="input-register" type="date" id="fecha_de_nacimiento" name="fecha_de_nacimiento" 
+                        value="<%= locals.oldData ? oldData.fecha_de_nacimiento: null %>" >
+                
+                <% if (locals.errors && errors.fecha_de_nacimiento) { %>
+                <p class="register_invalido"><%= errors.fecha_de_nacimiento.msg  %></p>
+                <% } %>
+
+                <label class="label-register" id="email">EMAIL</label>
+                <input type="email" name="email" id="email" class="input-register"
+                value="<%= locals.oldData ? oldData.email : null %>">
+                <span class="errorEmail"></span>
+                <% if (locals.errors && errors.email) { %>
+                    <p class="register_invalido"><%= errors.email.msg  %></p>
+                <% } %>
+
+                <label class="label-register" for="password">CONTRASEÑA</label>
+                <input type="password" name="password" id="password" class="input-register"
+                    value="<%= locals.oldData ? oldData.password : null %>">
+                <span errorPasword></span>
+                <% if (locals.errors && errors.password) { %>
+                <p class="register_invalido"><%= errors.password.msg  %></p>
+                <% } %>
+
+                <label class="label-register" for="password2">CONFIRMAR CONTRASEÑA</label>
+                <input type="password" name="password2" class="input-register"
+                    value="<%= locals.oldData ? oldData.password : null %>">
+                <% if (locals.errors && errors.password) { %>
+                <p class="register_invalido"><%= errors.password.msg  %></p>
+                <% } %>
+                <% if (locals.usuario && usuario.roles == 1) { %>
+                <label class="label-register" for="id_roles">ROL:</label>
+                    <select name="id_roles" id="" class="input-rol">
+                        <option value=3 class="option-rol">usuario</option>
+                        <option value=2 class="option-rol">profesor</option>
+                        <option value=1 class="option-rol">admin</option>
+                        </select>
+                        <% } %>
+                
+                <div class="botones-registro">
+                    <button class="boton-register" id="submit" type="submit">Enviar</button>
+                    <button class="boton-register"  id="reset" type="reset">Reset</button> 
+                </div> 
+                <!-- <span class="lista-de-errores">Existen campos vacios o datos incorrectos</span> -->
+        </form>
+    </main>
+    <%- include("../partials/footerdetail.ejs") %>
+    <script src="/js/registerUser.js"></script>
+</body>

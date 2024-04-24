@@ -1,0 +1,75 @@
+<%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main class="body-detail">
+    
+        <h3 class="slogan-main-detalle"> Lista de Actividades </h3>
+        <div class="crearActidad"><a href="/products/create"><i class="fa-solid fa-plus-minus"></i> AGREGAR ACTIVIDAD</a></div>
+                <% Products.forEach(product =>{ %>
+            <h3 class="nombre-producto"> Entrenamiento : <%= product.actividad %></h3>
+            <article class="articulo-producto">
+            <img src="/images/<%= product.imagen %>"  class="detalleProduct-imagen dashboard_img"> 
+            <div class="caja-producto dashboard_caja-producto">
+            
+                
+                <div class="seccion-tablet-info dashboard-seccion-tablet-info">
+                
+                <div class="precio-producto_dashboard-box">
+                    <p class="precio-producto">Pase mensual : $<%= product.precio %></p>
+                </div>
+                <div class="box_dashboard_option">
+                    <a class="icon_edit_dashboard" href="/products/detail/<%= product.id %>"
+                    ><i class="fa-regular fa-address-book"></i>
+                    </a>
+
+                    <a class="icon_edit_dashboard" href="/products/edit/<%= product.id %>"
+                    ><i class="fa-solid fa-highlighter"></i>
+                    </a>
+                    
+                     <form action="/products/delete/<%= product.id %>?_method=DELETE" class="formulario-eliminar" method="POST">
+                        <button  class="botonDelete" type="submit">
+                            <i class="fa-solid fa-trash tacho-dashboard"></i>
+                        </button>
+                    </form> 
+                    <!-- <button class="botonDelete" onclick="deleteProduct('<%= product.id %>')">
+                        <i class="fa-solid fa-trash tacho-dashboard"></i>
+                    </button> -->
+                    
+                    </div>
+        </div>
+                </div>
+                
+        </article>
+        <% })  %>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // let eliminar = document.querySelector('.formulario-eliminar');
+        //     eliminar.addEventListener('submit',(e)=>{
+        //         e.preventDefault()
+
+        //     })
+
+
+//                 Swal.fire({
+//           title: "Are you sure?",
+//           text: "You won't be able to revert this!",
+//           icon: "warning",
+//           showCancelButton: true,
+//           confirmButtonColor: "#3085d6",
+//           cancelButtonColor: "#d33",
+//           confirmButtonText: "Yes, delete it!"
+//      }).then((result) => {
+//          if (result.isConfirmed) {
+//          Swal.fire({
+//               title: "Deleted!",
+//              text: "Your file has been deleted.",
+//              icon: "success"
+//          });
+//           }
+//      });
+    </script>
+    <%- include("../partials/footerdetail.ejs") %>
+</body>
+</html>

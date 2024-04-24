@@ -1,0 +1,34 @@
+<%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <main class="body-detail">
+        
+        <h3 class="slogan-main-detalle">BE SMART - BE STRONG - BE FAST</h3>
+        
+                <% products.forEach(product =>{ %>
+            <h2 class="nombre-producto"><%= product.actividad %></h2>
+        <article class="articulo-producto">
+            <img src=" /images/<%= product.imagen%>"  class="detalleProduct-imagen"> 
+            <div class="caja-producto">
+            <p class="info-producto"><%= product.informacion %></p>
+            
+                
+                <p class="horarios-producto"><%= product.horario %></p>
+                <p class="horarios-producto">Categoría: <%= product.Category.name.charAt(0).toUpperCase() + product.Category.name.slice(1).toLowerCase() %></p>
+                <div class="seccion-tablet-info">
+                <p class="precio-producto">Pase mensual : $<%= product.precio %></p>
+                <div class="caja-boton-carrito">
+                <a href="/products/productCart" class="boton-carrito">SUSCRIBITE</a>
+            </div>
+        </div>
+                </div>
+            </article>
+            <% })  %>
+        </section>
+             
+
+    </main>
+    <%- include("./partials/footerdetail.ejs") %>
+    
+</body>
+</html>

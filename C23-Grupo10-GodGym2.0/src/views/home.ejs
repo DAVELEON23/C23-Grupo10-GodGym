@@ -1,0 +1,30 @@
+<%- include("./partials/head.ejs") %>
+  <body class="body-home">
+    <%- include("./partials/header.ejs") %>
+    <main class="home-main"> 
+      <div class="caja-admin-dash">  
+      <h3 class="slogan-main">BE SMART - BE STRONG - BE FAST</h3>
+      
+  </div>
+      <% products.forEach(product =>{ %>
+                
+        <article class="boton-inspeccion">   
+          <a href="/products/detail/<%= product.id %>">  
+          <img src="/images/<%= product.componente %>"  width="100%" class="imagen-home">
+
+          <% if (product.id % 2) { %>
+            <p class="boton-derecha"><%= product.nombre  %></p>
+            <%   } else { %>
+            <p class="boton-izquierda"><%= product.nombre  %></p>
+            <%  } %>
+            
+            </a> 
+            </article>
+          
+          
+     <% })  %>
+  </main>
+  <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
+

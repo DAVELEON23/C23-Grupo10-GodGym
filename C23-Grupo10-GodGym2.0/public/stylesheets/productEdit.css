@@ -1,0 +1,252 @@
+.div-form-edit{
+    width: 97%;
+    text-align: center;
+    background-color: rgb(166 165 165 / 30%);
+    box-shadow: 0px 0px 10px rgb(166, 165, 165) ;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.seccion-edit{
+    width: 100%;
+    text-align: center;
+}
+.div-form-nombre-edit{
+    width: 97%;
+    text-align: center;
+    background-color: rgb(166 165 165 / 30%);
+    box-shadow: 0px 0px 10px rgb(166, 165, 165) ;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.div-form-edit-precio{
+    width: 97%;
+    text-align: center;
+    background-color: rgb(166 165 165 / 30%);
+    box-shadow: 0px 0px 10px rgb(166, 165, 165) ;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.textarea-horario-edit{
+    font-weight: bold;
+    font-size: 8px;
+    height: 25px;
+    margin: 1% 0;
+    width: 85%;
+}
+.input-form-nombre-edit {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 1%;
+    width: 85%;
+    height: 25px;
+}
+
+.form-descripcion-edit{
+    font-weight: bold;
+    font-size: 12px;
+    height: 50px;
+    width: 90%;
+    margin: 10px auto;
+}
+.input-form-precio-edit{
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    width: 85%;
+}
+
+.boton-edit{
+    padding: 3px;
+    margin-top: 16px;
+    font-weight: bold;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 15px;
+    box-shadow: 0px 0px 20px #ff000094;
+}
+.boton-edit:hover{
+    transform: scale(0.95);
+}
+.seccion-edit-3 {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width: 768px){
+    .div-container-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .seccion-edit{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .form-descripcion-edit {
+        font-weight: bold;
+        font-size: 12px;
+        height: 44px;
+        width: 90%;
+        margin: 10px auto;
+    }
+    .seccion-edit-2 {
+        align-items: center;
+        width: 100%;
+        display: flex;
+    }
+    .div-form-edit {
+        margin-left: 18px;
+        width: 82%;
+    }
+    .div-form-nombre-edit{
+        width: 82%;
+    }
+    .div-form-nombre-edit label{
+        width: 82%;
+    }
+    .div-form-edit-precio{
+        width: 82%;
+        margin: auto;
+    }
+    .input-form-nombre-edit {
+        text-align: center;
+        font-weight: bold;
+        font-size: 13px;
+        margin: 10px auto;
+        width: 85%;
+        height: 26px;
+    }
+    .textarea-horario-edit {
+        font-weight: bold;
+        font-size: 9px;
+        margin: 1% 0;
+        width: 85%;
+        height: 30px;
+    }
+    .input-form-precio-edit {
+        margin: 10px auto;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        width: 85%;
+        height: 28px;
+    }
+    .boton-edit {
+        margin-top: 16px;
+        font-weight: bold;
+        background-color: #ff0000;
+        color: #ffffff;
+        font-size: 19px;
+        box-shadow: 0px 0px 20px #ff000094;
+    }
+}
+
+@media(min-width: 1024px){
+    .form-imagen {
+        width: 70%;
+    }
+    .seccion-edit {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        
+    }
+    .seccion-edit-imagen{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly ;
+    }
+    .div-form-nombre-edit {
+        width: 85%;
+    }
+    .container-edit-nombre{
+        width: 85%;
+
+    }
+    .seccion-edit-2 {
+        display: flex;
+        width: 100%;
+    }
+    .div-form-edit {
+        margin: auto;
+        width: 45%;
+    }
+    .seccion-edit-3 {
+        margin: 1%;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }
+    .div-container-1{
+        width: 40%;
+        margin-top: 3%;
+    }
+    .div-form-edit-precio{
+        width: 60%;
+    }
+    .boton-edit{
+        width: 20%;
+        font-size: 30px;
+    }
+    .form-descripcion-edit {
+        font-weight: bold;
+        font-size: 15px;
+        height: 80px;
+        width: 88%;
+        margin: 10px auto;
+    }
+    .input-form-nombre-edit {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 10px auto;
+        width: 85%;
+        height: 32px;
+    }
+    .textarea-horario-edit {
+        font-weight: bold;
+        font-size: 17px;
+        margin: 1% 0;
+        width: 85%;
+        height: 2rem;
+    }
+    .input-form-precio-edit{
+        width: 85%;
+        height: 32px;
+        font-size: 20px;
+    }
+    .boton-edit{
+        margin-top: 3%;
+    }
+    .label-seleccion-imagen{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .label-form-edit{
+        font-size: 20px;
+        font-weight: bold;
+    } 
+    .contenedor-submit{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media(min-width: 1440px){
+    .form-producto {
+        display: flex;
+        justify-content: center;
+}
+.form-producto-imagen {
+    width: 40%;
+    align-content: center;
+}
+}
